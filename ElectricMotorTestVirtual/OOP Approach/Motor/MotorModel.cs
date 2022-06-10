@@ -14,11 +14,11 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Motor
 
         private string motorName;
 
-        private TestCoefficents _testCoefficents;
+        private TestCoefficents testCoefficents;
 
         public int MotorId { get => motorId; set => motorId = value; }
         public int MotorSpeed { get => motorSpeed; set => motorSpeed = value; }
         public string MotorName { get => motorName; set => motorName = value; }
-        public TestCoefficents TestCoefficents { get => _testCoefficents; set => _testCoefficents = value; }
+        public TestCoefficents TestCoefficents { get => testCoefficents; set => testCoefficents = value; }
     }
 }

@@ -9,15 +9,17 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Test
 {
     public abstract class TestCase : ITestOperation
     {
-        public string testName;
+        public string TestName;
 
-        public string testDescription;
+        public string TestDescription;
 
-        public Coefficent testCoefficent;
+        public Coefficent TestCoefficent;
 
         public bool TestStarted;
 
         public TimeSpan TestDuration;
+
+        public bool IsTestActive { get; set; }
 
         public abstract void Daq();
 

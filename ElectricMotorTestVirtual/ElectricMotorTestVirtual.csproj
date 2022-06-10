@@ -80,6 +80,7 @@
     <Compile Include="OOP Approach\Motor\MotorModel.cs" />
     <Compile Include="OOP Approach\Motor\TestCoefficents.cs" />
     <Compile Include="OOP Approach\Recipe\TestRecipe.cs" />
+    <Compile Include="OOP Approach\Recipe\TestSettings.cs" />
     <Compile Include="OOP Approach\TestCases\EMKTest.cs" />
     <Compile Include="OOP Approach\TestCases\HVTest.cs" />
     <Compile Include="OOP Approach\TestCases\LCRTest.cs" />
@@ -124,6 +125,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="OOP Approach\Settings\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
