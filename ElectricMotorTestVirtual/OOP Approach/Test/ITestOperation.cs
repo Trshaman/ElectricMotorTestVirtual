@@ -8,7 +8,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Test
 {
     public interface ITestOperation
     {
-        void Daq();
+        void ExecuteTest();
 
         void PrapereResult();
 

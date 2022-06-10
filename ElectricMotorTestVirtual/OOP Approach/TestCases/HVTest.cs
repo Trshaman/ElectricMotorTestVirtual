@@ -9,7 +9,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 {
     public class HVTest : TestCase
     {
-        public override void Daq()
+        public override void ExecuteTest()
         {
             throw new NotImplementedException();
         }

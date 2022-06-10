@@ -10,7 +10,8 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 {
     public class EMKTest : TestCase
     {
-        public override void Daq()
+        public double PeakToPeak { get; set; }
+        public override void ExecuteTest()
         {
             throw new NotImplementedException();
         }

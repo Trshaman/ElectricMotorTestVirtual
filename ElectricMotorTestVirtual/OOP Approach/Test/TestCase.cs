@@ -21,7 +21,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Test
 
         public bool IsTestActive { get; set; }
 
-        public abstract void Daq();
+        public abstract void ExecuteTest();
 
 
         public abstract void LogSQL();

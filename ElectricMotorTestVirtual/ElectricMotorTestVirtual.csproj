@@ -76,6 +76,12 @@
     <Compile Include="Forms\PerformansTest.Designer.cs">
       <DependentUpon>PerformansTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\WinForm\TestRecipeSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WinForm\TestRecipeSettings.Designer.cs">
+      <DependentUpon>TestRecipeSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="OOP Approach\Motor\Coefficent.cs" />
     <Compile Include="OOP Approach\Motor\MotorModel.cs" />
     <Compile Include="OOP Approach\Motor\TestCoefficents.cs" />
