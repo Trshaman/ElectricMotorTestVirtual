@@ -6,8 +6,15 @@ using System.Windows.Forms;
 
 namespace ElectricMotorTestVirtual
 {
-    internal static class Program
+    static class Program
     {
+        internal static string SettingDir;
+        internal static string ReportDir;
+        internal static bool ProgramClosing;
+        internal static bool CancelStartUp;
+        internal static string TestSettingFile;
+        internal static string TestRecipeSettingFile;
+        public static frmLog LogForm;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +23,8 @@ namespace ElectricMotorTestVirtual
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new MainMenu());
         }
     }
 }
+.

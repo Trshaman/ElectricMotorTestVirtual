@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -57,15 +56,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "LCR Test";
             // 
             // groupBox1
             // 
@@ -140,7 +130,7 @@
             // LCRTestActive
             // 
             this.LCRTestActive.AutoSize = true;
-            this.LCRTestActive.Location = new System.Drawing.Point(39, 17);
+            this.LCRTestActive.Location = new System.Drawing.Point(39, 12);
             this.LCRTestActive.Name = "LCRTestActive";
             this.LCRTestActive.Size = new System.Drawing.Size(95, 17);
             this.LCRTestActive.TabIndex = 3;
@@ -149,14 +139,14 @@
             // 
             // R2_Max
             // 
-            this.R2_Max.Location = new System.Drawing.Point(57, 103);
+            this.R2_Max.Location = new System.Drawing.Point(57, 98);
             this.R2_Max.Name = "R2_Max";
             this.R2_Max.Size = new System.Drawing.Size(101, 20);
             this.R2_Max.TabIndex = 0;
             // 
             // R2_Min
             // 
-            this.R2_Min.Location = new System.Drawing.Point(297, 103);
+            this.R2_Min.Location = new System.Drawing.Point(297, 98);
             this.R2_Min.Name = "R2_Min";
             this.R2_Min.Size = new System.Drawing.Size(101, 20);
             this.R2_Min.TabIndex = 0;
@@ -165,7 +155,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(54, 82);
+            this.label4.Location = new System.Drawing.Point(54, 80);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 15);
             this.label4.TabIndex = 125;
@@ -176,7 +166,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(294, 82);
+            this.label5.Location = new System.Drawing.Point(294, 80);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 15);
             this.label5.TabIndex = 125;
@@ -185,14 +175,14 @@
             // 
             // R3_Max
             // 
-            this.R3_Max.Location = new System.Drawing.Point(57, 154);
+            this.R3_Max.Location = new System.Drawing.Point(57, 147);
             this.R3_Max.Name = "R3_Max";
             this.R3_Max.Size = new System.Drawing.Size(101, 20);
             this.R3_Max.TabIndex = 0;
             // 
             // R3_Min
             // 
-            this.R3_Min.Location = new System.Drawing.Point(297, 154);
+            this.R3_Min.Location = new System.Drawing.Point(297, 147);
             this.R3_Min.Name = "R3_Min";
             this.R3_Min.Size = new System.Drawing.Size(101, 20);
             this.R3_Min.TabIndex = 0;
@@ -201,7 +191,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(54, 133);
+            this.label6.Location = new System.Drawing.Point(54, 127);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 15);
             this.label6.TabIndex = 125;
@@ -212,7 +202,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(294, 133);
+            this.label7.Location = new System.Drawing.Point(294, 130);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(83, 15);
             this.label7.TabIndex = 125;
@@ -221,14 +211,14 @@
             // 
             // L1_Max
             // 
-            this.L1_Max.Location = new System.Drawing.Point(57, 202);
+            this.L1_Max.Location = new System.Drawing.Point(57, 196);
             this.L1_Max.Name = "L1_Max";
             this.L1_Max.Size = new System.Drawing.Size(101, 20);
             this.L1_Max.TabIndex = 0;
             // 
             // L1_Min
             // 
-            this.L1_Min.Location = new System.Drawing.Point(297, 202);
+            this.L1_Min.Location = new System.Drawing.Point(297, 196);
             this.L1_Min.Name = "L1_Min";
             this.L1_Min.Size = new System.Drawing.Size(101, 20);
             this.L1_Min.TabIndex = 0;
@@ -237,7 +227,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(54, 181);
+            this.label8.Location = new System.Drawing.Point(54, 179);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(87, 15);
             this.label8.TabIndex = 125;
@@ -248,7 +238,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(294, 181);
+            this.label9.Location = new System.Drawing.Point(294, 179);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(81, 15);
             this.label9.TabIndex = 125;
@@ -257,14 +247,14 @@
             // 
             // L2_Max
             // 
-            this.L2_Max.Location = new System.Drawing.Point(57, 249);
+            this.L2_Max.Location = new System.Drawing.Point(57, 245);
             this.L2_Max.Name = "L2_Max";
             this.L2_Max.Size = new System.Drawing.Size(101, 20);
             this.L2_Max.TabIndex = 0;
             // 
             // L2_Min
             // 
-            this.L2_Min.Location = new System.Drawing.Point(297, 249);
+            this.L2_Min.Location = new System.Drawing.Point(297, 245);
             this.L2_Min.Name = "L2_Min";
             this.L2_Min.Size = new System.Drawing.Size(101, 20);
             this.L2_Min.TabIndex = 0;
@@ -293,14 +283,14 @@
             // 
             // L3_Max
             // 
-            this.L3_Max.Location = new System.Drawing.Point(57, 295);
+            this.L3_Max.Location = new System.Drawing.Point(57, 294);
             this.L3_Max.Name = "L3_Max";
             this.L3_Max.Size = new System.Drawing.Size(101, 20);
             this.L3_Max.TabIndex = 0;
             // 
             // L3_Min
             // 
-            this.L3_Min.Location = new System.Drawing.Point(297, 295);
+            this.L3_Min.Location = new System.Drawing.Point(297, 294);
             this.L3_Min.Name = "L3_Min";
             this.L3_Min.Size = new System.Drawing.Size(101, 20);
             this.L3_Min.TabIndex = 0;
@@ -309,7 +299,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.Location = new System.Drawing.Point(54, 272);
+            this.label12.Location = new System.Drawing.Point(54, 276);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(87, 15);
             this.label12.TabIndex = 125;
@@ -333,7 +323,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.LCRTestActive);
-            this.Controls.Add(this.label1);
             this.Name = "LCRTest";
             this.Size = new System.Drawing.Size(543, 364);
             this.groupBox1.ResumeLayout(false);
@@ -344,8 +333,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;

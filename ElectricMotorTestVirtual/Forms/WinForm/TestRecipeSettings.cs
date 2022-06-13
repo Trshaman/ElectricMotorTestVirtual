@@ -16,5 +16,10 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
         {
             InitializeComponent();
         }
+
+        private void hvTestUserInterface1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

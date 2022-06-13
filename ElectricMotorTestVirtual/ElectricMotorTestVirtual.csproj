@@ -76,6 +76,36 @@
     <Compile Include="Forms\PerformansTest.Designer.cs">
       <DependentUpon>PerformansTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\WinForm\ComSettingsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WinForm\ComSettingsPage.Designer.cs">
+      <DependentUpon>ComSettingsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WinForm\frmLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WinForm\frmLog.designer.cs">
+      <DependentUpon>frmLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WinForm\MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WinForm\MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WinForm\MainOperatorUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WinForm\MainOperatorUI.Designer.cs">
+      <DependentUpon>MainOperatorUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WinForm\RecipeSelectionPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WinForm\RecipeSelectionPage.Designer.cs">
+      <DependentUpon>RecipeSelectionPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\WinForm\TestRecipeSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +139,18 @@
     <EmbeddedResource Include="Forms\PerformansTest.resx">
       <DependentUpon>PerformansTest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WinForm\frmLog.resx">
+      <DependentUpon>frmLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WinForm\MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WinForm\RecipeSelectionPage.resx">
+      <DependentUpon>RecipeSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WinForm\TestRecipeSettings.resx">
+      <DependentUpon>TestRecipeSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -133,6 +175,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="OOP Approach\Settings\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GlobalFunctions\GlobalFunctions.csproj">
+      <Project>{2a924922-f1d8-443c-9e1b-cbcefc3981f8}</Project>
+      <Name>GlobalFunctions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserInterface\UserInterface.csproj">
+      <Project>{79837fcb-9b53-46fc-8d32-acc27ca4409c}</Project>
+      <Name>UserInterface</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

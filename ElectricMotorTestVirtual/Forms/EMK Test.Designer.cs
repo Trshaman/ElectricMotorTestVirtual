@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
             this.EmkTestActive = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.PeaktoPeakMax = new System.Windows.Forms.TextBox();
@@ -44,19 +43,10 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Emk Test";
-            // 
             // EmkTestActive
             // 
             this.EmkTestActive.AutoSize = true;
-            this.EmkTestActive.Location = new System.Drawing.Point(42, 28);
+            this.EmkTestActive.Location = new System.Drawing.Point(42, 20);
             this.EmkTestActive.Name = "EmkTestActive";
             this.EmkTestActive.Size = new System.Drawing.Size(95, 17);
             this.EmkTestActive.TabIndex = 1;
@@ -165,7 +155,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.EmkTestActive);
-            this.Controls.Add(this.label1);
             this.Name = "EMK_Test";
             this.Size = new System.Drawing.Size(555, 356);
             this.groupBox1.ResumeLayout(false);
@@ -176,8 +165,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox EmkTestActive;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox PeaktoPeakMax;

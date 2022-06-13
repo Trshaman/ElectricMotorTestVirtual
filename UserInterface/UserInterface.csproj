@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{79837FCB-9B53-46FC-8D32-ACC27CA4409C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UserInterface</RootNamespace>
+    <AssemblyName>UserInterface</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Chaliy.Windows.Forms, Version=1.0.6198.24305, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Chaliy.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="NumericTextBox">
+      <HintPath>C:\Users\İlker Günaydın\Desktop\NumericTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activities" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TDMSReader, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TDMSReader.3.1.0\lib\net40\TDMSReader.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="ZedGraph">
+      <HintPath>C:\Program Files (x86)\Data Translation\Signal Processing Component Library\DotNet\Examples\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ColorMng.cs" />
+    <Compile Include="CrossThreadHelper.cs" />
+    <Compile Include="DataTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DigitalBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DigitalBase.designer.cs">
+      <DependentUpon>DigitalBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DigitalDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DigitalDisplay.designer.cs">
+      <DependentUpon>DigitalDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DateTimePickerEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DateTimePickerEx.Designer.cs">
+      <DependentUpon>DateTimePickerEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EventButton.Designer.cs">
+      <DependentUpon>EventButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtentedFileNameEditor.cs" />
+    <Compile Include="FilteredPropertyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FilteredPropertyGrid.designer.cs">
+      <DependentUpon>FilteredPropertyGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalogBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnalogBase.Designer.cs">
+      <DependentUpon>AnalogBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalogGauge.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnalogGauge.designer.cs">
+      <DependentUpon>AnalogGauge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GanttChart\DataClasses.cs" />
+    <Compile Include="GanttChart\GanttChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GanttChart\GanttChart.Designer.cs">
+      <DependentUpon>GanttChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GanttChart\GanttChartExample.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GanttChart\Performer.cs" />
+    <Compile Include="GanttChart\Job.cs" />
+    <Compile Include="GraphPlotter\Axis.cs" />
+    <Compile Include="GraphPlotter\AxisValueEdit.cs" />
+    <Compile Include="Channel.cs" />
+    <Compile Include="GraphPlotter\CommonFunction.cs" />
+    <Compile Include="GraphPlotter\Curve.cs" />
+    <Compile Include="GraphPlotter\CurveConverter.cs" />
+    <Compile Include="GraphPlotter\CurveEditor.cs" />
+    <Compile Include="GraphPlotter\GraphBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphPlotter\GraphBase.designer.cs">
+      <DependentUpon>GraphBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphPlotter\XYGraph.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphPlotter\XYGraph.designer.cs">
+      <DependentUpon>XYGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphPlotter\RealTimeGraph.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphPlotter\RealTimeGraph.designer.cs">
+      <DependentUpon>RealTimeGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphPlotter\frmCurvesSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphPlotter\frmCurvesSettings.Designer.cs">
+      <DependentUpon>frmCurvesSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeaderWithUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HeaderWithUnit.Designer.cs">
+      <DependentUpon>HeaderWithUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HydraulicCylinder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HydraulicCylinder.Designer.cs">
+      <DependentUpon>HydraulicCylinder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IP4TextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IP4TextBox.Designer.cs">
+      <DependentUpon>IP4TextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IprogressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Knob.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Knob.Designer.cs">
+      <DependentUpon>Knob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedDisplay.Designer.cs">
+      <DependentUpon>LedDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LinearGauge.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LinearGauge.designer.cs">
+      <DependentUpon>LinearGauge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Messages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Messages.Designer.cs">
+      <DependentUpon>Messages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NumericControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NumericControl.Designer.cs">
+      <DependentUpon>NumericControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Header.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Header.Designer.cs">
+      <DependentUpon>Header.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NumericTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NumericTextbox.Designer.cs">
+      <DependentUpon>NumericTextbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PushButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PushButton.Designer.cs">
+      <DependentUpon>PushButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PictureControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PictureControl.Designer.cs">
+      <DependentUpon>PictureControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RoundedRectangle.cs" />
+    <Compile Include="Selection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Selection.Designer.cs">
+      <DependentUpon>Selection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelEditor.cs" />
+    <Compile Include="SetFormOfWindowStateCallback.cs" />
+    <Compile Include="SteeringWheel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SteeringWheel.designer.cs">
+      <DependentUpon>SteeringWheel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TemperatureGauge.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TemperatureGauge.Designer.cs">
+      <DependentUpon>TemperatureGauge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToggleSwitch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToggleSwitch.Designer.cs">
+      <DependentUpon>ToggleSwitch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToggleSwitchVertical.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToggleSwitchVertical.Designer.cs">
+      <DependentUpon>ToggleSwitchVertical.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIBase.Designer.cs">
+      <DependentUpon>UIBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerticalProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VerticalProgressBar.Designer.cs">
+      <DependentUpon>VerticalProgressBar.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AnalogBase.resx">
+      <DependentUpon>AnalogBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalogGauge.resx">
+      <DependentUpon>AnalogGauge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataTreeView.resx">
+      <DependentUpon>DataTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DigitalBase.resx">
+      <DependentUpon>DigitalBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DigitalDisplay.resx">
+      <DependentUpon>DigitalDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GanttChart\GanttChart.resx">
+      <DependentUpon>GanttChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphPlotter\GraphBase.resx">
+      <DependentUpon>GraphBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphPlotter\XYGraph.resx">
+      <DependentUpon>XYGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphPlotter\RealTimeGraph.resx">
+      <DependentUpon>RealTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphPlotter\frmCurvesSettings.resx">
+      <DependentUpon>frmCurvesSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeaderWithUnit.resx">
+      <DependentUpon>HeaderWithUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HydraulicCylinder.resx">
+      <DependentUpon>HydraulicCylinder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IP4TextBox.resx">
+      <DependentUpon>IP4TextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Knob.resx">
+      <DependentUpon>Knob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinearGauge.resx">
+      <DependentUpon>LinearGauge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messages.resx">
+      <DependentUpon>Messages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumericControl.resx">
+      <DependentUpon>NumericControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selection.resx">
+      <DependentUpon>Selection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SteeringWheel.resx">
+      <DependentUpon>SteeringWheel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Chaliy.Windows.Forms.dll" />
+    <Content Include="Resources\1342551543_canvas_size.png" />
+    <Content Include="XMLFile1.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Resources\powerOff.png" />
+    <None Include="Resources\powerOn.png" />
+    <None Include="Resources\Lenkrad.png" />
+    <Content Include="Resources\plus3.png" />
+    <None Include="Resources\Properties.jpg" />
+    <None Include="Resources\1342551543_canvas_size1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GlobalFunctions\GlobalFunctions.csproj">
+      <Project>{2a924922-f1d8-443c-9e1b-cbcefc3981f8}</Project>
+      <Name>GlobalFunctions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

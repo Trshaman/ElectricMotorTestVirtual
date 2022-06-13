@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ElectricMotorTestVirtual.OOP_Approach.Motor.
+using ElectricMotorTestVirtual.OOP_Approach.Motor;
 using ElectricMotorTestVirtual.OOP_Approach.Test;
 
 namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
