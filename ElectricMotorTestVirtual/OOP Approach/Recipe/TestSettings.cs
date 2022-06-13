@@ -8,6 +8,7 @@ using System.Xml.Serialization;
 
 namespace ElectricMotorTestVirtual.OOP_Approach.Recipe
 {
+    [Serializable]
     public class TestSettings
     {
 
