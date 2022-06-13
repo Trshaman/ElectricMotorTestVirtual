@@ -30,11 +30,11 @@
         {
             this.HVTest = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.hvTestUserInterface1 = new ElectricMotorTestVirtual.Forms.HvTestUserInterface();
+            this.hvTestUserInterface2 = new ElectricMotorTestVirtual.Forms.HvTestUserInterface();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lcrTest1 = new ElectricMotorTestVirtual.Forms.LCRTest();
+            this.lcrTest2 = new ElectricMotorTestVirtual.Forms.LCRTest();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.performansTest1 = new ElectricMotorTestVirtual.Forms.PerformansTest();
+            this.performansTest2 = new ElectricMotorTestVirtual.Forms.PerformansTest();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,7 +62,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.hvTestUserInterface1);
+            this.tabPage1.Controls.Add(this.hvTestUserInterface2);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -73,14 +73,14 @@
             // 
             // hvTestUserInterface1
             // 
-            this.hvTestUserInterface1.Location = new System.Drawing.Point(0, 0);
-            this.hvTestUserInterface1.Name = "hvTestUserInterface1";
-            this.hvTestUserInterface1.Size = new System.Drawing.Size(552, 362);
-            this.hvTestUserInterface1.TabIndex = 0;
+            this.hvTestUserInterface2.Location = new System.Drawing.Point(0, 0);
+            this.hvTestUserInterface2.Name = "hvTestUserInterface1";
+            this.hvTestUserInterface2.Size = new System.Drawing.Size(552, 362);
+            this.hvTestUserInterface2.TabIndex = 0;
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.lcrTest1);
+            this.tabPage2.Controls.Add(this.lcrTest2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -91,14 +91,14 @@
             // 
             // lcrTest1
             // 
-            this.lcrTest1.Location = new System.Drawing.Point(8, 3);
-            this.lcrTest1.Name = "lcrTest1";
-            this.lcrTest1.Size = new System.Drawing.Size(543, 374);
-            this.lcrTest1.TabIndex = 0;
+            this.lcrTest2.Location = new System.Drawing.Point(8, 3);
+            this.lcrTest2.Name = "lcrTest1";
+            this.lcrTest2.Size = new System.Drawing.Size(543, 374);
+            this.lcrTest2.TabIndex = 0;
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.performansTest1);
+            this.tabPage3.Controls.Add(this.performansTest2);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -109,11 +109,11 @@
             // 
             // performansTest1
             // 
-            this.performansTest1.Location = new System.Drawing.Point(-4, 8);
-            this.performansTest1.Name = "performansTest1";
-            this.performansTest1.Size = new System.Drawing.Size(561, 366);
-            this.performansTest1.TabIndex = 0;
-            // 
+            this.performansTest2.Location = new System.Drawing.Point(-4, 8);
+            this.performansTest2.Name = "performansTest1";
+            this.performansTest2.Size = new System.Drawing.Size(561, 366);
+            this.performansTest2.TabIndex = 0;
+            //                 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label1);
@@ -213,9 +213,9 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private HvTestUserInterface hvTestUserInterface1;
-        private LCRTest lcrTest1;
-        private PerformansTest performansTest1;
+        private HvTestUserInterface hvTestUserInterface2;
+        private LCRTest lcrTest2;
+        private PerformansTest performansTest2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
     }

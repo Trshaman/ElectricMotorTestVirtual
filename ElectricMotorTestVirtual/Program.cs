@@ -14,7 +14,6 @@ namespace ElectricMotorTestVirtual
         internal static bool CancelStartUp;
         internal static string TestSettingFile;
         internal static string TestRecipeSettingFile;
-        public static frmLog LogForm;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -23,8 +22,7 @@ namespace ElectricMotorTestVirtual
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainMenu());
+   //         Application.Run(new MainMenu());
         }
     }
 }
-.

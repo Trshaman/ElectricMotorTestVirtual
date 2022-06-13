@@ -19,7 +19,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
 
         private void AddRecipe_Click(object sender, EventArgs e)
         {
-            TestRecipeSettings.ActiveForm.show
+            
         }
     }
 }
