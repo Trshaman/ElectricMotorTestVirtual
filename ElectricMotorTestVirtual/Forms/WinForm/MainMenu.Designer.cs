@@ -29,49 +29,53 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.testSayfasıToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reçeteAyarlarıToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.haberleşmeAyarlarıToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.programıKapatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testSayfasiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.receteAyarlariToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.haberlesmeAyarlariToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.programiKapatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.testSayfasıToolStripMenuItem,
-            this.reçeteAyarlarıToolStripMenuItem,
-            this.haberleşmeAyarlarıToolStripMenuItem,
-            this.programıKapatToolStripMenuItem});
+            this.testSayfasiToolStripMenuItem,
+            this.receteAyarlariToolStripMenuItem,
+            this.haberlesmeAyarlariToolStripMenuItem,
+            this.programiKapatToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // testSayfasıToolStripMenuItem
+            // testSayfasiToolStripMenuItem
             // 
-            this.testSayfasıToolStripMenuItem.Name = "testSayfasıToolStripMenuItem";
-            this.testSayfasıToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
-            this.testSayfasıToolStripMenuItem.Text = "Test Sayfası";
+            this.testSayfasiToolStripMenuItem.Name = "testSayfasiToolStripMenuItem";
+            this.testSayfasiToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.testSayfasiToolStripMenuItem.Text = "Test Sayfası";
+            this.testSayfasiToolStripMenuItem.Click += new System.EventHandler(this.testSayfasiToolStripMenuItem_Click);
             // 
-            // reçeteAyarlarıToolStripMenuItem
+            // receteAyarlariToolStripMenuItem
             // 
-            this.reçeteAyarlarıToolStripMenuItem.Name = "reçeteAyarlarıToolStripMenuItem";
-            this.reçeteAyarlarıToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
-            this.reçeteAyarlarıToolStripMenuItem.Text = "Reçete Ayarları";
+            this.receteAyarlariToolStripMenuItem.Name = "receteAyarlariToolStripMenuItem";
+            this.receteAyarlariToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
+            this.receteAyarlariToolStripMenuItem.Text = "Reçete Ayarları";
+            this.receteAyarlariToolStripMenuItem.Click += new System.EventHandler(this.receteAyarlariToolStripMenuItem_Click);
             // 
-            // haberleşmeAyarlarıToolStripMenuItem
+            // haberlesmeAyarlariToolStripMenuItem
             // 
-            this.haberleşmeAyarlarıToolStripMenuItem.Name = "haberleşmeAyarlarıToolStripMenuItem";
-            this.haberleşmeAyarlarıToolStripMenuItem.Size = new System.Drawing.Size(125, 20);
-            this.haberleşmeAyarlarıToolStripMenuItem.Text = "Haberleşme Ayarları";
+            this.haberlesmeAyarlariToolStripMenuItem.Name = "haberlesmeAyarlariToolStripMenuItem";
+            this.haberlesmeAyarlariToolStripMenuItem.Size = new System.Drawing.Size(125, 20);
+            this.haberlesmeAyarlariToolStripMenuItem.Text = "Haberleşme Ayarları";
+            this.haberlesmeAyarlariToolStripMenuItem.Click += new System.EventHandler(this.haberlesmeAyarlariToolStripMenuItem_Click);
             // 
-            // programıKapatToolStripMenuItem
+            // programiKapatToolStripMenuItem
             // 
-            this.programıKapatToolStripMenuItem.Name = "programıKapatToolStripMenuItem";
-            this.programıKapatToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
-            this.programıKapatToolStripMenuItem.Text = "Programı Kapat";
+            this.programiKapatToolStripMenuItem.Name = "programiKapatToolStripMenuItem";
+            this.programiKapatToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
+            this.programiKapatToolStripMenuItem.Text = "Programı Kapat";
+            this.programiKapatToolStripMenuItem.Click += new System.EventHandler(this.programiKapatToolStripMenuItem_Click);
             // 
             // MainMenu
             // 
@@ -93,9 +97,9 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem testSayfasıToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reçeteAyarlarıToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem haberleşmeAyarlarıToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem programıKapatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem testSayfasiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem receteAyarlariToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem haberlesmeAyarlariToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem programiKapatToolStripMenuItem;
     }
 }
