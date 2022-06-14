@@ -30,22 +30,28 @@
         {
             System.Windows.Forms.TextBox Point1Load;
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.Point2Load = new System.Windows.Forms.TextBox();
             this.loadPerform_Min = new System.Windows.Forms.TextBox();
             this.loadPerform_Max = new System.Windows.Forms.TextBox();
             this.UnloadPerform_Min = new System.Windows.Forms.TextBox();
             this.UnloadPerform_Max = new System.Windows.Forms.TextBox();
             this.PerformTestActive = new System.Windows.Forms.CheckBox();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.Point2Load = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             Point1Load = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // Point1Load
+            // 
+            Point1Load.Location = new System.Drawing.Point(63, 200);
+            Point1Load.Name = "Point1Load";
+            Point1Load.Size = new System.Drawing.Size(101, 20);
+            Point1Load.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -67,6 +73,17 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Test Limit Parametreleri";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(300, 180);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(124, 15);
+            this.label6.TabIndex = 125;
+            this.label6.Text = "2. Yükleme Nok (Nm)";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label5
             // 
@@ -90,6 +107,17 @@
             this.label2.Text = "Boşta Perofrmans Min (Rpm)";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(60, 180);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 15);
+            this.label1.TabIndex = 125;
+            this.label1.Text = "1.Yukleme Nok (Nm)";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -111,6 +139,13 @@
             this.label3.TabIndex = 125;
             this.label3.Text = "Boşta Performans Max (Rpm)";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // Point2Load
+            // 
+            this.Point2Load.Location = new System.Drawing.Point(303, 200);
+            this.Point2Load.Name = "Point2Load";
+            this.Point2Load.Size = new System.Drawing.Size(101, 20);
+            this.Point2Load.TabIndex = 0;
             // 
             // loadPerform_Min
             // 
@@ -150,42 +185,6 @@
             this.PerformTestActive.Text = "Performans Test Aktif";
             this.PerformTestActive.UseVisualStyleBackColor = true;
             // 
-            // Point1Load
-            // 
-            Point1Load.Location = new System.Drawing.Point(63, 200);
-            Point1Load.Name = "Point1Load";
-            Point1Load.Size = new System.Drawing.Size(101, 20);
-            Point1Load.TabIndex = 0;
-            // 
-            // Point2Load
-            // 
-            this.Point2Load.Location = new System.Drawing.Point(303, 200);
-            this.Point2Load.Name = "Point2Load";
-            this.Point2Load.Size = new System.Drawing.Size(101, 20);
-            this.Point2Load.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(60, 180);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 15);
-            this.label1.TabIndex = 125;
-            this.label1.Text = "1.Yukleme Nok (Nm)";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(300, 180);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 15);
-            this.label6.TabIndex = 125;
-            this.label6.Text = "2. Yükleme Nok (Nm)";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // PerformansTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,7 +211,6 @@
         private System.Windows.Forms.TextBox UnloadPerform_Min;
         private System.Windows.Forms.TextBox UnloadPerform_Max;
         private System.Windows.Forms.CheckBox PerformTestActive;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Point2Load;
