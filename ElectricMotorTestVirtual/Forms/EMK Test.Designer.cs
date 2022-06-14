@@ -156,27 +156,31 @@
             this.hvTestUserInterface1.TabIndex = 3;
             // 
             // lcrTest1
-            // 
+            this.label2.Size = new System.Drawing.Size(121, 15);
             this.lcrTest1.Location = new System.Drawing.Point(0, 0);
             this.lcrTest1.Name = "lcrTest1";
             this.lcrTest1.Size = new System.Drawing.Size(543, 364);
             this.lcrTest1.TabIndex = 4;
-            // 
+            this.label2.Text = "Peak to Peak Min (V)";
             // performansTest1
-            // 
+            this.RmsMax.Location = new System.Drawing.Point(66, 183);
             this.performansTest1.Location = new System.Drawing.Point(0, 0);
             this.performansTest1.Name = "performansTest1";
             this.performansTest1.Size = new System.Drawing.Size(561, 366);
             this.performansTest1.TabIndex = 5;
-            // 
+            this.RmsMax.Size = new System.Drawing.Size(101, 20);
             // performansTest2
-            // 
+            this.RmsMin.Location = new System.Drawing.Point(306, 183);
             this.performansTest2.Location = new System.Drawing.Point(0, 0);
             this.performansTest2.Name = "performansTest2";
             this.performansTest2.Size = new System.Drawing.Size(561, 366);
             this.performansTest2.TabIndex = 6;
             // 
             // performansTest3
+            this.RmsMin.Size = new System.Drawing.Size(101, 20);
+            this.RmsMin.TabIndex = 0;
+            // 
+            // label4
             // 
             this.performansTest3.Location = new System.Drawing.Point(0, 0);
             this.performansTest3.Name = "performansTest3";
