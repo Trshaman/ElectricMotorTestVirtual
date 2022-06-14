@@ -33,7 +33,7 @@ namespace ElectricMotorTestVirtual
             Application.SetCompatibleTextRenderingDefault(false);
             TestTableName = "Test";
 
-         //   Application.Run(new MainMenu());
+            Application.Run(new MainMenu());
 
 
 

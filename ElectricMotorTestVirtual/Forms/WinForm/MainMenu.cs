@@ -1,16 +1,32 @@
-﻿using System;
+﻿
+using GlobalFunctions;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Reflection;
+using System.Threading;
 using System.Windows.Forms;
+using Timer = System.Windows.Forms.Timer;
+
+
+
+
+
+//using System;
+//using System.Collections.Generic;
+//using System.ComponentModel;
+//using System.Data;
+//using System.Drawing;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
+//using System.Windows.Forms;
 
 namespace ElectricMotorTestVirtual.Forms.WinForm
 {
-    public partial class MainMenu : Form
+    public partial class MainScreen : Form
     {
         private ComSettingsPage _settingsPage;
         private MainOperatorUI _mainOperatorUI;
@@ -18,7 +34,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
         private RecipeSelectionPage _recipeSelectionPage;
 
 
-        public MainMenu()
+        public MainScreen()
         {
             InitializeComponent();
         }

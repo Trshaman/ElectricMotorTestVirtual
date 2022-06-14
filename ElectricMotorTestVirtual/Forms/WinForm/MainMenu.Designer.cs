@@ -1,6 +1,6 @@
 ﻿namespace ElectricMotorTestVirtual.Forms.WinForm
 {
-    partial class MainMenu
+    partial class MainScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -77,7 +77,7 @@
             this.programiKapatToolStripMenuItem.Text = "Programı Kapat";
             this.programiKapatToolStripMenuItem.Click += new System.EventHandler(this.programiKapatToolStripMenuItem_Click);
             // 
-            // MainMenu
+            // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -85,8 +85,8 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "MainMenu";
-            this.Text = "MainMenu";
+            this.Name = "MainScreen";
+            this.Text = "MainScreen";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainMenu_Load);
             this.menuStrip1.ResumeLayout(false);
