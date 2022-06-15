@@ -88,17 +88,17 @@
     <Compile Include="Forms\WinForm\frmLog.designer.cs">
       <DependentUpon>frmLog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\WinForm\MainMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\WinForm\MainMenu.Designer.cs">
-      <DependentUpon>MainMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\WinForm\MainOperatorUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\WinForm\MainOperatorUI.Designer.cs">
       <DependentUpon>MainOperatorUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WinForm\MainScreen1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WinForm\MainScreen1.Designer.cs">
+      <DependentUpon>MainScreen1.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\WinForm\RecipeSelectionPage.cs">
       <SubType>Form</SubType>
@@ -142,8 +142,8 @@
     <EmbeddedResource Include="Forms\WinForm\frmLog.resx">
       <DependentUpon>frmLog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\WinForm\MainMenu.resx">
-      <DependentUpon>MainMenu.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\WinForm\MainScreen1.resx">
+      <DependentUpon>MainScreen1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\WinForm\RecipeSelectionPage.resx">
       <DependentUpon>RecipeSelectionPage.cs</DependentUpon>

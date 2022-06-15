@@ -32,14 +32,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.IRResistance_Min = new System.Windows.Forms.TextBox();
             this.IRResistance_Max = new System.Windows.Forms.TextBox();
             this.LeakagemA_Min = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.LeakagemA_Max = new System.Windows.Forms.TextBox();
             this.HVTestActive = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,6 +97,17 @@
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(63, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(120, 15);
+            this.label2.TabIndex = 125;
+            this.label2.Text = "HV Test Voltage (kV):";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -110,61 +121,56 @@
             // 
             // IRResistance_Min
             // 
+            this.IRResistance_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IRResistance_Min.Location = new System.Drawing.Point(306, 174);
             this.IRResistance_Min.Name = "IRResistance_Min";
-            this.IRResistance_Min.Size = new System.Drawing.Size(101, 20);
+            this.IRResistance_Min.Size = new System.Drawing.Size(101, 24);
             this.IRResistance_Min.TabIndex = 0;
             this.IRResistance_Min.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // IRResistance_Max
             // 
+            this.IRResistance_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IRResistance_Max.Location = new System.Drawing.Point(66, 174);
             this.IRResistance_Max.Name = "IRResistance_Max";
-            this.IRResistance_Max.Size = new System.Drawing.Size(101, 20);
+            this.IRResistance_Max.Size = new System.Drawing.Size(101, 24);
             this.IRResistance_Max.TabIndex = 0;
             this.IRResistance_Max.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // LeakagemA_Min
             // 
+            this.LeakagemA_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LeakagemA_Min.Location = new System.Drawing.Point(306, 115);
             this.LeakagemA_Min.Name = "LeakagemA_Min";
-            this.LeakagemA_Min.Size = new System.Drawing.Size(101, 20);
+            this.LeakagemA_Min.Size = new System.Drawing.Size(101, 24);
             this.LeakagemA_Min.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(66, 54);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(101, 24);
+            this.textBox1.TabIndex = 0;
             // 
             // LeakagemA_Max
             // 
+            this.LeakagemA_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LeakagemA_Max.Location = new System.Drawing.Point(66, 115);
             this.LeakagemA_Max.Name = "LeakagemA_Max";
-            this.LeakagemA_Max.Size = new System.Drawing.Size(101, 20);
+            this.LeakagemA_Max.Size = new System.Drawing.Size(101, 24);
             this.LeakagemA_Max.TabIndex = 0;
             // 
             // HVTestActive
             // 
             this.HVTestActive.AutoSize = true;
+            this.HVTestActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HVTestActive.Location = new System.Drawing.Point(44, 22);
             this.HVTestActive.Name = "HVTestActive";
-            this.HVTestActive.Size = new System.Drawing.Size(89, 17);
+            this.HVTestActive.Size = new System.Drawing.Size(112, 22);
             this.HVTestActive.TabIndex = 3;
             this.HVTestActive.Text = "HV Test Aktif";
             this.HVTestActive.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(66, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(101, 20);
-            this.textBox1.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(63, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 15);
-            this.label2.TabIndex = 125;
-            this.label2.Text = "HV Test Voltage (kV):";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // HvTestUserInterface
             // 
@@ -173,7 +179,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.HVTestActive);
             this.Name = "HvTestUserInterface";
-            this.Size = new System.Drawing.Size(552, 362);
+            this.Size = new System.Drawing.Size(591, 371);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

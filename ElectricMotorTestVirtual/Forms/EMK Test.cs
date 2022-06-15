@@ -26,5 +26,10 @@ namespace ElectricMotorTestVirtual.Forms
         {
 
         }
+
+        private void performansTest3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

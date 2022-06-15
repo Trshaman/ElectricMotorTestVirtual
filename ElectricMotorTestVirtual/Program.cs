@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ElectricMotorTestVirtual.Forms.WinForm;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace ElectricMotorTestVirtual
         internal static string TestRecipeSettingFile;
         internal static string TestTableName;
         internal static bool IsServer;
+        public static frmLog LogForm;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -32,8 +34,9 @@ namespace ElectricMotorTestVirtual
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             TestTableName = "Test";
-
-            Application.Run(new MainMenu());
+            //ToDo: settins ve kayıtlar kontrol edilecek.
+            //log formuna eklenicek.
+            Application.Run(new MainScreen1());
 
 
 

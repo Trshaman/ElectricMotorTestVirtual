@@ -12,6 +12,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
 {
     public partial class RecipeSelectionPage : Form
     {
+        private TestRecipeSettings _testRecipeSettings;
         public RecipeSelectionPage()
         {
             InitializeComponent();
@@ -19,7 +20,17 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
 
         private void AddRecipe_Click(object sender, EventArgs e)
         {
-            
+            if (_testRecipeSettings == null)
+            {
+                _testRecipeSettings = new TestRecipeSettings();
+                _testRecipeSettings.HandleDestroyed += (object send, EventArgs e2) => { _testRecipeSettings = null; };
+               // _testRecipeSettings.MdiParent = this;
+                _testRecipeSettings.Show();
+            }
+            else
+            {
+                _testRecipeSettings.Focus();
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace ElectricMotorTestVirtual.Forms.WinForm
 {
-    partial class MainScreen
+    partial class MainScreen1
     {
         /// <summary>
         /// Required designer variable.
@@ -68,27 +68,25 @@
             this.haberlesmeAyarlariToolStripMenuItem.Name = "haberlesmeAyarlariToolStripMenuItem";
             this.haberlesmeAyarlariToolStripMenuItem.Size = new System.Drawing.Size(125, 20);
             this.haberlesmeAyarlariToolStripMenuItem.Text = "Haberleşme Ayarları";
-            this.haberlesmeAyarlariToolStripMenuItem.Click += new System.EventHandler(this.haberlesmeAyarlariToolStripMenuItem_Click);
+            this.haberlesmeAyarlariToolStripMenuItem.Click += new System.EventHandler(this.haberlesmeAyarlariToolStripMenuItem_Click_1);
             // 
             // programiKapatToolStripMenuItem
             // 
             this.programiKapatToolStripMenuItem.Name = "programiKapatToolStripMenuItem";
             this.programiKapatToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
             this.programiKapatToolStripMenuItem.Text = "Programı Kapat";
-            this.programiKapatToolStripMenuItem.Click += new System.EventHandler(this.programiKapatToolStripMenuItem_Click);
+            this.programiKapatToolStripMenuItem.Click += new System.EventHandler(this.programiKapatToolStripMenuItem_Click_1);
             // 
-            // MainScreen
+            // MainScreen1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1101, 602);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "MainScreen";
-            this.Text = "MainScreen";
+            this.Name = "MainScreen1";
+            this.Text = "MainScreen1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

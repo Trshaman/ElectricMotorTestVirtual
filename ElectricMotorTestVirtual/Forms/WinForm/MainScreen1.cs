@@ -1,32 +1,17 @@
-﻿
-using GlobalFunctions;
+﻿using GlobalFunctions;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Threading;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using Timer = System.Windows.Forms.Timer;
-
-
-
-
-
-//using System;
-//using System.Collections.Generic;
-//using System.ComponentModel;
-//using System.Data;
-//using System.Drawing;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
-//using System.Windows.Forms;
 
 namespace ElectricMotorTestVirtual.Forms.WinForm
 {
-    public partial class MainScreen : Form
+    public partial class MainScreen1 : Form
     {
         private ComSettingsPage _settingsPage;
         private MainOperatorUI _mainOperatorUI;
@@ -34,9 +19,14 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
         private RecipeSelectionPage _recipeSelectionPage;
 
 
-        public MainScreen()
+        public MainScreen1()
         {
             InitializeComponent();
+            Program.LogForm = new frmLog();
+            Program.LogForm.MdiParent = this;
+            Program.LogForm.Show();
+            //0:system 1:alarm
+            Program.LogForm.WriteLog(LogTypes.System, 0, -1, -1, "Program Başlatıldı.", SystemIcons.Information);
         }
 
         private void MainMenu_Load(object sender, EventArgs e)
@@ -50,6 +40,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
             {
                 _mainOperatorUI = new MainOperatorUI();
                 _mainOperatorUI.HandleDestroyed += (object send, EventArgs e2) => { _mainOperatorUI = null; };
+                _mainOperatorUI.MdiParent = this;
                 _mainOperatorUI.Show();
             }
             else
@@ -65,6 +56,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
                 _recipeSelectionPage = new RecipeSelectionPage();
                 _recipeSelectionPage.HandleDestroyed += (object send, EventArgs e2) => { _recipeSelectionPage = null; };
                 _recipeSelectionPage.Show();
+                _recipeSelectionPage.MdiParent = this;
             }
             else
             {
@@ -72,13 +64,14 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
             }
         }
 
-        private void haberlesmeAyarlariToolStripMenuItem_Click(object sender, EventArgs e)
+        private void haberlesmeAyarlariToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             if (_settingsPage == null)
             {
                 _settingsPage = new ComSettingsPage();
                 _settingsPage.HandleDestroyed += (object send, EventArgs e2) => { _settingsPage = null; };
                 _settingsPage.Show();
+                _settingsPage.MdiParent = this;
             }
             else
             {
@@ -86,7 +79,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
             }
         }
 
-        private void programiKapatToolStripMenuItem_Click(object sender, EventArgs e)
+        private void programiKapatToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             if (_mainOperatorUI == null)
             {
