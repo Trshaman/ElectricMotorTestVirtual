@@ -16,6 +16,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
         public RecipeSelectionPage()
         {
             InitializeComponent();
+            TestList.Items.AddRange(Program.TestList.ToArray());
         }
 
         private void AddRecipe_Click(object sender, EventArgs e)
@@ -32,5 +33,6 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
                 _testRecipeSettings.Focus();
             }
         }
+
     }
 }

@@ -19,6 +19,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
         public TestRecipeSettings()
         {
             InitializeComponent();
+            _testList = Program.TestList;
             //ToDo:Program yüklenirken testlist yüklenicek burayada testList olarak alınacak.
         }
 

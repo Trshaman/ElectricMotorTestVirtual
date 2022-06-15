@@ -45,7 +45,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Recipe
             return null;
         }
 
-        public static List<TestSettings> LoadTestsAsXML(string fileName)
+        public static List<TestSettings> LoadTestsFromXML(string fileName)
         {
             if (File.Exists(fileName))
             {
@@ -93,6 +93,11 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Recipe
                 MessageBox.Show("Herhangi bir test aktif değil!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+        }
+
+        public override string ToString()
+        {
+            return Name;
         }
     }
 }

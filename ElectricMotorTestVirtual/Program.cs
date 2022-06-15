@@ -1,4 +1,6 @@
 ﻿using ElectricMotorTestVirtual.Forms.WinForm;
+using ElectricMotorTestVirtual.OOP_Approach.Recipe;
+using GlobalFunctions;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -25,6 +27,8 @@ namespace ElectricMotorTestVirtual
         internal static string TestsFile;
         internal static List<Log> StartUpLogs;
         internal static string UserSettingsFile;
+        internal static string ProgramIniFile;
+        internal static List<TestSettings> TestList;
 
         /// <summary>
         /// The main entry point for the application.
@@ -47,11 +51,12 @@ namespace ElectricMotorTestVirtual
 
             //ToDo: settins ve kayıtlar kontrol edilecek.
             //log formuna eklenicek.
+            DoStartUp();
             Application.Run(new MainScreen1());
 
         }
 
-        private static bool DoStartUp()
+        private static void DoStartUp()
         {
             StartUpLogs = new List<Log>();
             SettingDir = Directory.GetCurrentDirectory() + "\\Settings\\";
@@ -74,26 +79,29 @@ namespace ElectricMotorTestVirtual
                 MessageBox.Show("\\Settings klasörü bulunamadı. Yeniden oluşturulacak, tüm test,istasyon,kullanıcı bilgileri tanımlanmalıdır. ", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 StartUpLogs.Add(new Log(DateTime.Now, LogTypes.System, 5, -1, -1, "\\Settings klasörü bulunamadı. Yeniden oluşturulacak, tüm test,istasyon,kullanıcı bilgileri tanımlanmalıdır. ", System.Drawing.SystemIcons.Error));
                 Directory.CreateDirectory(SettingDir);
+                TestList = TestSettings.LoadTestsFromXML(TestSettingFile);
+
+                if (TestList == null)
+                    TestList = new List<TestSettings>();
+
             }
-            ReadProgramInitSetting(ProgramIniFile, iniFileXmlHeader);
 
-            if (!InitDataConnection(ProgramIniFile, iniFileXmlHeader))
-                return false;
+            //ToDo:init ayarları yapılabilir.
 
-            if (!CheckCreateSystemDatabaseAndTables())
-                return false;
+            //if (!CheckCreateSystemDatabaseAndTables())
+            //   return false;
 
-            Logger.ConnectionString = Program.ConStringDatabase;
-            User.LoadUserListFromFile(UserSettingsFile);
-            if (!System.Diagnostics.Debugger.IsAttached)
-            {
-                frmLogIn frmue = new frmLogIn();
-                frmue.ShowDialog();
-                if (CancelStartUp)
-                    return CancelStartUp;
-            }
-            else
-                User.ActiveUser = new User("Admin", UserLevels.Admin, "emtest4001");
+            //Logger.ConnectionString = Program.ConStringDatabase;
+            //User.LoadUserListFromFile(UserSettingsFile);
+            //if (!System.Diagnostics.Debugger.IsAttached)
+            //{
+            //    frmLogIn frmue = new frmLogIn();
+            //    frmue.ShowDialog();
+            //    if (CancelStartUp)
+            //        return CancelStartUp;
+            //}
+            //else
+            //    User.ActiveUser = new User("Admin", UserLevels.Admin, "emtest4001");
 
         }
 }
