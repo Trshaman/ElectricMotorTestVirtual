@@ -21,6 +21,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
             InitializeComponent();
             _testList = Program.TestList;
             //ToDo:Program yüklenirken testlist yüklenicek burayada testList olarak alınacak.
+            _CurrentTestSettings = new TestSettings();
         }
 
         private void hvTestUserInterface1_Load(object sender, EventArgs e)

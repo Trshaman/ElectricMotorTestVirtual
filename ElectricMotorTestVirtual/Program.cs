@@ -104,4 +104,5 @@ namespace ElectricMotorTestVirtual
             //    User.ActiveUser = new User("Admin", UserLevels.Admin, "emtest4001");
 
         }
+    }
 }
