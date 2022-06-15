@@ -10,7 +10,12 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 {
     public class EMKTest : TestCase
     {
-        public double PeakToPeak { get; set; }
+
+
+        public double PeakToPeaxMax { get; set; }
+        public double PeakToPeaxMin { get; set; }
+        public double RmsMax { get; set; }
+        public double RmsMin { get; set; }
         public override void ExecuteTest()
         {
             throw new NotImplementedException();

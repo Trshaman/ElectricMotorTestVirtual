@@ -9,6 +9,12 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 {
     public class HVTest : TestCase
     {
+
+        public double HvTesVoltage { get; set; }
+        public double LeakageCurrentMax { get; set; }
+        public double LeakageCurrentMin { get; set; }
+        public double IRResistanceMax { get; set; }
+        public double IRResistanceMin { get; set; }
         public override void ExecuteTest()
         {
             throw new NotImplementedException();

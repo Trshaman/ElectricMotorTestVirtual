@@ -120,7 +120,6 @@
     <Compile Include="OOP Approach\TestCases\EMKTest.cs" />
     <Compile Include="OOP Approach\TestCases\HVTest.cs" />
     <Compile Include="OOP Approach\TestCases\LCRTest.cs" />
-    <Compile Include="OOP Approach\TestCases\LoadPerformanceTest.cs" />
     <Compile Include="OOP Approach\TestCases\PerformanceTest.cs" />
     <Compile Include="OOP Approach\TestRunner\TestRunnerClass.cs" />
     <Compile Include="OOP Approach\Test\ITestOperation.cs" />
