@@ -28,55 +28,121 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TextBox Point1Load;
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.LoadTorqueNm_Point2 = new UserInterface.NumericTextbox();
+            this.LoadTorqueNm_Point1 = new UserInterface.NumericTextbox();
+            this.LoadPerformRpm_Min = new UserInterface.NumericTextbox();
+            this.LoadPerformRpm_Max = new UserInterface.NumericTextbox();
+            this.UnloadPerformRpm_Max = new UserInterface.NumericTextbox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.Point2Load = new System.Windows.Forms.TextBox();
-            this.loadPerform_Min = new System.Windows.Forms.TextBox();
-            this.loadPerform_Max = new System.Windows.Forms.TextBox();
-            this.UnloadPerform_Min = new System.Windows.Forms.TextBox();
-            this.UnloadPerform_Max = new System.Windows.Forms.TextBox();
             this.PerformTestActive = new System.Windows.Forms.CheckBox();
-            Point1Load = new System.Windows.Forms.TextBox();
+            this.UnloadPerformRpm_Min = new UserInterface.NumericTextbox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Point1Load
-            // 
-            Point1Load.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            Point1Load.Location = new System.Drawing.Point(94, 277);
-            Point1Load.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            Point1Load.Name = "Point1Load";
-            Point1Load.Size = new System.Drawing.Size(121, 24);
-            Point1Load.TabIndex = 0;
-            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.LoadTorqueNm_Point2);
+            this.groupBox1.Controls.Add(this.LoadTorqueNm_Point1);
+            this.groupBox1.Controls.Add(this.LoadPerformRpm_Min);
+            this.groupBox1.Controls.Add(this.LoadPerformRpm_Max);
+            this.groupBox1.Controls.Add(this.UnloadPerformRpm_Min);
+            this.groupBox1.Controls.Add(this.UnloadPerformRpm_Max);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.Point2Load);
-            this.groupBox1.Controls.Add(Point1Load);
-            this.groupBox1.Controls.Add(this.loadPerform_Min);
-            this.groupBox1.Controls.Add(this.loadPerform_Max);
-            this.groupBox1.Controls.Add(this.UnloadPerform_Min);
-            this.groupBox1.Controls.Add(this.UnloadPerform_Max);
             this.groupBox1.Location = new System.Drawing.Point(21, 76);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(536, 337);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Test Limit Parametreleri";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // LoadTorqueNm_Point2
+            // 
+            this.LoadTorqueNm_Point2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.LoadTorqueNm_Point2.InputType = UserInterface.NumericTextbox.InputTypes.Double;
+            this.LoadTorqueNm_Point2.Location = new System.Drawing.Point(313, 278);
+            this.LoadTorqueNm_Point2.MaxValue = 0D;
+            this.LoadTorqueNm_Point2.MinValue = 0D;
+            this.LoadTorqueNm_Point2.Name = "LoadTorqueNm_Point2";
+            this.LoadTorqueNm_Point2.NumberDecimalSeparator = '\0';
+            this.LoadTorqueNm_Point2.Size = new System.Drawing.Size(122, 24);
+            this.LoadTorqueNm_Point2.TabIndex = 127;
+            this.LoadTorqueNm_Point2.Text = "0";
+            this.LoadTorqueNm_Point2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.LoadTorqueNm_Point2.Value = 0D;
+            // 
+            // LoadTorqueNm_Point1
+            // 
+            this.LoadTorqueNm_Point1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.LoadTorqueNm_Point1.InputType = UserInterface.NumericTextbox.InputTypes.Double;
+            this.LoadTorqueNm_Point1.Location = new System.Drawing.Point(94, 278);
+            this.LoadTorqueNm_Point1.MaxValue = 100D;
+            this.LoadTorqueNm_Point1.MinValue = 0D;
+            this.LoadTorqueNm_Point1.Name = "LoadTorqueNm_Point1";
+            this.LoadTorqueNm_Point1.NumberDecimalSeparator = '\0';
+            this.LoadTorqueNm_Point1.Size = new System.Drawing.Size(122, 24);
+            this.LoadTorqueNm_Point1.TabIndex = 127;
+            this.LoadTorqueNm_Point1.Text = "0";
+            this.LoadTorqueNm_Point1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.LoadTorqueNm_Point1.Value = 0D;
+            // 
+            // LoadPerformRpm_Min
+            // 
+            this.LoadPerformRpm_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.LoadPerformRpm_Min.InputType = UserInterface.NumericTextbox.InputTypes.Integer;
+            this.LoadPerformRpm_Min.Location = new System.Drawing.Point(313, 190);
+            this.LoadPerformRpm_Min.MaxValue = 0D;
+            this.LoadPerformRpm_Min.MinValue = 0D;
+            this.LoadPerformRpm_Min.Name = "LoadPerformRpm_Min";
+            this.LoadPerformRpm_Min.NumberDecimalSeparator = '\0';
+            this.LoadPerformRpm_Min.Size = new System.Drawing.Size(122, 24);
+            this.LoadPerformRpm_Min.TabIndex = 127;
+            this.LoadPerformRpm_Min.Text = "0";
+            this.LoadPerformRpm_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.LoadPerformRpm_Min.Value = 0D;
+            // 
+            // LoadPerformRpm_Max
+            // 
+            this.LoadPerformRpm_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.LoadPerformRpm_Max.InputType = UserInterface.NumericTextbox.InputTypes.Integer;
+            this.LoadPerformRpm_Max.Location = new System.Drawing.Point(94, 190);
+            this.LoadPerformRpm_Max.MaxValue = 100D;
+            this.LoadPerformRpm_Max.MinValue = 0D;
+            this.LoadPerformRpm_Max.Name = "LoadPerformRpm_Max";
+            this.LoadPerformRpm_Max.NumberDecimalSeparator = '\0';
+            this.LoadPerformRpm_Max.Size = new System.Drawing.Size(122, 24);
+            this.LoadPerformRpm_Max.TabIndex = 127;
+            this.LoadPerformRpm_Max.Text = "0";
+            this.LoadPerformRpm_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.LoadPerformRpm_Max.Value = 0D;
+            // 
+            // UnloadPerformRpm_Max
+            // 
+            this.UnloadPerformRpm_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.UnloadPerformRpm_Max.InputType = UserInterface.NumericTextbox.InputTypes.Integer;
+            this.UnloadPerformRpm_Max.Location = new System.Drawing.Point(94, 102);
+            this.UnloadPerformRpm_Max.MaxValue = 100D;
+            this.UnloadPerformRpm_Max.MinValue = 0D;
+            this.UnloadPerformRpm_Max.Name = "UnloadPerformRpm_Max";
+            this.UnloadPerformRpm_Max.NumberDecimalSeparator = '\0';
+            this.UnloadPerformRpm_Max.Size = new System.Drawing.Size(122, 24);
+            this.UnloadPerformRpm_Max.TabIndex = 127;
+            this.UnloadPerformRpm_Max.Text = "0";
+            this.UnloadPerformRpm_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.UnloadPerformRpm_Max.Value = 0D;
             // 
             // label6
             // 
@@ -94,7 +160,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(310, 155);
+            this.label5.Location = new System.Drawing.Point(91, 163);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(169, 15);
@@ -130,7 +196,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(90, 155);
+            this.label4.Location = new System.Drawing.Point(310, 163);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(166, 15);
@@ -150,62 +216,32 @@
             this.label3.Text = "Boşta Performans Max (Rpm)";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Point2Load
-            // 
-            this.Point2Load.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Point2Load.Location = new System.Drawing.Point(314, 277);
-            this.Point2Load.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Point2Load.Name = "Point2Load";
-            this.Point2Load.Size = new System.Drawing.Size(121, 24);
-            this.Point2Load.TabIndex = 0;
-            // 
-            // loadPerform_Min
-            // 
-            this.loadPerform_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loadPerform_Min.Location = new System.Drawing.Point(314, 190);
-            this.loadPerform_Min.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.loadPerform_Min.Name = "loadPerform_Min";
-            this.loadPerform_Min.Size = new System.Drawing.Size(121, 24);
-            this.loadPerform_Min.TabIndex = 0;
-            // 
-            // loadPerform_Max
-            // 
-            this.loadPerform_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loadPerform_Max.Location = new System.Drawing.Point(94, 190);
-            this.loadPerform_Max.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.loadPerform_Max.Name = "loadPerform_Max";
-            this.loadPerform_Max.Size = new System.Drawing.Size(121, 24);
-            this.loadPerform_Max.TabIndex = 0;
-            // 
-            // UnloadPerform_Min
-            // 
-            this.UnloadPerform_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UnloadPerform_Min.Location = new System.Drawing.Point(314, 102);
-            this.UnloadPerform_Min.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.UnloadPerform_Min.Name = "UnloadPerform_Min";
-            this.UnloadPerform_Min.Size = new System.Drawing.Size(121, 24);
-            this.UnloadPerform_Min.TabIndex = 0;
-            // 
-            // UnloadPerform_Max
-            // 
-            this.UnloadPerform_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UnloadPerform_Max.Location = new System.Drawing.Point(94, 102);
-            this.UnloadPerform_Max.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.UnloadPerform_Max.Name = "UnloadPerform_Max";
-            this.UnloadPerform_Max.Size = new System.Drawing.Size(121, 24);
-            this.UnloadPerform_Max.TabIndex = 0;
-            // 
             // PerformTestActive
             // 
             this.PerformTestActive.AutoSize = true;
             this.PerformTestActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PerformTestActive.Location = new System.Drawing.Point(56, 30);
-            this.PerformTestActive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PerformTestActive.Margin = new System.Windows.Forms.Padding(4);
             this.PerformTestActive.Name = "PerformTestActive";
             this.PerformTestActive.Size = new System.Drawing.Size(170, 22);
             this.PerformTestActive.TabIndex = 5;
             this.PerformTestActive.Text = "Performans Test Aktif";
             this.PerformTestActive.UseVisualStyleBackColor = true;
+            // 
+            // UnloadPerformRpm_Min
+            // 
+            this.UnloadPerformRpm_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.UnloadPerformRpm_Min.InputType = UserInterface.NumericTextbox.InputTypes.Integer;
+            this.UnloadPerformRpm_Min.Location = new System.Drawing.Point(313, 102);
+            this.UnloadPerformRpm_Min.MaxValue = 100D;
+            this.UnloadPerformRpm_Min.MinValue = 0D;
+            this.UnloadPerformRpm_Min.Name = "UnloadPerformRpm_Min";
+            this.UnloadPerformRpm_Min.NumberDecimalSeparator = '\0';
+            this.UnloadPerformRpm_Min.Size = new System.Drawing.Size(122, 24);
+            this.UnloadPerformRpm_Min.TabIndex = 127;
+            this.UnloadPerformRpm_Min.Text = "0";
+            this.UnloadPerformRpm_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.UnloadPerformRpm_Min.Value = 0D;
             // 
             // PerformansTest
             // 
@@ -214,7 +250,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.PerformTestActive);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PerformansTest";
             this.Size = new System.Drawing.Size(590, 447);
             this.groupBox1.ResumeLayout(false);
@@ -230,13 +266,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox loadPerform_Min;
-        private System.Windows.Forms.TextBox loadPerform_Max;
-        private System.Windows.Forms.TextBox UnloadPerform_Min;
-        private System.Windows.Forms.TextBox UnloadPerform_Max;
         private System.Windows.Forms.CheckBox PerformTestActive;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox Point2Load;
+        private UserInterface.NumericTextbox LoadPerformRpm_Max;
+        private UserInterface.NumericTextbox UnloadPerformRpm_Max;
+        private UserInterface.NumericTextbox LoadTorqueNm_Point2;
+        private UserInterface.NumericTextbox LoadTorqueNm_Point1;
+        private UserInterface.NumericTextbox LoadPerformRpm_Min;
+        private UserInterface.NumericTextbox UnloadPerformRpm_MinUnloadPerformRpm_Min;
+        private UserInterface.NumericTextbox UnloadPerformRpm_Min;
     }
 }

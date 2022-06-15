@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ElectricMotorTestVirtual.OOP_Approach.TestCases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,6 +36,25 @@ namespace ElectricMotorTestVirtual.Forms
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public void LoadStepToUIHV(HVTest test)
+        {
+            HvTestVoltageKv.Value = test.HvTesVoltage;
+            LeakagemA_Max.Value = test.LeakageCurrentMax;
+            LeakagemA_Min.Value = test.LeakageCurrentMin;
+            IRResistanceOhm_Max.Value = test.IRResistanceMax;
+            IRResistanceOhm_Min.Value = test.IRResistanceMin;
+          
+        }
+
+        public void LoadUItoStepHV(HVTest test)
+        {
+            test.HvTesVoltage = HvTestVoltageKv.Value;
+            test.LeakageCurrentMax = LeakagemA_Max.Value;
+            test.LeakageCurrentMin = LeakagemA_Min.Value;
+            test.IRResistanceMax = IRResistanceOhm_Max.Value;
+            test.IRResistanceMin = IRResistanceOhm_Min.Value;
         }
     }
 }

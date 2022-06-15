@@ -33,11 +33,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.RmsMax = new System.Windows.Forms.TextBox();
-            this.PeaktoPeakMin = new System.Windows.Forms.TextBox();
-            this.PeaktoPeakMax = new System.Windows.Forms.TextBox();
-            this.RmsMin = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.PeaktoPeakV_Max = new UserInterface.NumericTextbox();
+            this.PeaktoPeakV_Min = new UserInterface.NumericTextbox();
+            this.RmsV_Max = new UserInterface.NumericTextbox();
+            this.RmsV_Min = new UserInterface.NumericTextbox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,14 +55,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.RmsV_Min);
+            this.groupBox1.Controls.Add(this.PeaktoPeakV_Min);
+            this.groupBox1.Controls.Add(this.RmsV_Max);
+            this.groupBox1.Controls.Add(this.PeaktoPeakV_Max);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.RmsMin);
-            this.groupBox1.Controls.Add(this.RmsMax);
-            this.groupBox1.Controls.Add(this.PeaktoPeakMin);
-            this.groupBox1.Controls.Add(this.PeaktoPeakMax);
             this.groupBox1.Location = new System.Drawing.Point(42, 51);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(405, 256);
@@ -104,38 +104,6 @@
             this.label3.Text = "Peak to Peak Max (V)";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // RmsMax
-            // 
-            this.RmsMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RmsMax.Location = new System.Drawing.Point(66, 183);
-            this.RmsMax.Name = "RmsMax";
-            this.RmsMax.Size = new System.Drawing.Size(101, 24);
-            this.RmsMax.TabIndex = 0;
-            // 
-            // PeaktoPeakMin
-            // 
-            this.PeaktoPeakMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PeaktoPeakMin.Location = new System.Drawing.Point(248, 77);
-            this.PeaktoPeakMin.Name = "PeaktoPeakMin";
-            this.PeaktoPeakMin.Size = new System.Drawing.Size(101, 24);
-            this.PeaktoPeakMin.TabIndex = 0;
-            // 
-            // PeaktoPeakMax
-            // 
-            this.PeaktoPeakMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PeaktoPeakMax.Location = new System.Drawing.Point(66, 77);
-            this.PeaktoPeakMax.Name = "PeaktoPeakMax";
-            this.PeaktoPeakMax.Size = new System.Drawing.Size(101, 24);
-            this.PeaktoPeakMax.TabIndex = 0;
-            // 
-            // RmsMin
-            // 
-            this.RmsMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RmsMin.Location = new System.Drawing.Point(248, 183);
-            this.RmsMin.Name = "RmsMin";
-            this.RmsMin.Size = new System.Drawing.Size(101, 24);
-            this.RmsMin.TabIndex = 0;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -146,6 +114,66 @@
             this.label5.TabIndex = 125;
             this.label5.Text = "Rms Min (V)";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // PeaktoPeakV_Max
+            // 
+            this.PeaktoPeakV_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PeaktoPeakV_Max.InputType = UserInterface.NumericTextbox.InputTypes.Double;
+            this.PeaktoPeakV_Max.Location = new System.Drawing.Point(66, 81);
+            this.PeaktoPeakV_Max.MaxValue = 0D;
+            this.PeaktoPeakV_Max.MinValue = 0D;
+            this.PeaktoPeakV_Max.Name = "PeaktoPeakV_Max";
+            this.PeaktoPeakV_Max.NumberDecimalSeparator = '.';
+            this.PeaktoPeakV_Max.Size = new System.Drawing.Size(94, 24);
+            this.PeaktoPeakV_Max.TabIndex = 126;
+            this.PeaktoPeakV_Max.Text = "0.00";
+            this.PeaktoPeakV_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.PeaktoPeakV_Max.Value = 0D;
+            // 
+            // PeaktoPeakV_Min
+            // 
+            this.PeaktoPeakV_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PeaktoPeakV_Min.InputType = UserInterface.NumericTextbox.InputTypes.Double;
+            this.PeaktoPeakV_Min.Location = new System.Drawing.Point(248, 81);
+            this.PeaktoPeakV_Min.MaxValue = 0D;
+            this.PeaktoPeakV_Min.MinValue = 0D;
+            this.PeaktoPeakV_Min.Name = "PeaktoPeakV_Min";
+            this.PeaktoPeakV_Min.NumberDecimalSeparator = '.';
+            this.PeaktoPeakV_Min.Size = new System.Drawing.Size(94, 24);
+            this.PeaktoPeakV_Min.TabIndex = 126;
+            this.PeaktoPeakV_Min.Text = "0.00";
+            this.PeaktoPeakV_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.PeaktoPeakV_Min.Value = 0D;
+            // 
+            // RmsV_Max
+            // 
+            this.RmsV_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RmsV_Max.InputType = UserInterface.NumericTextbox.InputTypes.Double;
+            this.RmsV_Max.Location = new System.Drawing.Point(66, 183);
+            this.RmsV_Max.MaxValue = 0D;
+            this.RmsV_Max.MinValue = 0D;
+            this.RmsV_Max.Name = "RmsV_Max";
+            this.RmsV_Max.NumberDecimalSeparator = '.';
+            this.RmsV_Max.Size = new System.Drawing.Size(94, 24);
+            this.RmsV_Max.TabIndex = 126;
+            this.RmsV_Max.Text = "0.00";
+            this.RmsV_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.RmsV_Max.Value = 0D;
+            // 
+            // RmsV_Min
+            // 
+            this.RmsV_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RmsV_Min.InputType = UserInterface.NumericTextbox.InputTypes.Double;
+            this.RmsV_Min.Location = new System.Drawing.Point(248, 183);
+            this.RmsV_Min.MaxValue = 0D;
+            this.RmsV_Min.MinValue = 0D;
+            this.RmsV_Min.Name = "RmsV_Min";
+            this.RmsV_Min.NumberDecimalSeparator = '.';
+            this.RmsV_Min.Size = new System.Drawing.Size(94, 24);
+            this.RmsV_Min.TabIndex = 127;
+            this.RmsV_Min.Text = "0.00";
+            this.RmsV_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.RmsV_Min.Value = 0D;
             // 
             // EMK_Test
             // 
@@ -165,13 +193,13 @@
         #endregion
         private System.Windows.Forms.CheckBox EmkTestActive;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox PeaktoPeakMax;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox PeaktoPeakMin;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox RmsMax;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox RmsMin;
+        private UserInterface.NumericTextbox RmsV_Min;
+        private UserInterface.NumericTextbox PeaktoPeakV_Min;
+        private UserInterface.NumericTextbox RmsV_Max;
+        private UserInterface.NumericTextbox PeaktoPeakV_Max;
     }
 }

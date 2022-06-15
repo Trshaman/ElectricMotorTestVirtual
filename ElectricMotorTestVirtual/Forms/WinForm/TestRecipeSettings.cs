@@ -68,4 +68,9 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
                 NmVibratorCycle.Value = 0;
             }
         }
-}
+
+        private void lcrTest2_Load(object sender, EventArgs e)
+        {
+
+        }
+    }

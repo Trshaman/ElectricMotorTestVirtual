@@ -98,10 +98,11 @@
             // 
             // lcrTest2
             // 
-            this.lcrTest2.Location = new System.Drawing.Point(-29, -32);
+            this.lcrTest2.Location = new System.Drawing.Point(-29, -13);
             this.lcrTest2.Name = "lcrTest2";
-            this.lcrTest2.Size = new System.Drawing.Size(688, 481);
+            this.lcrTest2.Size = new System.Drawing.Size(688, 472);
             this.lcrTest2.TabIndex = 0;
+            this.lcrTest2.Load += new System.EventHandler(this.lcrTest2_Load);
             // 
             // tabPage3
             // 
@@ -197,7 +198,7 @@
             // 
             // Save
             // 
-            this.Save.Location = new System.Drawing.Point(194, 647);
+            this.Save.Location = new System.Drawing.Point(169, 653);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(157, 45);
             this.Save.TabIndex = 2;
@@ -207,7 +208,7 @@
             // 
             // Exit
             // 
-            this.Exit.Location = new System.Drawing.Point(561, 647);
+            this.Exit.Location = new System.Drawing.Point(563, 653);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(158, 45);
             this.Exit.TabIndex = 2;

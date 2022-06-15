@@ -34,27 +34,27 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.IRResistance_Min = new System.Windows.Forms.TextBox();
-            this.IRResistance_Max = new System.Windows.Forms.TextBox();
-            this.LeakagemA_Min = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.LeakagemA_Max = new System.Windows.Forms.TextBox();
             this.HVTestActive = new System.Windows.Forms.CheckBox();
+            this.HvTestVoltageKv = new UserInterface.NumericTextbox();
+            this.LeakagemA_Max = new UserInterface.NumericTextbox();
+            this.LeakagemA_Min = new UserInterface.NumericTextbox();
+            this.IRResistanceOhm_Max = new UserInterface.NumericTextbox();
+            this.IRResistanceOhm_Min = new UserInterface.NumericTextbox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.IRResistanceOhm_Min);
+            this.groupBox1.Controls.Add(this.IRResistanceOhm_Max);
+            this.groupBox1.Controls.Add(this.LeakagemA_Min);
+            this.groupBox1.Controls.Add(this.LeakagemA_Max);
+            this.groupBox1.Controls.Add(this.HvTestVoltageKv);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.IRResistance_Min);
-            this.groupBox1.Controls.Add(this.IRResistance_Max);
-            this.groupBox1.Controls.Add(this.LeakagemA_Min);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.LeakagemA_Max);
             this.groupBox1.Location = new System.Drawing.Point(44, 55);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(464, 275);
@@ -119,48 +119,6 @@
             this.label3.Text = "Kaçak Akım Max (mA)";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // IRResistance_Min
-            // 
-            this.IRResistance_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IRResistance_Min.Location = new System.Drawing.Point(306, 174);
-            this.IRResistance_Min.Name = "IRResistance_Min";
-            this.IRResistance_Min.Size = new System.Drawing.Size(101, 24);
-            this.IRResistance_Min.TabIndex = 0;
-            this.IRResistance_Min.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // IRResistance_Max
-            // 
-            this.IRResistance_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IRResistance_Max.Location = new System.Drawing.Point(66, 174);
-            this.IRResistance_Max.Name = "IRResistance_Max";
-            this.IRResistance_Max.Size = new System.Drawing.Size(101, 24);
-            this.IRResistance_Max.TabIndex = 0;
-            this.IRResistance_Max.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // LeakagemA_Min
-            // 
-            this.LeakagemA_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LeakagemA_Min.Location = new System.Drawing.Point(306, 115);
-            this.LeakagemA_Min.Name = "LeakagemA_Min";
-            this.LeakagemA_Min.Size = new System.Drawing.Size(101, 24);
-            this.LeakagemA_Min.TabIndex = 0;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(66, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(101, 24);
-            this.textBox1.TabIndex = 0;
-            // 
-            // LeakagemA_Max
-            // 
-            this.LeakagemA_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LeakagemA_Max.Location = new System.Drawing.Point(66, 115);
-            this.LeakagemA_Max.Name = "LeakagemA_Max";
-            this.LeakagemA_Max.Size = new System.Drawing.Size(101, 24);
-            this.LeakagemA_Max.TabIndex = 0;
-            // 
             // HVTestActive
             // 
             this.HVTestActive.AutoSize = true;
@@ -171,6 +129,82 @@
             this.HVTestActive.TabIndex = 3;
             this.HVTestActive.Text = "HV Test Aktif";
             this.HVTestActive.UseVisualStyleBackColor = true;
+            // 
+            // HvTestVoltageKv
+            // 
+            this.HvTestVoltageKv.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HvTestVoltageKv.InputType = UserInterface.NumericTextbox.InputTypes.Double;
+            this.HvTestVoltageKv.Location = new System.Drawing.Point(66, 51);
+            this.HvTestVoltageKv.MaxValue = 10D;
+            this.HvTestVoltageKv.MinValue = 0D;
+            this.HvTestVoltageKv.Name = "HvTestVoltageKv";
+            this.HvTestVoltageKv.NumberDecimalSeparator = '\0';
+            this.HvTestVoltageKv.Size = new System.Drawing.Size(94, 24);
+            this.HvTestVoltageKv.TabIndex = 127;
+            this.HvTestVoltageKv.Text = "0.00";
+            this.HvTestVoltageKv.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.HvTestVoltageKv.Value = 0D;
+            // 
+            // LeakagemA_Max
+            // 
+            this.LeakagemA_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LeakagemA_Max.InputType = UserInterface.NumericTextbox.InputTypes.Double;
+            this.LeakagemA_Max.Location = new System.Drawing.Point(66, 115);
+            this.LeakagemA_Max.MaxValue = 100D;
+            this.LeakagemA_Max.MinValue = 0D;
+            this.LeakagemA_Max.Name = "LeakagemA_Max";
+            this.LeakagemA_Max.NumberDecimalSeparator = '\0';
+            this.LeakagemA_Max.Size = new System.Drawing.Size(94, 24);
+            this.LeakagemA_Max.TabIndex = 128;
+            this.LeakagemA_Max.Text = "0.00";
+            this.LeakagemA_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.LeakagemA_Max.Value = 0D;
+            // 
+            // LeakagemA_Min
+            // 
+            this.LeakagemA_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LeakagemA_Min.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LeakagemA_Min.InputType = UserInterface.NumericTextbox.InputTypes.Double;
+            this.LeakagemA_Min.Location = new System.Drawing.Point(306, 115);
+            this.LeakagemA_Min.MaxValue = 100D;
+            this.LeakagemA_Min.MinValue = 0D;
+            this.LeakagemA_Min.Name = "LeakagemA_Min";
+            this.LeakagemA_Min.NumberDecimalSeparator = '\0';
+            this.LeakagemA_Min.Size = new System.Drawing.Size(94, 24);
+            this.LeakagemA_Min.TabIndex = 129;
+            this.LeakagemA_Min.Text = "0.00";
+            this.LeakagemA_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.LeakagemA_Min.Value = 0D;
+            // 
+            // IRResistanceOhm_Max
+            // 
+            this.IRResistanceOhm_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IRResistanceOhm_Max.InputType = UserInterface.NumericTextbox.InputTypes.Double;
+            this.IRResistanceOhm_Max.Location = new System.Drawing.Point(66, 174);
+            this.IRResistanceOhm_Max.MaxValue = 100D;
+            this.IRResistanceOhm_Max.MinValue = 0D;
+            this.IRResistanceOhm_Max.Name = "IRResistanceOhm_Max";
+            this.IRResistanceOhm_Max.NumberDecimalSeparator = '\0';
+            this.IRResistanceOhm_Max.Size = new System.Drawing.Size(94, 24);
+            this.IRResistanceOhm_Max.TabIndex = 130;
+            this.IRResistanceOhm_Max.Text = "0.00";
+            this.IRResistanceOhm_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.IRResistanceOhm_Max.Value = 0D;
+            // 
+            // IRResistanceOhm_Min
+            // 
+            this.IRResistanceOhm_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IRResistanceOhm_Min.InputType = UserInterface.NumericTextbox.InputTypes.Double;
+            this.IRResistanceOhm_Min.Location = new System.Drawing.Point(306, 174);
+            this.IRResistanceOhm_Min.MaxValue = 100D;
+            this.IRResistanceOhm_Min.MinValue = 0D;
+            this.IRResistanceOhm_Min.Name = "IRResistanceOhm_Min";
+            this.IRResistanceOhm_Min.NumberDecimalSeparator = '\0';
+            this.IRResistanceOhm_Min.Size = new System.Drawing.Size(94, 24);
+            this.IRResistanceOhm_Min.TabIndex = 131;
+            this.IRResistanceOhm_Min.Text = "0.00";
+            this.IRResistanceOhm_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.IRResistanceOhm_Min.Value = 0D;
             // 
             // HvTestUserInterface
             // 
@@ -191,14 +225,14 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox LeakagemA_Min;
-        private System.Windows.Forms.TextBox LeakagemA_Max;
         private System.Windows.Forms.CheckBox HVTestActive;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox IRResistance_Min;
-        private System.Windows.Forms.TextBox IRResistance_Max;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private UserInterface.NumericTextbox IRResistanceOhm_Min;
+        private UserInterface.NumericTextbox IRResistanceOhm_Max;
+        private UserInterface.NumericTextbox LeakagemA_Min;
+        private UserInterface.NumericTextbox LeakagemA_Max;
+        private UserInterface.NumericTextbox HvTestVoltageKv;
     }
 }

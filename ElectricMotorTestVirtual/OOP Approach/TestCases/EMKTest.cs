@@ -10,8 +10,6 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 {
     public class EMKTest : TestCase
     {
-
-
         public double PeakToPeaxMax { get; set; }
         public double PeakToPeaxMin { get; set; }
         public double RmsMax { get; set; }
