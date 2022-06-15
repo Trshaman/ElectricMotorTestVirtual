@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace ElectricMotorTestVirtual.Forms
 {
-    public partial class PerformansTest : UserControl
+    public partial class PerformansTestUI : UserControl
     {
-        public PerformansTest()
+        public PerformansTestUI()
         {
             InitializeComponent();
         }
@@ -28,7 +28,7 @@ namespace ElectricMotorTestVirtual.Forms
 
         }
 
-        public void LoadStepToUIPerformance(PerformanceTest test)
+        public void LoadTestToUIPerformance(PerformanceTest test)
         {
             UnloadPerformRpm_Max.Value = test.UnloadPerformanceRpmMax;
             UnloadPerformRpm_Min.Value = test.UnloadPerformanceRpmMin;
@@ -36,19 +36,19 @@ namespace ElectricMotorTestVirtual.Forms
             LoadPerformRpm_Min.Value = test.LoadPerformanceRpmMin;
             LoadTorqueNm_Point1.Value = test.LoadTorque1Nm;
             LoadTorqueNm_Point2.Value = test.LoadTorque2Nm;
-
-
+            PerformTestActive.Checked = test.IsTestActive;
 
         }
 
-        public void LoadUItoStepPerformance(PerformanceTest test)
+        public void LoadUItoTestPerformance(PerformanceTest test)
         {
-            test.UnloadPerformanceRpmMax = UnloadPerformRpm_Max.Value;
-            test.UnloadPerformanceRpmMax = UnloadPerformRpm_Min.Value;
-            test.LoadPerformanceRpmMax = LoadPerformRpm_Max.Value;
-            test.LoadPerformanceRpmMin = LoadPerformRpm_Min.Value;
+            test.UnloadPerformanceRpmMax = (int)UnloadPerformRpm_Max.Value;
+            test.UnloadPerformanceRpmMax = (int)UnloadPerformRpm_Min.Value;
+            test.LoadPerformanceRpmMax = (int)LoadPerformRpm_Max.Value;
+            test.LoadPerformanceRpmMin = (int)LoadPerformRpm_Min.Value;
             test.LoadTorque1Nm = LoadTorqueNm_Point1.Value;
             test.LoadTorque2Nm = LoadTorqueNm_Point2.Value;
+            test.IsTestActive = PerformTestActive.Checked; 
         }
     }
 }

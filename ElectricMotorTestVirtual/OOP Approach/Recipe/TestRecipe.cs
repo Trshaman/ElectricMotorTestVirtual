@@ -18,8 +18,6 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Recipe
 
         public PerformanceTest PerformanceTestRecipe { get; set; }
 
-        public LoadPerformanceTest LoadPerformanceTestRecipe { get; set; }
-
         public MotorModel MotorModelRecipe { get; set; }
 
 

@@ -1,6 +1,6 @@
 ﻿namespace ElectricMotorTestVirtual.Forms
 {
-    partial class PerformansTest
+    partial class PerformansTestUI
     {
         /// <summary> 
         /// Required designer variable.

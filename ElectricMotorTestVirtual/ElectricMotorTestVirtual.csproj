@@ -52,29 +52,29 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\EMK Test.cs">
+    <Compile Include="Forms\EMKTestUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\EMK Test.Designer.cs">
-      <DependentUpon>EMK Test.cs</DependentUpon>
+    <Compile Include="Forms\EMKTestUI.Designer.cs">
+      <DependentUpon>EMKTestUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\HvTestUserInterface.cs">
+    <Compile Include="Forms\HvTestUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\HvTestUserInterface.Designer.cs">
-      <DependentUpon>HvTestUserInterface.cs</DependentUpon>
+    <Compile Include="Forms\HvTestUI.Designer.cs">
+      <DependentUpon>HvTestUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\LCRTest.cs">
+    <Compile Include="Forms\LCRTestUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\LCRTest.Designer.cs">
-      <DependentUpon>LCRTest.cs</DependentUpon>
+    <Compile Include="Forms\LCRTestUI.Designer.cs">
+      <DependentUpon>LCRTestUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\PerformansTest.cs">
+    <Compile Include="Forms\PerformansTestUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\PerformansTest.Designer.cs">
-      <DependentUpon>PerformansTest.cs</DependentUpon>
+    <Compile Include="Forms\PerformansTestUI.Designer.cs">
+      <DependentUpon>PerformansTestUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\WinForm\ComSettingsPage.cs">
       <SubType>Form</SubType>
@@ -126,17 +126,17 @@
     <Compile Include="OOP Approach\Test\TestCase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\EMK Test.resx">
-      <DependentUpon>EMK Test.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\EMKTestUI.resx">
+      <DependentUpon>EMKTestUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\HvTestUserInterface.resx">
-      <DependentUpon>HvTestUserInterface.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\HvTestUI.resx">
+      <DependentUpon>HvTestUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LCRTest.resx">
-      <DependentUpon>LCRTest.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\LCRTestUI.resx">
+      <DependentUpon>LCRTestUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\PerformansTest.resx">
-      <DependentUpon>PerformansTest.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\PerformansTestUI.resx">
+      <DependentUpon>PerformansTestUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\WinForm\frmLog.resx">
       <DependentUpon>frmLog.cs</DependentUpon>

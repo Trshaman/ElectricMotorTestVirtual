@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace ElectricMotorTestVirtual.Forms
 {
-    public partial class HvTestUserInterface : UserControl
+    public partial class HvTestUI : UserControl
     {
-        public HvTestUserInterface()
+        public HvTestUI()
         {
             InitializeComponent();
         }
@@ -38,23 +38,25 @@ namespace ElectricMotorTestVirtual.Forms
 
         }
 
-        public void LoadStepToUIHV(HVTest test)
+        public void LoadTestToUIHV(HVTest test)
         {
             HvTestVoltageKv.Value = test.HvTesVoltage;
             LeakagemA_Max.Value = test.LeakageCurrentMax;
             LeakagemA_Min.Value = test.LeakageCurrentMin;
             IRResistanceOhm_Max.Value = test.IRResistanceMax;
             IRResistanceOhm_Min.Value = test.IRResistanceMin;
+            HVTestActive.Checked = test.IsTestActive;
           
         }
 
-        public void LoadUItoStepHV(HVTest test)
+        public void LoadUItoTestHV(HVTest test)
         {
             test.HvTesVoltage = HvTestVoltageKv.Value;
             test.LeakageCurrentMax = LeakagemA_Max.Value;
             test.LeakageCurrentMin = LeakagemA_Min.Value;
             test.IRResistanceMax = IRResistanceOhm_Max.Value;
             test.IRResistanceMin = IRResistanceOhm_Min.Value;
+            test.IsTestActive = HVTestActive.Checked;
         }
     }
 }

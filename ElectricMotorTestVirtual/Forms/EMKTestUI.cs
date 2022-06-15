@@ -33,7 +33,7 @@ namespace ElectricMotorTestVirtual.Forms
 
         }
 
-        public void LoadStepToUIEmk(EMKTest test)
+        public void LoadTestToUIEmk(EMKTest test)
         {
             PeaktoPeakV_Max.Value = test.PeakToPeaxMax;
             PeaktoPeakV_Min.Value = test.PeakToPeaxMin;
@@ -42,7 +42,7 @@ namespace ElectricMotorTestVirtual.Forms
             EmkTestActive.Checked = test.IsTestActive;
         }
 
-        public void LoadUItoStepEmk(EMKTest test)
+        public void LoadUItoTestEmk(EMKTest test)
         {
             test.PeakToPeaxMax = PeaktoPeakV_Max.Value;
             test.PeakToPeaxMin = PeaktoPeakV_Min.Value;

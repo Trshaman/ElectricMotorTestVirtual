@@ -30,18 +30,18 @@
         {
             this.HVTest = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.hvTestUserInterface2 = new ElectricMotorTestVirtual.Forms.HvTestUserInterface();
+            this.hvTestUserInterface2 = new ElectricMotorTestVirtual.Forms.HvTestUI();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lcrTest2 = new ElectricMotorTestVirtual.Forms.LCRTest();
+            this.lcrTest2 = new ElectricMotorTestVirtual.Forms.LCRTestUI();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.performansTest2 = new ElectricMotorTestVirtual.Forms.PerformansTest();
+            this.performansTest2 = new ElectricMotorTestVirtual.Forms.PerformansTestUI();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.emK_Test1 = new ElectricMotorTestVirtual.Forms.EMK_Test();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TestDescription = new System.Windows.Forms.TextBox();
+            this.TestName = new System.Windows.Forms.TextBox();
             this.Save = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
             this.HVTest.SuspendLayout();
@@ -149,8 +149,8 @@
             // 
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.TestDescription);
+            this.groupBox1.Controls.Add(this.TestName);
             this.groupBox1.Location = new System.Drawing.Point(59, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(798, 142);
@@ -180,21 +180,21 @@
             this.label3.Text = "Test İsmi";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox2
+            // TestDescription
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(6, 94);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(756, 26);
-            this.textBox2.TabIndex = 0;
+            this.TestDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TestDescription.Location = new System.Drawing.Point(6, 94);
+            this.TestDescription.Name = "TestDescription";
+            this.TestDescription.Size = new System.Drawing.Size(756, 26);
+            this.TestDescription.TabIndex = 0;
             // 
-            // textBox1
+            // TestName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(6, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 26);
-            this.textBox1.TabIndex = 0;
+            this.TestName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TestName.Location = new System.Drawing.Point(6, 35);
+            this.TestName.Name = "TestName";
+            this.TestName.Size = new System.Drawing.Size(158, 26);
+            this.TestName.TabIndex = 0;
             // 
             // Save
             // 
@@ -244,13 +244,13 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TestDescription;
+        private System.Windows.Forms.TextBox TestName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private HvTestUserInterface hvTestUserInterface2;
-        private LCRTest lcrTest2;
-        private PerformansTest performansTest2;
+        private HvTestUI hvTestUserInterface2;
+        private LCRTestUI lcrTest2;
+        private PerformansTestUI performansTest2;
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.TabPage tabPage4;

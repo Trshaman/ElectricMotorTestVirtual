@@ -1,6 +1,6 @@
 ﻿namespace ElectricMotorTestVirtual.Forms
 {
-    partial class LCRTest
+    partial class LCRTestUI
     {
         /// <summary> 
         /// Required designer variable.

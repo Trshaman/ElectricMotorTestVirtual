@@ -1,6 +1,6 @@
 ﻿namespace ElectricMotorTestVirtual.Forms
 {
-    partial class HvTestUserInterface
+    partial class HvTestUI
     {
         /// <summary> 
         /// Required designer variable.

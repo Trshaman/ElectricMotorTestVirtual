@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml.Serialization;
 
 namespace ElectricMotorTestVirtual.OOP_Approach.Recipe
@@ -16,9 +17,11 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Recipe
 
         public ulong No { get; set; }
 
-        public List<TestRecipe> RecipeSettings { get; set; }
+        public string TestDescription { get; set; }
 
-        public static Exception SaveTestsAsXML(string fileName, List<TestRecipe> testList)
+        public TestRecipe RecipeSettings { get; set; }
+
+        public static Exception SaveTestsAsXML(string fileName, List<TestSettings> testList)
         {
             FileStream fs = null;
             try
@@ -69,6 +72,27 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Recipe
             newTest.No = No;
             newTest.RecipeSettings = this.RecipeSettings;
             return newTest;
+        }
+
+        public bool IsTestSettingsAppropriate()
+        {
+            if (this.RecipeSettings.EmkTestRecipe.IsTestActive || this.RecipeSettings.HVTestRecipe.IsTestActive || this.RecipeSettings.LCRTestRecipe.IsTestActive || this.RecipeSettings.PerformanceTestRecipe.IsTestActive)
+            {
+                if (!string.IsNullOrEmpty(this.Name))
+                {
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Test adı boş bırakılamaz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Herhangi bir test aktif değil!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
         }
     }
 }
