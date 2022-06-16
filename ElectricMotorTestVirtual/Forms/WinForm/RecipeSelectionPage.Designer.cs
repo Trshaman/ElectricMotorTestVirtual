@@ -30,10 +30,10 @@
         {
             this.TestList = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.AdjustRecipe = new System.Windows.Forms.Button();
-            this.AddRecipe = new System.Windows.Forms.Button();
-            this.CopyRecipe = new System.Windows.Forms.Button();
-            this.CloseSettings = new System.Windows.Forms.Button();
+            this.BtnAdjustRecipe = new System.Windows.Forms.Button();
+            this.BtnAddRecipe = new System.Windows.Forms.Button();
+            this.BtnCopyRecipe = new System.Windows.Forms.Button();
+            this.BtnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TestList
@@ -56,53 +56,53 @@
             this.label3.Text = "Kayıtlı Testler:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // AdjustRecipe
+            // BtnAdjustRecipe
             // 
-            this.AdjustRecipe.Location = new System.Drawing.Point(66, 92);
-            this.AdjustRecipe.Name = "AdjustRecipe";
-            this.AdjustRecipe.Size = new System.Drawing.Size(156, 32);
-            this.AdjustRecipe.TabIndex = 127;
-            this.AdjustRecipe.Text = "Düzenle";
-            this.AdjustRecipe.UseVisualStyleBackColor = true;
-            this.AdjustRecipe.Click += new System.EventHandler(this.AdjustRecipe_Click);
+            this.BtnAdjustRecipe.Location = new System.Drawing.Point(66, 92);
+            this.BtnAdjustRecipe.Name = "BtnAdjustRecipe";
+            this.BtnAdjustRecipe.Size = new System.Drawing.Size(156, 32);
+            this.BtnAdjustRecipe.TabIndex = 127;
+            this.BtnAdjustRecipe.Text = "Düzenle";
+            this.BtnAdjustRecipe.UseVisualStyleBackColor = true;
+            this.BtnAdjustRecipe.Click += new System.EventHandler(this.AdjustRecipe_Click);
             // 
-            // AddRecipe
+            // BtnAddRecipe
             // 
-            this.AddRecipe.Location = new System.Drawing.Point(228, 92);
-            this.AddRecipe.Name = "AddRecipe";
-            this.AddRecipe.Size = new System.Drawing.Size(156, 32);
-            this.AddRecipe.TabIndex = 127;
-            this.AddRecipe.Text = "Ekle";
-            this.AddRecipe.UseVisualStyleBackColor = true;
-            this.AddRecipe.Click += new System.EventHandler(this.AddRecipe_Click);
+            this.BtnAddRecipe.Location = new System.Drawing.Point(228, 92);
+            this.BtnAddRecipe.Name = "BtnAddRecipe";
+            this.BtnAddRecipe.Size = new System.Drawing.Size(156, 32);
+            this.BtnAddRecipe.TabIndex = 127;
+            this.BtnAddRecipe.Text = "Ekle";
+            this.BtnAddRecipe.UseVisualStyleBackColor = true;
+            this.BtnAddRecipe.Click += new System.EventHandler(this.AddRecipe_Click);
             // 
-            // CopyRecipe
+            // BtnCopyRecipe
             // 
-            this.CopyRecipe.Location = new System.Drawing.Point(390, 92);
-            this.CopyRecipe.Name = "CopyRecipe";
-            this.CopyRecipe.Size = new System.Drawing.Size(156, 32);
-            this.CopyRecipe.TabIndex = 127;
-            this.CopyRecipe.Text = "Kopyala";
-            this.CopyRecipe.UseVisualStyleBackColor = true;
+            this.BtnCopyRecipe.Location = new System.Drawing.Point(390, 92);
+            this.BtnCopyRecipe.Name = "BtnCopyRecipe";
+            this.BtnCopyRecipe.Size = new System.Drawing.Size(156, 32);
+            this.BtnCopyRecipe.TabIndex = 127;
+            this.BtnCopyRecipe.Text = "Kopyala";
+            this.BtnCopyRecipe.UseVisualStyleBackColor = true;
             // 
-            // CloseSettings
+            // BtnClose
             // 
-            this.CloseSettings.Location = new System.Drawing.Point(552, 92);
-            this.CloseSettings.Name = "CloseSettings";
-            this.CloseSettings.Size = new System.Drawing.Size(156, 32);
-            this.CloseSettings.TabIndex = 128;
-            this.CloseSettings.Text = "Çıkış";
-            this.CloseSettings.UseVisualStyleBackColor = true;
+            this.BtnClose.Location = new System.Drawing.Point(552, 92);
+            this.BtnClose.Name = "BtnClose";
+            this.BtnClose.Size = new System.Drawing.Size(156, 32);
+            this.BtnClose.TabIndex = 128;
+            this.BtnClose.Text = "Çıkış";
+            this.BtnClose.UseVisualStyleBackColor = true;
             // 
             // RecipeSelectionPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 136);
-            this.Controls.Add(this.CloseSettings);
-            this.Controls.Add(this.CopyRecipe);
-            this.Controls.Add(this.AddRecipe);
-            this.Controls.Add(this.AdjustRecipe);
+            this.Controls.Add(this.BtnClose);
+            this.Controls.Add(this.BtnCopyRecipe);
+            this.Controls.Add(this.BtnAddRecipe);
+            this.Controls.Add(this.BtnAdjustRecipe);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TestList);
             this.Name = "RecipeSelectionPage";
@@ -116,9 +116,9 @@
 
         private System.Windows.Forms.ComboBox TestList;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button AdjustRecipe;
-        private System.Windows.Forms.Button AddRecipe;
-        private System.Windows.Forms.Button CopyRecipe;
-        private System.Windows.Forms.Button CloseSettings;
+        private System.Windows.Forms.Button BtnAdjustRecipe;
+        private System.Windows.Forms.Button BtnAddRecipe;
+        private System.Windows.Forms.Button BtnCopyRecipe;
+        private System.Windows.Forms.Button BtnClose;
     }
 }

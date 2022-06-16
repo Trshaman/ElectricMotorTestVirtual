@@ -38,8 +38,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.TestDescription = new System.Windows.Forms.TextBox();
             this.TestName = new System.Windows.Forms.TextBox();
-            this.Save = new System.Windows.Forms.Button();
-            this.Exit = new System.Windows.Forms.Button();
+            this.BtnSave = new System.Windows.Forms.Button();
+            this.BtnExit = new System.Windows.Forms.Button();
             this.hvTestUserInterface2 = new ElectricMotorTestVirtual.Forms.HvTestUI();
             this.lcrTest2 = new ElectricMotorTestVirtual.Forms.LCRTestUI();
             this.performansTest2 = new ElectricMotorTestVirtual.Forms.PerformansTestUI();
@@ -162,26 +162,25 @@
             this.TestName.Name = "TestName";
             this.TestName.Size = new System.Drawing.Size(158, 26);
             this.TestName.TabIndex = 0;
-
             // 
-            // Save
+            // BtnSave
             // 
-            this.Save.Location = new System.Drawing.Point(169, 653);
-            this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(157, 45);
-            this.Save.TabIndex = 2;
-            this.Save.Text = "Kaydet";
-            this.Save.UseVisualStyleBackColor = true;
-            this.Save.Click += new System.EventHandler(this.Save_Click);
+            this.BtnSave.Location = new System.Drawing.Point(169, 653);
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.Size = new System.Drawing.Size(157, 45);
+            this.BtnSave.TabIndex = 2;
+            this.BtnSave.Text = "Kaydet";
+            this.BtnSave.UseVisualStyleBackColor = true;
+            this.BtnSave.Click += new System.EventHandler(this.Save_Click);
             // 
-            // Exit
+            // BtnExit
             // 
-            this.Exit.Location = new System.Drawing.Point(563, 653);
-            this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(158, 45);
-            this.Exit.TabIndex = 2;
-            this.Exit.Text = "Çıkış";
-            this.Exit.UseVisualStyleBackColor = true;
+            this.BtnExit.Location = new System.Drawing.Point(563, 653);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Size = new System.Drawing.Size(158, 45);
+            this.BtnExit.TabIndex = 2;
+            this.BtnExit.Text = "Çıkış";
+            this.BtnExit.UseVisualStyleBackColor = true;
             // 
             // hvTestUserInterface2
             // 
@@ -221,8 +220,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 708);
-            this.Controls.Add(this.Exit);
-            this.Controls.Add(this.Save);
+            this.Controls.Add(this.BtnExit);
+            this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.HVTest);
             this.Name = "TestRecipeSettings";
@@ -252,8 +251,8 @@
         private HvTestUI hvTestUserInterface2;
         private LCRTestUI lcrTest2;
         private PerformansTestUI performansTest2;
-        private System.Windows.Forms.Button Save;
-        private System.Windows.Forms.Button Exit;
+        private System.Windows.Forms.Button BtnSave;
+        private System.Windows.Forms.Button BtnExit;
         private System.Windows.Forms.TabPage tabPage4;
         private EMK_Test emK_Test1;
     }

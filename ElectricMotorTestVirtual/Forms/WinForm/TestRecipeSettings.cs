@@ -23,6 +23,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
             InitializeComponent();
             _testList = Program.TestList;
             _CurrentTestSettings = new TestSettings();
+            BtnExit.Click += (object sender, EventArgs e) => { this.Close(); };
             if (Program.AddNewTest)
             {
              
@@ -34,6 +35,8 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
             }
             
         }
+
+       
 
         private void hvTestUserInterface1_Load(object sender, EventArgs e)
         {
@@ -76,8 +79,8 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
 
         private void Save_Click(object sender, EventArgs e)
         {
-            if (_CurrentTestSettings.IsTestSettingsAppropriate())
-            {
+           
+            
                 if (_testList != null)
                 {
                         if (MessageBox.Show("Testi kayıt etmek istiyor musunuz?", "Onay", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
@@ -95,23 +98,36 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
                                    }
                                    else
                                    {
+                                     
                                      LoadUIToTest(_CurrentTestSettings);
-                                     TestSettings.SaveTestsAsXML(Program.TestSettingFile, _testList);
-                                     MessageBox.Show("Test Güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                     if (_CurrentTestSettings.IsTestSettingsAppropriate())
+                                     {
+                                      TestSettings.SaveTestsAsXML(Program.TestSettingFile, _testList);
+                                      MessageBox.Show("Test Güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                     }
+                                    
                                    }
                                 
                             }
                             else
                             {
                                 LoadUIToTest(_CurrentTestSettings);
-                               _isTestNameFree = _testList.FindLast(test => test.Name == TestName.Text) == null;
-                               if (_isTestNameFree)
+                               if (_CurrentTestSettings.IsTestSettingsAppropriate())
                                {
-                                _testList.Add(_CurrentTestSettings);
-                                TestSettings.SaveTestsAsXML(Program.TestSettingFile, _testList);
-                                MessageBox.Show("Test Oluştruldu.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                   _isTestNameFree = _testList.FindLast(test => test.Name == TestName.Text) == null;
+                                   if (_isTestNameFree)
+                                   {
+                                       _testList.Add(_CurrentTestSettings);
+                                       TestSettings.SaveTestsAsXML(Program.TestSettingFile, _testList);
+                                       MessageBox.Show("Test Oluştruldu.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                   }
+                                   else
+                                   {
+                                       MessageBox.Show("Aynı isimde bir test mevcut lütfen eşsiz bir isim giriniz.", "Bilgi", MessageBoxButtons.OK,  MessageBoxIcon.Information);
+                                   }
+
                                }
-                               
+
                             }
                         
                         }
@@ -127,11 +143,8 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
                     }
                 }
             
-            }
-            else
-            {
-                    MessageBox.Show("Test Adı mevcut lütfen eşsiz bir ad giriniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
+ 
         }
     }
     

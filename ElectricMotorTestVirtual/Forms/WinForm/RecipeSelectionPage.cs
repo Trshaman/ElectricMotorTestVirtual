@@ -19,6 +19,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
             if (Program.TestList!=null)
             {
                 TestList.Items.AddRange(Program.TestList.ToArray());
+                BtnClose.Click +=  (object sender, EventArgs e) => { this.Close(); };
             }
             
         }
@@ -29,7 +30,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
             {
                 Program.AddNewTest = true;
                 _testRecipeSettings = new TestRecipeSettings();
-                _testRecipeSettings.HandleDestroyed += (object send, EventArgs e2) => { _testRecipeSettings = null;  Program.AddNewTest = false;  };
+                _testRecipeSettings.HandleDestroyed += (object send, EventArgs e2) => { _testRecipeSettings = null;  Program.AddNewTest = false; UpdateTestList(); };
                // _testRecipeSettings.MdiParent = this;
                 _testRecipeSettings.Show();
             }
@@ -44,7 +45,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
             if (_testRecipeSettings == null)
             {
                 
-                if (string.IsNullOrEmpty(TestList.SelectedText))
+                if (!string.IsNullOrEmpty(TestList.Text))
                 {
                     Program.AdjustTest = true;
                     Program.SelectedTestName = TestList.Text;
