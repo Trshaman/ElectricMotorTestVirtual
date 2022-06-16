@@ -16,12 +16,23 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
         private TestSettings _CurrentTestSettings;
         private List<TestSettings> _testList;
         private TestRecipe _CurrentTestRecipe;
+        private string _editedTestName;
+        private bool _isTestNameFree;
         public TestRecipeSettings()
         {
             InitializeComponent();
             _testList = Program.TestList;
-            //ToDo:Program yüklenirken testlist yüklenicek burayada testList olarak alınacak.
             _CurrentTestSettings = new TestSettings();
+            if (Program.AddNewTest)
+            {
+             
+            }
+            else
+            {
+                _CurrentTestSettings = _testList.FirstOrDefault(tst => tst.Name == Program.SelectedTestName);
+                LoadTestToUI(_CurrentTestSettings);
+            }
+            
         }
 
         private void hvTestUserInterface1_Load(object sender, EventArgs e)
@@ -65,11 +76,48 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
 
         private void Save_Click(object sender, EventArgs e)
         {
-            LoadUIToTest(_CurrentTestSettings);
             if (_CurrentTestSettings.IsTestSettingsAppropriate())
             {
-                bool isTestNameFree = _testList.FindLast(test => test.Name == TestName.Text) == null;
-                if (isTestNameFree)
+                if (_testList != null)
+                {
+                        if (MessageBox.Show("Testi kayıt etmek istiyor musunuz?", "Onay", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                        {
+                            if (Program.AdjustTest)
+                            {
+                                   if (Program.SelectedTestName != TestName.Text)
+                                   {
+                                        _isTestNameFree = _testList.FindLast(test => test.Name == TestName.Text) != null;
+                                      
+                                   }
+                                   if (_isTestNameFree)
+                                   {
+                                     MessageBox.Show("Aynı isimde bir test mevcut lütfen eşsiz bir isim giriniz.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                   }
+                                   else
+                                   {
+                                     LoadUIToTest(_CurrentTestSettings);
+                                     TestSettings.SaveTestsAsXML(Program.TestSettingFile, _testList);
+                                     MessageBox.Show("Test Güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                   }
+                                
+                            }
+                            else
+                            {
+                                LoadUIToTest(_CurrentTestSettings);
+                               _isTestNameFree = _testList.FindLast(test => test.Name == TestName.Text) == null;
+                               if (_isTestNameFree)
+                               {
+                                _testList.Add(_CurrentTestSettings);
+                                TestSettings.SaveTestsAsXML(Program.TestSettingFile, _testList);
+                                MessageBox.Show("Test Oluştruldu.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                               }
+                               
+                            }
+                        
+                        }
+                    
+                }
+                else
                 {
                     if (MessageBox.Show("Testi kayıt etmek istiyor musunuz?", "Onay", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                     {
@@ -78,6 +126,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
                         MessageBox.Show("Test güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
+            
             }
             else
             {

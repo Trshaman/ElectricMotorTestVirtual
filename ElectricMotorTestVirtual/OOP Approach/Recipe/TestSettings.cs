@@ -21,6 +21,10 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Recipe
 
         public TestRecipe RecipeSettings { get; set; }
 
+        public TestSettings()
+        {
+            this.RecipeSettings = new TestRecipe();
+        }
         public static Exception SaveTestsAsXML(string fileName, List<TestSettings> testList)
         {
             FileStream fs = null;

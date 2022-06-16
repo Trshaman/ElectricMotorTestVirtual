@@ -29,6 +29,10 @@ namespace ElectricMotorTestVirtual
         internal static string UserSettingsFile;
         internal static string ProgramIniFile;
         internal static List<TestSettings> TestList;
+        internal static bool AddNewTest = false;
+        internal static bool AdjustTest = false;
+        internal static string SelectedTestName = "";
+
 
         /// <summary>
         /// The main entry point for the application.
@@ -79,13 +83,10 @@ namespace ElectricMotorTestVirtual
                 MessageBox.Show("\\Settings klasörü bulunamadı. Yeniden oluşturulacak, tüm test,istasyon,kullanıcı bilgileri tanımlanmalıdır. ", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 StartUpLogs.Add(new Log(DateTime.Now, LogTypes.System, 5, -1, -1, "\\Settings klasörü bulunamadı. Yeniden oluşturulacak, tüm test,istasyon,kullanıcı bilgileri tanımlanmalıdır. ", System.Drawing.SystemIcons.Error));
                 Directory.CreateDirectory(SettingDir);
-                TestList = TestSettings.LoadTestsFromXML(TestSettingFile);
-
-                if (TestList == null)
-                    TestList = new List<TestSettings>();
-
             }
-
+            TestList = TestSettings.LoadTestsFromXML(TestSettingFile);
+            if (TestList == null)
+                TestList = new List<TestSettings>();
             //ToDo:init ayarları yapılabilir.
 
             //if (!CheckCreateSystemDatabaseAndTables())

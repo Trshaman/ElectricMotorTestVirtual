@@ -1,5 +1,4 @@
-﻿using ElectricMotorTestVirtual.OOP_Approach.Recipe;
-using ElectricMotorTestVirtual.OOP_Approach.TestCases;
+﻿using ElectricMotorTestVirtual.OOP_Approach.TestCases;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,22 +33,22 @@ namespace ElectricMotorTestVirtual.Forms
 
         }
 
-        public void LoadTestToUIEmk(TestSettings test)
+        public void LoadTestToUIEmk(EMKTest test)
         {
-            PeaktoPeakV_Max.Value = test.RecipeSettings.EmkTestRecipe.PeakToPeaxMax;
-            PeaktoPeakV_Min.Value = test.RecipeSettings.EmkTestRecipe.PeakToPeaxMin;
-            RmsV_Max.Value = test.RecipeSettings.EmkTestRecipe.RmsMax;
-            RmsV_Min.Value = test.RecipeSettings.EmkTestRecipe.RmsMin;
-            EmkTestActive.Checked = test.RecipeSettings.EmkTestRecipe.IsTestActive;
+            PeaktoPeakV_Max.Value = test.PeakToPeaxMax;
+            PeaktoPeakV_Min.Value = test.PeakToPeaxMin;
+            RmsV_Max.Value = test.RmsMax;
+            RmsV_Min.Value = test.RmsMin;
+            EmkTestActive.Checked = test.IsTestActive;
         }
 
-        public void LoadUItoTestEmk(TestSettings test)
+        public void LoadUItoTestEmk(EMKTest test)
         {
-            test.RecipeSettings.EmkTestRecipe.PeakToPeaxMax = PeaktoPeakV_Max.Value;
-            test.RecipeSettings.EmkTestRecipe.PeakToPeaxMin = PeaktoPeakV_Min.Value;
-            test.RecipeSettings.EmkTestRecipe.RmsMax = RmsV_Max.Value;
-            test.RecipeSettings.EmkTestRecipe.RmsMin = RmsV_Min.Value;
-            test.RecipeSettings.EmkTestRecipe.IsTestActive = EmkTestActive.Checked;
+            test.PeakToPeaxMax = PeaktoPeakV_Max.Value;
+            test.PeakToPeaxMin = PeaktoPeakV_Min.Value;
+            test.RmsMax = RmsV_Max.Value;
+            test.RmsMin = RmsV_Min.Value;
+            test.IsTestActive = EmkTestActive.Checked;
         }
     }
 }

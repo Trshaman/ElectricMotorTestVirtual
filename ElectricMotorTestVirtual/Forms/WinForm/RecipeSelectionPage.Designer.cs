@@ -64,6 +64,7 @@
             this.AdjustRecipe.TabIndex = 127;
             this.AdjustRecipe.Text = "Düzenle";
             this.AdjustRecipe.UseVisualStyleBackColor = true;
+            this.AdjustRecipe.Click += new System.EventHandler(this.AdjustRecipe_Click);
             // 
             // AddRecipe
             // 

@@ -1,5 +1,4 @@
-﻿using ElectricMotorTestVirtual.OOP_Approach.Recipe;
-using ElectricMotorTestVirtual.OOP_Approach.TestCases;
+﻿using ElectricMotorTestVirtual.OOP_Approach.TestCases;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,27 +28,27 @@ namespace ElectricMotorTestVirtual.Forms
 
         }
 
-        public void LoadTestToUIPerformance(TestSettings test)
+        public void LoadTestToUIPerformance(PerformanceTest test)
         {
-            UnloadPerformRpm_Max.Value = test.RecipeSettings.PerformanceTestRecipe.UnloadPerformanceRpmMax;
-            UnloadPerformRpm_Min.Value = test.RecipeSettings.PerformanceTestRecipe.UnloadPerformanceRpmMin;
-            LoadPerformRpm_Max.Value = test.RecipeSettings.PerformanceTestRecipe.LoadPerformanceRpmMax;
-            LoadPerformRpm_Min.Value = test.RecipeSettings.PerformanceTestRecipe.LoadPerformanceRpmMin;
-            LoadTorqueNm_Point1.Value = test.RecipeSettings.PerformanceTestRecipe.LoadTorque1Nm;
-            LoadTorqueNm_Point2.Value = test.RecipeSettings.PerformanceTestRecipe.LoadTorque2Nm;
-            PerformTestActive.Checked = test.RecipeSettings.PerformanceTestRecipe.IsTestActive;
+            UnloadPerformRpm_Max.Value = test.UnloadPerformanceRpmMax;
+            UnloadPerformRpm_Min.Value = test.UnloadPerformanceRpmMin;
+            LoadPerformRpm_Max.Value = test.LoadPerformanceRpmMax;
+            LoadPerformRpm_Min.Value = test.LoadPerformanceRpmMin;
+            LoadTorqueNm_Point1.Value = test.LoadTorque1Nm;
+            LoadTorqueNm_Point2.Value = test.LoadTorque2Nm;
+            PerformTestActive.Checked = test.IsTestActive;
 
         }
 
-        public void LoadUItoTestPerformance(TestSettings test)
+        public void LoadUItoTestPerformance(PerformanceTest test)
         {
-            test.RecipeSettings.PerformanceTestRecipe.UnloadPerformanceRpmMax = (int)UnloadPerformRpm_Max.Value;
-            test.RecipeSettings.PerformanceTestRecipe.UnloadPerformanceRpmMax = (int)UnloadPerformRpm_Min.Value;
-            test.RecipeSettings.PerformanceTestRecipe.LoadPerformanceRpmMax = (int)LoadPerformRpm_Max.Value;
-            test.RecipeSettings.PerformanceTestRecipe.LoadPerformanceRpmMin = (int)LoadPerformRpm_Min.Value;
-            test.RecipeSettings.PerformanceTestRecipe.LoadTorque1Nm = LoadTorqueNm_Point1.Value;
-            test.RecipeSettings.PerformanceTestRecipe.LoadTorque2Nm = LoadTorqueNm_Point2.Value;
-            test.RecipeSettings.PerformanceTestRecipe.IsTestActive = PerformTestActive.Checked; 
+            test.UnloadPerformanceRpmMax = (int)UnloadPerformRpm_Max.Value;
+            test.UnloadPerformanceRpmMax = (int)UnloadPerformRpm_Min.Value;
+            test.LoadPerformanceRpmMax = (int)LoadPerformRpm_Max.Value;
+            test.LoadPerformanceRpmMin = (int)LoadPerformRpm_Min.Value;
+            test.LoadTorque1Nm = LoadTorqueNm_Point1.Value;
+            test.LoadTorque2Nm = LoadTorqueNm_Point2.Value;
+            test.IsTestActive = PerformTestActive.Checked; 
         }
     }
 }

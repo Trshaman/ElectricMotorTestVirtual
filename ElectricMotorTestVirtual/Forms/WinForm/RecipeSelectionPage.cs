@@ -27,8 +27,9 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
         {
             if (_testRecipeSettings == null)
             {
+                Program.AddNewTest = true;
                 _testRecipeSettings = new TestRecipeSettings();
-                _testRecipeSettings.HandleDestroyed += (object send, EventArgs e2) => { _testRecipeSettings = null; };
+                _testRecipeSettings.HandleDestroyed += (object send, EventArgs e2) => { _testRecipeSettings = null;  Program.AddNewTest = false;  };
                // _testRecipeSettings.MdiParent = this;
                 _testRecipeSettings.Show();
             }
@@ -38,5 +39,37 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
             }
         }
 
+        private void AdjustRecipe_Click(object sender, EventArgs e)
+        {
+            if (_testRecipeSettings == null)
+            {
+                
+                if (string.IsNullOrEmpty(TestList.SelectedText))
+                {
+                    Program.AdjustTest = true;
+                    Program.SelectedTestName = TestList.Text;
+                    _testRecipeSettings = new TestRecipeSettings();
+                    _testRecipeSettings.HandleDestroyed += (object send, EventArgs e2) => { _testRecipeSettings = null; Program.AdjustTest = false; UpdateTestList(); };
+                    // _testRecipeSettings.MdiParent = this;
+                    _testRecipeSettings.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Herhangi bir test seçilmedi", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+              
+            }
+            else
+            {
+                _testRecipeSettings.Focus();
+            }
+        }
+
+        private void UpdateTestList()
+        {
+            TestList.Items.Clear();
+            TestList.Items.AddRange(Program.TestList.ToArray());
+        }
     }
+    
 }

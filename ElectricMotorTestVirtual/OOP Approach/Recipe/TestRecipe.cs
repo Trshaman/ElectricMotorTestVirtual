@@ -20,6 +20,14 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Recipe
 
         public MotorModel MotorModelRecipe { get; set; }
 
+        public TestRecipe()
+        {
+            this.EmkTestRecipe = new EMKTest();
+            this.HVTestRecipe = new HVTest();
+            this. LCRTestRecipe = new LCRTest();
+            this.PerformanceTestRecipe = new PerformanceTest();
+            this.MotorModelRecipe = new MotorModel();
+        }
 
     }
 }

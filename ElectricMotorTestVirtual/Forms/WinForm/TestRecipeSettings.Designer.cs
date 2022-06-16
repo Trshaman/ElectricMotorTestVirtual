@@ -30,13 +30,9 @@
         {
             this.HVTest = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.hvTestUserInterface2 = new ElectricMotorTestVirtual.Forms.HvTestUI();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lcrTest2 = new ElectricMotorTestVirtual.Forms.LCRTestUI();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.performansTest2 = new ElectricMotorTestVirtual.Forms.PerformansTestUI();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.emK_Test1 = new ElectricMotorTestVirtual.Forms.EMK_Test();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,6 +40,10 @@
             this.TestName = new System.Windows.Forms.TextBox();
             this.Save = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
+            this.hvTestUserInterface2 = new ElectricMotorTestVirtual.Forms.HvTestUI();
+            this.lcrTest2 = new ElectricMotorTestVirtual.Forms.LCRTestUI();
+            this.performansTest2 = new ElectricMotorTestVirtual.Forms.PerformansTestUI();
+            this.emK_Test1 = new ElectricMotorTestVirtual.Forms.EMK_Test();
             this.HVTest.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -76,14 +76,6 @@
             this.tabPage1.Text = "HV Test";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // hvTestUserInterface2
-            // 
-            this.hvTestUserInterface2.Location = new System.Drawing.Point(-27, -12);
-            this.hvTestUserInterface2.Name = "hvTestUserInterface2";
-            this.hvTestUserInterface2.Size = new System.Drawing.Size(692, 447);
-            this.hvTestUserInterface2.TabIndex = 0;
-            this.hvTestUserInterface2.Load += new System.EventHandler(this.hvTestUserInterface2_Load);
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.lcrTest2);
@@ -95,14 +87,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "LCR Test";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // lcrTest2
-            // 
-            this.lcrTest2.Location = new System.Drawing.Point(-29, -13);
-            this.lcrTest2.Name = "lcrTest2";
-            this.lcrTest2.Size = new System.Drawing.Size(688, 472);
-            this.lcrTest2.TabIndex = 0;
-            this.lcrTest2.Load += new System.EventHandler(this.lcrTest2_Load);
             // 
             // tabPage3
             // 
@@ -116,15 +100,6 @@
             this.tabPage3.Text = "Performans Test";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // performansTest2
-            // 
-            this.performansTest2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.performansTest2.Location = new System.Drawing.Point(52, 0);
-            this.performansTest2.Margin = new System.Windows.Forms.Padding(4);
-            this.performansTest2.Name = "performansTest2";
-            this.performansTest2.Size = new System.Drawing.Size(561, 430);
-            this.performansTest2.TabIndex = 0;
-            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.emK_Test1);
@@ -136,14 +111,6 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "EMK Test";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // emK_Test1
-            // 
-            this.emK_Test1.Location = new System.Drawing.Point(7, 0);
-            this.emK_Test1.Margin = new System.Windows.Forms.Padding(4);
-            this.emK_Test1.Name = "emK_Test1";
-            this.emK_Test1.Size = new System.Drawing.Size(624, 433);
-            this.emK_Test1.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -195,6 +162,7 @@
             this.TestName.Name = "TestName";
             this.TestName.Size = new System.Drawing.Size(158, 26);
             this.TestName.TabIndex = 0;
+
             // 
             // Save
             // 
@@ -214,6 +182,39 @@
             this.Exit.TabIndex = 2;
             this.Exit.Text = "Çıkış";
             this.Exit.UseVisualStyleBackColor = true;
+            // 
+            // hvTestUserInterface2
+            // 
+            this.hvTestUserInterface2.Location = new System.Drawing.Point(-27, -12);
+            this.hvTestUserInterface2.Name = "hvTestUserInterface2";
+            this.hvTestUserInterface2.Size = new System.Drawing.Size(692, 447);
+            this.hvTestUserInterface2.TabIndex = 0;
+            this.hvTestUserInterface2.Load += new System.EventHandler(this.hvTestUserInterface2_Load);
+            // 
+            // lcrTest2
+            // 
+            this.lcrTest2.Location = new System.Drawing.Point(-29, -13);
+            this.lcrTest2.Name = "lcrTest2";
+            this.lcrTest2.Size = new System.Drawing.Size(688, 472);
+            this.lcrTest2.TabIndex = 0;
+            this.lcrTest2.Load += new System.EventHandler(this.lcrTest2_Load);
+            // 
+            // performansTest2
+            // 
+            this.performansTest2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.performansTest2.Location = new System.Drawing.Point(52, 0);
+            this.performansTest2.Margin = new System.Windows.Forms.Padding(4);
+            this.performansTest2.Name = "performansTest2";
+            this.performansTest2.Size = new System.Drawing.Size(561, 430);
+            this.performansTest2.TabIndex = 0;
+            // 
+            // emK_Test1
+            // 
+            this.emK_Test1.Location = new System.Drawing.Point(7, 0);
+            this.emK_Test1.Margin = new System.Windows.Forms.Padding(4);
+            this.emK_Test1.Name = "emK_Test1";
+            this.emK_Test1.Size = new System.Drawing.Size(624, 433);
+            this.emK_Test1.TabIndex = 0;
             // 
             // TestRecipeSettings
             // 
