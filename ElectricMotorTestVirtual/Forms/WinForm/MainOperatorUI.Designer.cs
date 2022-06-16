@@ -38,6 +38,11 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnClose = new System.Windows.Forms.Button();
+            this.TestOK = new UserInterface.LedDisplay();
+            this.TestNOK = new UserInterface.LedDisplay();
+            this.Barcıde = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +59,7 @@
             this.ClmnResultValue,
             this.ClmnLowLimit,
             this.ClmnResult});
-            this.dataGridView1.Location = new System.Drawing.Point(556, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(469, 21);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(591, 520);
@@ -125,11 +130,104 @@
             this.BtnClose.Text = "Çıkış";
             this.BtnClose.UseVisualStyleBackColor = true;
             // 
+            // TestOK
+            // 
+            this.TestOK.BackGradientColor = System.Drawing.Color.White;
+            this.TestOK.BackGradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.TestOK.Blink = UserInterface.LedDisplay.BlinkState.Off;
+            this.TestOK.BlinkPeriod = 1000;
+            this.TestOK.ChannelList = null;
+            this.TestOK.ContainerFormName = null;
+            this.TestOK.DesignModeActive = false;
+            this.TestOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TestOK.Header = "OK";
+            this.TestOK.HeaderBackColor = System.Drawing.Color.WhiteSmoke;
+            this.TestOK.HeaderFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TestOK.HeaderForeColor = System.Drawing.Color.Black;
+            this.TestOK.HeaderPosition = UserInterface.HeaderPosition.Top;
+            this.TestOK.HeaderVisible = true;
+            this.TestOK.LedStyle = UserInterface.LedDisplay.LedDisplayStyle.Sphere;
+            this.TestOK.Location = new System.Drawing.Point(1065, 324);
+            this.TestOK.Margin = new System.Windows.Forms.Padding(2);
+            this.TestOK.Name = "TestOK";
+            this.TestOK.OffColor = System.Drawing.Color.Gainsboro;
+            this.TestOK.OnColor = System.Drawing.Color.GreenYellow;
+            this.TestOK.PropertyEditMode = false;
+            this.TestOK.Reflection = UserInterface.LedDisplay.ReflectionState.On;
+            this.TestOK.Selected = false;
+            this.TestOK.Size = new System.Drawing.Size(88, 110);
+            this.TestOK.TabIndex = 4;
+            this.TestOK.Value = false;
+            this.TestOK.Load += new System.EventHandler(this.ledDisplay1_Load);
+            // 
+            // TestNOK
+            // 
+            this.TestNOK.BackGradientColor = System.Drawing.Color.White;
+            this.TestNOK.BackGradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.TestNOK.Blink = UserInterface.LedDisplay.BlinkState.Off;
+            this.TestNOK.BlinkPeriod = 1000;
+            this.TestNOK.ChannelList = null;
+            this.TestNOK.ContainerFormName = null;
+            this.TestNOK.DesignModeActive = false;
+            this.TestNOK.Header = "NOK";
+            this.TestNOK.HeaderBackColor = System.Drawing.Color.WhiteSmoke;
+            this.TestNOK.HeaderFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TestNOK.HeaderForeColor = System.Drawing.Color.Black;
+            this.TestNOK.HeaderPosition = UserInterface.HeaderPosition.Top;
+            this.TestNOK.HeaderVisible = true;
+            this.TestNOK.LedStyle = UserInterface.LedDisplay.LedDisplayStyle.Sphere;
+            this.TestNOK.Location = new System.Drawing.Point(1065, 105);
+            this.TestNOK.Margin = new System.Windows.Forms.Padding(2);
+            this.TestNOK.Name = "TestNOK";
+            this.TestNOK.OffColor = System.Drawing.Color.Gainsboro;
+            this.TestNOK.OnColor = System.Drawing.Color.Red;
+            this.TestNOK.PropertyEditMode = false;
+            this.TestNOK.Reflection = UserInterface.LedDisplay.ReflectionState.On;
+            this.TestNOK.Selected = false;
+            this.TestNOK.Size = new System.Drawing.Size(88, 106);
+            this.TestNOK.TabIndex = 4;
+            this.TestNOK.Value = false;
+            this.TestNOK.Load += new System.EventHandler(this.ledDisplay1_Load);
+            // 
+            // Barcıde
+            // 
+            this.Barcıde.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Barcıde.Location = new System.Drawing.Point(118, 21);
+            this.Barcıde.Name = "Barcıde";
+            this.Barcıde.Size = new System.Drawing.Size(150, 26);
+            this.Barcıde.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(21, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 18);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Motor S/N:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(21, 198);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(409, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Seçili testlerin checkboxlarına bakılarak bir array yapılabilir o array ilede tes" +
+    "t koşulabilir.";
+            // 
             // MainOperatorUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1159, 636);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Barcıde);
+            this.Controls.Add(this.TestNOK);
+            this.Controls.Add(this.TestOK);
             this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
@@ -154,5 +252,10 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnClose;
+        private UserInterface.LedDisplay TestOK;
+        private UserInterface.LedDisplay TestNOK;
+        private System.Windows.Forms.TextBox Barcıde;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

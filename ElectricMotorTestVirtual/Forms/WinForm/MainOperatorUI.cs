@@ -21,5 +21,10 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
         {
 
         }
+
+        private void ledDisplay1_Load(object sender, EventArgs e)
+        {
+            TestOK.Value = true;
+        }
     }
 }
