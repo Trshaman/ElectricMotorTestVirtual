@@ -21,6 +21,12 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
         public double L2Min { get; set; }
         public double L3Max { get; set; }
         public double L3Min { get; set; }
+
+        public override void ApplyCoefficent()
+        {
+            throw new NotImplementedException();
+        }
+
         public override void ExecuteTest()
         {
             throw new NotImplementedException();

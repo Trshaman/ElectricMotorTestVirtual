@@ -141,6 +141,9 @@
     <EmbeddedResource Include="Forms\WinForm\frmLog.resx">
       <DependentUpon>frmLog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WinForm\MainOperatorUI.resx">
+      <DependentUpon>MainOperatorUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\WinForm\MainScreen1.resx">
       <DependentUpon>MainScreen1.cs</DependentUpon>
     </EmbeddedResource>

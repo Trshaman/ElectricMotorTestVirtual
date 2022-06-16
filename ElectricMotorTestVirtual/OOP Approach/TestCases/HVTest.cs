@@ -15,6 +15,12 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
         public double LeakageCurrentMin { get; set; }
         public double IRResistanceMax { get; set; }
         public double IRResistanceMin { get; set; }
+
+        public override void ApplyCoefficent()
+        {
+            throw new NotImplementedException();
+        }
+
         public override void ExecuteTest()
         {
             throw new NotImplementedException();

@@ -15,6 +15,12 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
         public int LoadPerformanceRpmMin { get; set; }
         public double LoadTorque1Nm { get; set; }
         public double LoadTorque2Nm { get; set; }
+
+        public override void ApplyCoefficent()
+        {
+            throw new NotImplementedException();
+        }
+
         public override void ExecuteTest()
         {
             throw new NotImplementedException();

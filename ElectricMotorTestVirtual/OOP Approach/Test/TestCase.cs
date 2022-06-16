@@ -21,6 +21,8 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Test
 
         public bool IsTestActive { get; set; }
 
+        public abstract void ApplyCoefficent()
+
         public abstract void ExecuteTest();
 
 

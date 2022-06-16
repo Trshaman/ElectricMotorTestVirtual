@@ -14,6 +14,12 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
         public double PeakToPeaxMin { get; set; }
         public double RmsMax { get; set; }
         public double RmsMin { get; set; }
+
+        public override void ApplyCoefficent()
+        {
+            throw new NotImplementedException();
+        }
+
         public override void ExecuteTest()
         {
             throw new NotImplementedException();

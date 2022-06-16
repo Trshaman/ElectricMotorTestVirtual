@@ -10,9 +10,12 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Test
     {
         void ExecuteTest();
 
+        void ApplyCoefficent();
+
         void PrapereResult();
 
         void LogSQL();
+
 
 
     }
