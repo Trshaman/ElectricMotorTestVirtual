@@ -20,9 +20,29 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
             throw new NotImplementedException();
         }
 
-        public override void ExecuteTest()
+        public override void DataAcquisition()
         {
             throw new NotImplementedException();
+        }
+
+        public override void ExecuteTest()
+        {
+            if (base.IsTestActive == true)
+            {
+                DateTime StartTestTime = DateTime.Now;
+                base.TestStarted = true;
+                PrepareRelayMatrix();
+                DataAcquisition();
+                ApplyCoefficent();
+                PrapereResult();
+                LogSQL();
+                base.TestDuration = StartTestTime - DateTime.Now;
+                base.TestStarted = false;
+            }
+            else
+            {
+                //do nothing 
+            }
         }
 
         public override void LogSQL()
@@ -31,6 +51,11 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
         }
 
         public override void PrapereResult()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void PrepareRelayMatrix()
         {
             throw new NotImplementedException();
         }

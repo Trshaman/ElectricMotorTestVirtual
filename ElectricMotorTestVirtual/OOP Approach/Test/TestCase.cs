@@ -23,13 +23,15 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Test
 
         public abstract void ApplyCoefficent();
 
-        public abstract void ExecuteTest();
+        public abstract void DataAcquisition();
 
+        public abstract void ExecuteTest();
 
         public abstract void LogSQL();
 
-
         public abstract void PrapereResult();
-      
+
+        public abstract void PrepareRelayMatrix();
+
     }
 }

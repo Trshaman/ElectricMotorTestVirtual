@@ -1,5 +1,6 @@
 ﻿using ElectricMotorTestVirtual.Forms.WinForm;
 using ElectricMotorTestVirtual.OOP_Approach.Recipe;
+using ElectricMotorTestVirtual.OOP_Approach.TestRunner;
 using GlobalFunctions;
 using System;
 using System.Collections.Generic;
@@ -32,6 +33,7 @@ namespace ElectricMotorTestVirtual
         internal static bool AddNewTest = false;
         internal static bool AdjustTest = false;
         internal static string SelectedTestName = "";
+         
 
 
         /// <summary>
@@ -87,6 +89,7 @@ namespace ElectricMotorTestVirtual
             TestList = TestSettings.LoadTestsFromXML(TestSettingFile);
             if (TestList == null)
                 TestList = new List<TestSettings>();
+            
             //ToDo:init ayarları yapılabilir.
 
             //if (!CheckCreateSystemDatabaseAndTables())

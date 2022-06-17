@@ -8,6 +8,10 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Test
 {
     public interface ITestOperation
     {
+        void DataAcquisition();
+
+        void PrepareRelayMatrix();
+
         void ExecuteTest();
 
         void ApplyCoefficent();

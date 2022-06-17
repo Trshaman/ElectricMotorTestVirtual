@@ -1,6 +1,7 @@
 ﻿using ElectricMotorTestVirtual.OOP_Approach.Motor;
 using ElectricMotorTestVirtual.OOP_Approach.TestCases;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ElectricMotorTestVirtual.OOP_Approach.Recipe
 {
-    public class TestRecipe
+    public class TestRecipe : IEnumerable<T>
     {
         public EMKTest EmkTestRecipe { get; set; }
 
@@ -29,5 +30,14 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Recipe
             this.MotorModelRecipe = new MotorModel();
         }
 
+        public IEnumerator<T> GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

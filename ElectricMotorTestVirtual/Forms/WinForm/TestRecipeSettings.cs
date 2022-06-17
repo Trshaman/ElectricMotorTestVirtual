@@ -1,4 +1,5 @@
 ﻿using ElectricMotorTestVirtual.OOP_Approach.Recipe;
+using ElectricMotorTestVirtual.OOP_Approach.TestRunner;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,6 +32,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
             else
             {
                 _CurrentTestSettings = _testList.FirstOrDefault(tst => tst.Name == Program.SelectedTestName);
+                TestRunnerClass.PrapareTestRecipe(_CurrentTestSettings);
                 LoadTestToUI(_CurrentTestSettings);
             }
             
