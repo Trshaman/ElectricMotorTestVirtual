@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.TestResultTable = new System.Windows.Forms.DataGridView();
             this.ClmnTestParameter = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClmnUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClmnUpperLimit = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,28 +42,29 @@
             this.TestNOK = new UserInterface.LedDisplay();
             this.Barcıde = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.BtnStart = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.TestResultTable)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // TestResultTable
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TestResultTable.AllowUserToAddRows = false;
+            this.TestResultTable.AllowUserToDeleteRows = false;
+            this.TestResultTable.AllowUserToOrderColumns = true;
+            this.TestResultTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TestResultTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ClmnTestParameter,
             this.ClmnUnit,
             this.ClmnUpperLimit,
             this.ClmnResultValue,
             this.ClmnLowLimit,
             this.ClmnResult});
-            this.dataGridView1.Location = new System.Drawing.Point(469, 21);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(591, 520);
-            this.dataGridView1.TabIndex = 0;
+            this.TestResultTable.Location = new System.Drawing.Point(469, 21);
+            this.TestResultTable.Name = "TestResultTable";
+            this.TestResultTable.ReadOnly = true;
+            this.TestResultTable.Size = new System.Drawing.Size(591, 520);
+            this.TestResultTable.TabIndex = 0;
+
             // 
             // ClmnTestParameter
             // 
@@ -208,33 +209,33 @@
             this.label2.Text = "Motor S/N:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label3
+            // BtnStart
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 198);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(409, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Seçili testlerin checkboxlarına bakılarak bir array yapılabilir o array ilede tes" +
-    "t koşulabilir.";
+            this.BtnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnStart.Location = new System.Drawing.Point(74, 588);
+            this.BtnStart.Name = "BtnStart";
+            this.BtnStart.Size = new System.Drawing.Size(225, 34);
+            this.BtnStart.TabIndex = 3;
+            this.BtnStart.Text = "Start Test";
+            this.BtnStart.UseVisualStyleBackColor = true;
             // 
             // MainOperatorUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1159, 636);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Barcıde);
             this.Controls.Add(this.TestNOK);
             this.Controls.Add(this.TestOK);
+            this.Controls.Add(this.BtnStart);
             this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.TestResultTable);
             this.Name = "MainOperatorUI";
             this.Text = "MainOperatorUI";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TestResultTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,7 +243,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView TestResultTable;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClmnTestParameter;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClmnUnit;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClmnUpperLimit;
@@ -256,6 +257,6 @@
         private UserInterface.LedDisplay TestNOK;
         private System.Windows.Forms.TextBox Barcıde;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button BtnStart;
     }
 }

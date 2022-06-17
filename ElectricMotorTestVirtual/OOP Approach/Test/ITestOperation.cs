@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ElectricMotorTestVirtual.OOP_Approach.Test
 {
@@ -12,11 +13,11 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Test
 
         void PrepareRelayMatrix();
 
-        void ExecuteTest();
+        TestStates ExecuteTest(DataGridView dataGridView);
 
-        void ApplyCoefficent();
+        double ApplyCoefficent(double value);
 
-        void PrapereResult();
+        bool PrapereResult(DataGridView dataGridView);
 
         void LogSQL();
 

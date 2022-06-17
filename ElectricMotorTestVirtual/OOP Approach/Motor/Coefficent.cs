@@ -11,5 +11,10 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Motor
         public double Gain { get; set; } = 1;
 
         public double Offset { get; set; } = 0;
+
+        public double ApplyCoefficentValues(double value)
+        {
+           return  ((value * Gain) + Offset);
+        }
     }
 }

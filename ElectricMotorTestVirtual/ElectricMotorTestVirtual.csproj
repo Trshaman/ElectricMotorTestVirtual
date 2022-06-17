@@ -121,9 +121,11 @@
     <Compile Include="OOP Approach\TestCases\HVTest.cs" />
     <Compile Include="OOP Approach\TestCases\LCRTest.cs" />
     <Compile Include="OOP Approach\TestCases\PerformanceTest.cs" />
+    <Compile Include="OOP Approach\TestCases\TestComparableAttribute.cs" />
     <Compile Include="OOP Approach\TestRunner\TestRunnerClass.cs" />
     <Compile Include="OOP Approach\Test\ITestOperation.cs" />
     <Compile Include="OOP Approach\Test\TestCase.cs" />
+    <Compile Include="OOP Approach\Test\TestStates.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\EMKTestUI.resx">

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ElectricMotorTestVirtual.OOP_Approach.Recipe
 {
-    public class TestRecipe : IEnumerable<T>
+    public class TestRecipe 
     {
         public EMKTest EmkTestRecipe { get; set; }
 

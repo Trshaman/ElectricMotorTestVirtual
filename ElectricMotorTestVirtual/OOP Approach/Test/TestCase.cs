@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ElectricMotorTestVirtual.OOP_Approach.Test
 {
@@ -17,19 +18,26 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Test
 
         public bool TestStarted;
 
+        public bool TestResult;
+
         public TimeSpan TestDuration;
+
+        public TestCase()
+        {
+             TestCoefficent = new Coefficent(); 
+        }
 
         public bool IsTestActive { get; set; }
 
-        public abstract void ApplyCoefficent();
+        public abstract double ApplyCoefficent(double value);
 
         public abstract void DataAcquisition();
 
-        public abstract void ExecuteTest();
+        public abstract TestStates ExecuteTest(DataGridView dataGridView);
 
         public abstract void LogSQL();
 
-        public abstract void PrapereResult();
+        public abstract bool PrapereResult(DataGridView dataGridView);
 
         public abstract void PrepareRelayMatrix();
 

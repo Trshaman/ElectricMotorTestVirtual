@@ -12,6 +12,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
 {
     public partial class MainOperatorUI : Form
     {
+        public static DataGridView ResultTable;
         public MainOperatorUI()
         {
             InitializeComponent();
@@ -24,7 +25,10 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
 
         private void ledDisplay1_Load(object sender, EventArgs e)
         {
-            TestOK.Value = true;
+            TestOK.Value = false;
+            ResultTable = TestResultTable;
         }
+
+      
     }
 }

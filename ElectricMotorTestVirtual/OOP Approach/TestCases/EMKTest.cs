@@ -1,10 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Xml.Serialization;
 using ElectricMotorTestVirtual.OOP_Approach.Motor;
 using ElectricMotorTestVirtual.OOP_Approach.Test;
+using GlobalFunctions;
 
 namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 {
@@ -15,49 +20,91 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
         public double RmsMax { get; set; }
         public double RmsMin { get; set; }
 
-        public override void ApplyCoefficent()
+        [XmlIgnore][TestComparable]
+        private double PeakToPeak { get; set; }
+        [XmlIgnore][TestComparable]
+        private double Rms { get; set; }
+        public override double ApplyCoefficent(double value)
         {
-            throw new NotImplementedException();
+            return base.TestCoefficent.ApplyCoefficentValues(value);
         }
-
         public override void DataAcquisition()
         {
-            throw new NotImplementedException();
+            Random rnd = new Random();
+            PropertyInfo[] Properties = this.GetType().GetProperties();
+
+            foreach (PropertyInfo property in Properties)
+            {
+                if (Attribute.IsDefined(property, typeof(TestComparable)))
+                {
+                   double realValue = ApplyCoefficent((rnd.NextDouble()));
+                    property.SetValue(property, realValue);
+                }
+            }
         }
 
-        public override void ExecuteTest()
+        public override TestStates ExecuteTest(DataGridView dataGridView)
         {
             if (base.IsTestActive == true)
             {
-                DateTime StartTestTime = DateTime.Now;
+                DateTime startTestTime = DateTime.Now;
+                Program.LogForm.WriteLog(LogTypes.System, 0, -1, -1, this.GetType().Name + "başlatıldı", SystemIcons.Information);
                 base.TestStarted = true;
                 PrepareRelayMatrix();
                 DataAcquisition();
-                ApplyCoefficent();
-                PrapereResult();
+                base.TestResult = PrapereResult(dataGridView);
                 LogSQL();
-                base.TestDuration = StartTestTime - DateTime.Now;
+                base.TestDuration = startTestTime - DateTime.Now;
                 base.TestStarted = false;
+                return TestResult ? TestStates.TestResultOK : TestStates.TestResultNOK;
             }
             else
             {
-                //do nothing 
+                return TestStates.TestEmpty;
             }
+           
         }
 
         public override void LogSQL()
         {
-            throw new NotImplementedException();
+            
         }
 
-        public override void PrapereResult()
+        public override bool PrapereResult(DataGridView dataGridView)
         {
-            throw new NotImplementedException();
-        }
+            PropertyInfo[] Properties = this.GetType().GetProperties();
+            bool testResult = false;
+            int lastRowIndex = dataGridView.Rows.Count - 1;
+            foreach (PropertyInfo property in Properties)
+            {
+                if (Attribute.IsDefined(property, typeof(TestComparable)))
+                {
+                    
+                   double max = (double)this.GetType().GetProperty(property.Name + "Max").GetValue(this, null);
+                   double min = (double)this.GetType().GetProperty(property.Name + "Min").GetValue(this, null);
+                   double PropertyValue = (double)property.GetValue(property);
+                    if ((double)property.GetValue(property) >= min && (double)property.GetValue(property) <= max)
+                    {
+                        testResult = true;
+                    }
+                    else
+                    {
+                        testResult = false;
+                    }
+                    dataGridView.Rows.Add();
+                    dataGridView.Rows[lastRowIndex].Cells[Program.TestTableName].Value = property.Name;
+                    dataGridView.Rows[lastRowIndex].Cells[Program.TestUnit].Value = "";
+                    dataGridView.Rows[lastRowIndex].Cells[Program.TestMaxLimit].Value = max;
+                    dataGridView.Rows[lastRowIndex].Cells[Program.TestMinLimit].Value = min;
+                    dataGridView.Rows[lastRowIndex].Cells[Program.TestResult].Value = testResult ? "OK" : "RED";  
+                }
+            }
+            return testResult;
+        }   
 
         public override void PrepareRelayMatrix()
         {
-            throw new NotImplementedException();
+           
         }
     }
 }

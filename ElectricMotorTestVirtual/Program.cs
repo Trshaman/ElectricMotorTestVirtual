@@ -30,10 +30,17 @@ namespace ElectricMotorTestVirtual
         internal static string UserSettingsFile;
         internal static string ProgramIniFile;
         internal static List<TestSettings> TestList;
+
         internal static bool AddNewTest = false;
         internal static bool AdjustTest = false;
-        internal static string SelectedTestName = "";
-         
+
+        internal readonly static int  TestParameter = 0;
+        internal readonly static int  TestUnit = 1;
+        internal readonly static int  TestMaxLimit = 2;
+        internal readonly static int  TestMeasuredValue = 3;
+        internal readonly static int  TestMinLimit = 4;
+        internal readonly static int  TestResult = 5;
+
 
 
         /// <summary>
