@@ -30,14 +30,6 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Recipe
             this.MotorModelRecipe = new MotorModel();
         }
 
-        public IEnumerator<T> GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
 
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -32,7 +32,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
             else
             {
                 _CurrentTestSettings = _testList.FirstOrDefault(tst => tst.Name == Program.SelectedTestName);
-                TestRunnerClass.PrapareTestRecipe(_CurrentTestSettings);
+               // TestRunnerClass.PrapareTestRecipe(_CurrentTestSettings);
                 LoadTestToUI(_CurrentTestSettings);
             }
             

@@ -33,6 +33,7 @@ namespace ElectricMotorTestVirtual
 
         internal static bool AddNewTest = false;
         internal static bool AdjustTest = false;
+        internal static string SelectedTestName;
 
         internal readonly static int  TestParameter = 0;
         internal readonly static int  TestUnit = 1;
