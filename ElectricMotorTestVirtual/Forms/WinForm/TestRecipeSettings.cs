@@ -31,7 +31,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
             }
             else
             {
-                _CurrentTestSettings = _testList.FirstOrDefault(tst => tst.Name == Program.SelectedTestName);
+                _CurrentTestSettings = _testList.FirstOrDefault(tst => tst.Name == Program.AdjustedTestName);
                // TestRunnerClass.PrapareTestRecipe(_CurrentTestSettings);
                 LoadTestToUI(_CurrentTestSettings);
             }
@@ -89,7 +89,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
                         {
                             if (Program.AdjustTest)
                             {
-                                   if (Program.SelectedTestName != TestName.Text)
+                                   if (Program.AdjustedTestName != TestName.Text)
                                    {
                                         _isTestNameFree = _testList.FindLast(test => test.Name == TestName.Text) != null;
                                       

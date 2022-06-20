@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ElectricMotorTestVirtual.OOP_Approach.Recipe;
+using ElectricMotorTestVirtual.OOP_Approach.Settings;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +15,18 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
     public partial class MainOperatorUI : Form
     {
         public static DataGridView ResultTable;
+        private SettingsData _programDataSettings;
+        private List<TestSettings> _testList;
+        private TestSettings _selectedTestSettings;
+
         public MainOperatorUI()
         {
             InitializeComponent();
+            _programDataSettings = SettingsData.LoadSettingsFromXML(Program.ProgramIniFile);
+            _testList = Program.TestList;
+            _selectedTestSettings = _testList.FirstOrDefault(tst => tst.Name == _programDataSettings.SelectedTest);
+            TxbxSelectedTest.Text = _programDataSettings.SelectedTest;
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -23,11 +34,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
 
         }
 
-        private void ledDisplay1_Load(object sender, EventArgs e)
-        {
-            TestOK.Value = false;
-            ResultTable = TestResultTable;
-        }
+
 
       
     }

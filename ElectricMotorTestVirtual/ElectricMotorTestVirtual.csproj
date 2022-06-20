@@ -117,6 +117,7 @@
     <Compile Include="OOP Approach\Motor\TestCoefficents.cs" />
     <Compile Include="OOP Approach\Recipe\TestRecipe.cs" />
     <Compile Include="OOP Approach\Recipe\TestSettings.cs" />
+    <Compile Include="OOP Approach\Settings\SettingsData.cs" />
     <Compile Include="OOP Approach\TestCases\EMKTest.cs" />
     <Compile Include="OOP Approach\TestCases\HVTest.cs" />
     <Compile Include="OOP Approach\TestCases\LCRTest.cs" />
@@ -139,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PerformansTestUI.resx">
       <DependentUpon>PerformansTestUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WinForm\ComSettingsPage.resx">
+      <DependentUpon>ComSettingsPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\WinForm\frmLog.resx">
       <DependentUpon>frmLog.cs</DependentUpon>
@@ -177,9 +181,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="OOP Approach\Settings\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\GlobalFunctions\GlobalFunctions.csproj">
       <Project>{2a924922-f1d8-443c-9e1b-cbcefc3981f8}</Project>

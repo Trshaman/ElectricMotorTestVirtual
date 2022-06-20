@@ -11,6 +11,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestRunner
 {
     public static class TestRunnerClass
     {
+        public static string SelectedTestName;
         private static void initRelayMatrix()
         {
 

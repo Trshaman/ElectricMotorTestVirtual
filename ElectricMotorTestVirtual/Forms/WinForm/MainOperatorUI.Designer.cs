@@ -43,6 +43,7 @@
             this.Barcıde = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnStart = new System.Windows.Forms.Button();
+            this.TxbxSelectedTest = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.TestResultTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,12 +60,11 @@
             this.ClmnResultValue,
             this.ClmnLowLimit,
             this.ClmnResult});
-            this.TestResultTable.Location = new System.Drawing.Point(469, 21);
+            this.TestResultTable.Location = new System.Drawing.Point(469, 60);
             this.TestResultTable.Name = "TestResultTable";
             this.TestResultTable.ReadOnly = true;
-            this.TestResultTable.Size = new System.Drawing.Size(591, 520);
+            this.TestResultTable.Size = new System.Drawing.Size(591, 481);
             this.TestResultTable.TabIndex = 0;
-
             // 
             // ClmnTestParameter
             // 
@@ -159,7 +159,6 @@
             this.TestOK.Size = new System.Drawing.Size(88, 110);
             this.TestOK.TabIndex = 4;
             this.TestOK.Value = false;
-            this.TestOK.Load += new System.EventHandler(this.ledDisplay1_Load);
             // 
             // TestNOK
             // 
@@ -188,7 +187,6 @@
             this.TestNOK.Size = new System.Drawing.Size(88, 106);
             this.TestNOK.TabIndex = 4;
             this.TestNOK.Value = false;
-            this.TestNOK.Load += new System.EventHandler(this.ledDisplay1_Load);
             // 
             // Barcıde
             // 
@@ -202,11 +200,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(21, 25);
+            this.label2.Location = new System.Drawing.Point(817, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 18);
+            this.label2.Size = new System.Drawing.Size(98, 18);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Motor S/N:";
+            this.label2.Text = "Seçili Reçete:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // BtnStart
@@ -219,11 +217,20 @@
             this.BtnStart.Text = "Start Test";
             this.BtnStart.UseVisualStyleBackColor = true;
             // 
+            // TxbxSelectedTest
+            // 
+            this.TxbxSelectedTest.Location = new System.Drawing.Point(922, 12);
+            this.TxbxSelectedTest.Name = "TxbxSelectedTest";
+            this.TxbxSelectedTest.ReadOnly = true;
+            this.TxbxSelectedTest.Size = new System.Drawing.Size(133, 20);
+            this.TxbxSelectedTest.TabIndex = 131;
+            // 
             // MainOperatorUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1159, 636);
+            this.Controls.Add(this.TxbxSelectedTest);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Barcıde);
             this.Controls.Add(this.TestNOK);
@@ -258,5 +265,6 @@
         private System.Windows.Forms.TextBox Barcıde;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnStart;
+        private System.Windows.Forms.TextBox TxbxSelectedTest;
     }
 }
