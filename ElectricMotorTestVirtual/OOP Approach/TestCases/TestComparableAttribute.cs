@@ -8,6 +8,6 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 {
     public class TestComparable : Attribute
     {
-
+        //just marking
     }
 }

@@ -113,17 +113,19 @@
       <DependentUpon>TestRecipeSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="OOP Approach\Motor\Coefficent.cs" />
+    <Compile Include="OOP Approach\Motor\IMotorModel.cs" />
     <Compile Include="OOP Approach\Motor\MotorModel.cs" />
     <Compile Include="OOP Approach\Motor\TestCoefficents.cs" />
     <Compile Include="OOP Approach\Recipe\TestRecipe.cs" />
-    <Compile Include="OOP Approach\Recipe\TestSettings.cs" />
+    <Compile Include="OOP Approach\Recipe\TestRecipeClass.cs" />
     <Compile Include="OOP Approach\Settings\SettingsData.cs" />
     <Compile Include="OOP Approach\TestCases\EMKTest.cs" />
     <Compile Include="OOP Approach\TestCases\HVTest.cs" />
     <Compile Include="OOP Approach\TestCases\LCRTest.cs" />
     <Compile Include="OOP Approach\TestCases\PerformanceTest.cs" />
+    <Compile Include="OOP Approach\TestCases\TestFactory.cs" />
     <Compile Include="OOP Approach\TestCases\TestComparableAttribute.cs" />
-    <Compile Include="OOP Approach\TestRunner\TestRunnerClass.cs" />
+    <Compile Include="OOP Approach\TestRunner\TestRunner.cs" />
     <Compile Include="OOP Approach\Test\ITestOperation.cs" />
     <Compile Include="OOP Approach\Test\TestCase.cs" />
     <Compile Include="OOP Approach\Test\TestStates.cs" />

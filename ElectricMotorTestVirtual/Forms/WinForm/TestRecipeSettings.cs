@@ -14,8 +14,8 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
 {
     public partial class TestRecipeSettings : Form
     {
-        private TestSettings _CurrentTestSettings;
-        private List<TestSettings> _testList;
+        private OOP_Approach.Recipe.TestRecipeClass _CurrentTestSettings;
+        private List<OOP_Approach.Recipe.TestRecipeClass> _testList;
         private TestRecipe _CurrentTestRecipe;
         private string _editedTestName;
         private bool _isTestNameFree;
@@ -23,7 +23,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
         {
             InitializeComponent();
             _testList = Program.TestList;
-            _CurrentTestSettings = new TestSettings();
+            _CurrentTestSettings = new OOP_Approach.Recipe.TestRecipeClass();
             BtnExit.Click += (object sender, EventArgs e) => { this.Close(); };
             if (Program.AddNewTest)
             {
@@ -57,7 +57,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
 
         }
 
-        private void LoadTestToUI(TestSettings testSettings)
+        private void LoadTestToUI(OOP_Approach.Recipe.TestRecipeClass testSettings)
         {
             TestName.Text = testSettings.Name;
             TestDescription.Text = testSettings.TestDescription;
@@ -68,7 +68,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
 
         }
 
-        private void LoadUIToTest(TestSettings testSettings)
+        private void LoadUIToTest(OOP_Approach.Recipe.TestRecipeClass testSettings)
         {
             testSettings.Name = TestName.Text;
             testSettings.TestDescription = TestDescription.Text;
@@ -104,7 +104,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
                                      LoadUIToTest(_CurrentTestSettings);
                                      if (_CurrentTestSettings.IsTestSettingsAppropriate())
                                      {
-                                      TestSettings.SaveTestsAsXML(Program.TestSettingFile, _testList);
+                                      TestRecipeClass.SaveTestsAsXML(Program.TestSettingFile, _testList);
                                       MessageBox.Show("Test Güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                      }
                                     
@@ -120,7 +120,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
                                    if (_isTestNameFree)
                                    {
                                        _testList.Add(_CurrentTestSettings);
-                                       TestSettings.SaveTestsAsXML(Program.TestSettingFile, _testList);
+                                       TestRecipeClass.SaveTestsAsXML(Program.TestSettingFile, _testList);
                                        MessageBox.Show("Test Oluştruldu.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                    }
                                    else
@@ -140,7 +140,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
                     if (MessageBox.Show("Testi kayıt etmek istiyor musunuz?", "Onay", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                     {
                         _testList.Add(_CurrentTestSettings);
-                        TestSettings.SaveTestsAsXML(Program.TestSettingFile, _testList);
+                        TestRecipeClass.SaveTestsAsXML(Program.TestSettingFile, _testList);
                         MessageBox.Show("Test güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }

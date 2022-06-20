@@ -56,7 +56,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
                 LogSQL();
                 base.TestDuration = startTestTime - DateTime.Now;
                 base.TestStarted = false;
-                return TestResult ? TestStates.TestResultOK : TestStates.TestResultNOK;
+                return TestResult == true ? TestStates.TestResultOK : TestStates.TestResultNOK;
             }
             else
             {

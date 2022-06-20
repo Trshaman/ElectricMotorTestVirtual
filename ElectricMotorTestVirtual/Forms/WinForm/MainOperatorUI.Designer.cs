@@ -38,12 +38,13 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnClose = new System.Windows.Forms.Button();
-            this.TestOK = new UserInterface.LedDisplay();
-            this.TestNOK = new UserInterface.LedDisplay();
             this.Barcıde = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnStart = new System.Windows.Forms.Button();
             this.TxbxSelectedTest = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TestNOK = new UserInterface.LedDisplay();
+            this.TestOK = new UserInterface.LedDisplay();
             ((System.ComponentModel.ISupportInitialize)(this.TestResultTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,7 +107,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(884, 547);
+            this.textBox1.Location = new System.Drawing.Point(867, 547);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(263, 26);
             this.textBox1.TabIndex = 1;
@@ -115,7 +116,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(698, 547);
+            this.label1.Location = new System.Drawing.Point(692, 543);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 29);
             this.label1.TabIndex = 2;
@@ -124,12 +125,89 @@
             // BtnClose
             // 
             this.BtnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnClose.Location = new System.Drawing.Point(922, 588);
+            this.BtnClose.Location = new System.Drawing.Point(905, 590);
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Size = new System.Drawing.Size(225, 34);
             this.BtnClose.TabIndex = 3;
             this.BtnClose.Text = "Çıkış";
             this.BtnClose.UseVisualStyleBackColor = true;
+            // 
+            // Barcıde
+            // 
+            this.Barcıde.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Barcıde.Location = new System.Drawing.Point(118, 21);
+            this.Barcıde.Name = "Barcıde";
+            this.Barcıde.Size = new System.Drawing.Size(150, 26);
+            this.Barcıde.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(823, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 18);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Seçili Reçete:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // BtnStart
+            // 
+            this.BtnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnStart.Location = new System.Drawing.Point(74, 588);
+            this.BtnStart.Name = "BtnStart";
+            this.BtnStart.Size = new System.Drawing.Size(225, 34);
+            this.BtnStart.TabIndex = 3;
+            this.BtnStart.Text = "Start Test";
+            this.BtnStart.UseVisualStyleBackColor = true;
+            this.BtnStart.Click += new System.EventHandler(this.BtnStart_Click);
+            // 
+            // TxbxSelectedTest
+            // 
+            this.TxbxSelectedTest.Location = new System.Drawing.Point(927, 21);
+            this.TxbxSelectedTest.Name = "TxbxSelectedTest";
+            this.TxbxSelectedTest.ReadOnly = true;
+            this.TxbxSelectedTest.Size = new System.Drawing.Size(133, 20);
+            this.TxbxSelectedTest.TabIndex = 131;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(31, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 18);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Motor S/N:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // TestNOK
+            // 
+            this.TestNOK.BackGradientColor = System.Drawing.Color.White;
+            this.TestNOK.BackGradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.TestNOK.Blink = UserInterface.LedDisplay.BlinkState.Off;
+            this.TestNOK.BlinkPeriod = 1000;
+            this.TestNOK.ChannelList = null;
+            this.TestNOK.ContainerFormName = null;
+            this.TestNOK.DesignModeActive = false;
+            this.TestNOK.Header = "NOK";
+            this.TestNOK.HeaderBackColor = System.Drawing.Color.WhiteSmoke;
+            this.TestNOK.HeaderFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TestNOK.HeaderForeColor = System.Drawing.Color.Black;
+            this.TestNOK.HeaderPosition = UserInterface.HeaderPosition.Top;
+            this.TestNOK.HeaderVisible = true;
+            this.TestNOK.LedStyle = UserInterface.LedDisplay.LedDisplayStyle.Sphere;
+            this.TestNOK.Location = new System.Drawing.Point(1065, 105);
+            this.TestNOK.Margin = new System.Windows.Forms.Padding(2);
+            this.TestNOK.Name = "TestNOK";
+            this.TestNOK.OffColor = System.Drawing.Color.Gainsboro;
+            this.TestNOK.OnColor = System.Drawing.Color.Red;
+            this.TestNOK.PropertyEditMode = false;
+            this.TestNOK.Reflection = UserInterface.LedDisplay.ReflectionState.On;
+            this.TestNOK.Selected = false;
+            this.TestNOK.Size = new System.Drawing.Size(88, 106);
+            this.TestNOK.TabIndex = 4;
+            this.TestNOK.Value = false;
             // 
             // TestOK
             // 
@@ -160,77 +238,13 @@
             this.TestOK.TabIndex = 4;
             this.TestOK.Value = false;
             // 
-            // TestNOK
-            // 
-            this.TestNOK.BackGradientColor = System.Drawing.Color.White;
-            this.TestNOK.BackGradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.TestNOK.Blink = UserInterface.LedDisplay.BlinkState.Off;
-            this.TestNOK.BlinkPeriod = 1000;
-            this.TestNOK.ChannelList = null;
-            this.TestNOK.ContainerFormName = null;
-            this.TestNOK.DesignModeActive = false;
-            this.TestNOK.Header = "NOK";
-            this.TestNOK.HeaderBackColor = System.Drawing.Color.WhiteSmoke;
-            this.TestNOK.HeaderFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TestNOK.HeaderForeColor = System.Drawing.Color.Black;
-            this.TestNOK.HeaderPosition = UserInterface.HeaderPosition.Top;
-            this.TestNOK.HeaderVisible = true;
-            this.TestNOK.LedStyle = UserInterface.LedDisplay.LedDisplayStyle.Sphere;
-            this.TestNOK.Location = new System.Drawing.Point(1065, 105);
-            this.TestNOK.Margin = new System.Windows.Forms.Padding(2);
-            this.TestNOK.Name = "TestNOK";
-            this.TestNOK.OffColor = System.Drawing.Color.Gainsboro;
-            this.TestNOK.OnColor = System.Drawing.Color.Red;
-            this.TestNOK.PropertyEditMode = false;
-            this.TestNOK.Reflection = UserInterface.LedDisplay.ReflectionState.On;
-            this.TestNOK.Selected = false;
-            this.TestNOK.Size = new System.Drawing.Size(88, 106);
-            this.TestNOK.TabIndex = 4;
-            this.TestNOK.Value = false;
-            // 
-            // Barcıde
-            // 
-            this.Barcıde.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Barcıde.Location = new System.Drawing.Point(118, 21);
-            this.Barcıde.Name = "Barcıde";
-            this.Barcıde.Size = new System.Drawing.Size(150, 26);
-            this.Barcıde.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(817, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 18);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Seçili Reçete:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // BtnStart
-            // 
-            this.BtnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnStart.Location = new System.Drawing.Point(74, 588);
-            this.BtnStart.Name = "BtnStart";
-            this.BtnStart.Size = new System.Drawing.Size(225, 34);
-            this.BtnStart.TabIndex = 3;
-            this.BtnStart.Text = "Start Test";
-            this.BtnStart.UseVisualStyleBackColor = true;
-            // 
-            // TxbxSelectedTest
-            // 
-            this.TxbxSelectedTest.Location = new System.Drawing.Point(922, 12);
-            this.TxbxSelectedTest.Name = "TxbxSelectedTest";
-            this.TxbxSelectedTest.ReadOnly = true;
-            this.TxbxSelectedTest.Size = new System.Drawing.Size(133, 20);
-            this.TxbxSelectedTest.TabIndex = 131;
-            // 
             // MainOperatorUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1159, 636);
             this.Controls.Add(this.TxbxSelectedTest);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Barcıde);
             this.Controls.Add(this.TestNOK);
@@ -266,5 +280,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnStart;
         private System.Windows.Forms.TextBox TxbxSelectedTest;
+        private System.Windows.Forms.Label label3;
     }
 }

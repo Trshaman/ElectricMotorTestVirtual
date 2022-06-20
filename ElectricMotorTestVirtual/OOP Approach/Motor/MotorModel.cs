@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElectricMotorTestVirtual.OOP_Approach.Motor
 {
-    public class MotorModel
+    public class MotorModel : IMotorModel
     {
         private int motorId;
 

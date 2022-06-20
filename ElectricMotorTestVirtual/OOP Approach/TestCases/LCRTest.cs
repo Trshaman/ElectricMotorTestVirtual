@@ -88,7 +88,34 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 
         public override bool PrapereResult(DataGridView dataGridView)
         {
-            return true;
+            PropertyInfo[] Properties = this.GetType().GetProperties();
+            bool testResult = false;
+            int lastRowIndex = dataGridView.Rows.Count - 1;
+            foreach (PropertyInfo property in Properties)
+            {
+                if (Attribute.IsDefined(property, typeof(TestComparable)))
+                {
+
+                    double max = (double)this.GetType().GetProperty(property.Name + "Max").GetValue(this, null);
+                    double min = (double)this.GetType().GetProperty(property.Name + "Min").GetValue(this, null);
+                    double PropertyValue = (double)property.GetValue(property);
+                    if ((double)property.GetValue(property) >= min && (double)property.GetValue(property) <= max)
+                    {
+                        testResult = true;
+                    }
+                    else
+                    {
+                        testResult = false;
+                    }
+                    dataGridView.Rows.Add();
+                    dataGridView.Rows[lastRowIndex].Cells[Program.TestTableName].Value = property.Name;
+                    dataGridView.Rows[lastRowIndex].Cells[Program.TestUnit].Value = "";
+                    dataGridView.Rows[lastRowIndex].Cells[Program.TestMaxLimit].Value = max;
+                    dataGridView.Rows[lastRowIndex].Cells[Program.TestMinLimit].Value = min;
+                    dataGridView.Rows[lastRowIndex].Cells[Program.TestResult].Value = testResult ? "OK" : "RED";
+                }
+            }
+            return testResult;
         }
 
         public override void PrepareRelayMatrix()

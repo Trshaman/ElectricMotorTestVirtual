@@ -1,4 +1,5 @@
 ﻿using ElectricMotorTestVirtual.OOP_Approach.Motor;
+using ElectricMotorTestVirtual.OOP_Approach.Test;
 using ElectricMotorTestVirtual.OOP_Approach.TestCases;
 using System;
 using System.Collections;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ElectricMotorTestVirtual.OOP_Approach.Recipe
 {
-    public class TestRecipe 
+    public class TestRecipe
     {
         public EMKTest EmkTestRecipe { get; set; }
 
@@ -25,11 +26,11 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Recipe
         {
             this.EmkTestRecipe = new EMKTest();
             this.HVTestRecipe = new HVTest();
-            this. LCRTestRecipe = new LCRTest();
+            this.LCRTestRecipe = new LCRTest();
             this.PerformanceTestRecipe = new PerformanceTest();
             this.MotorModelRecipe = new MotorModel();
         }
 
-
+ 
     }
 }

@@ -1,5 +1,6 @@
 ﻿using ElectricMotorTestVirtual.OOP_Approach.Recipe;
 using ElectricMotorTestVirtual.OOP_Approach.Settings;
+using ElectricMotorTestVirtual.OOP_Approach.TestRunner;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,16 +17,20 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
     {
         public static DataGridView ResultTable;
         private SettingsData _programDataSettings;
-        private List<TestSettings> _testList;
-        private TestSettings _selectedTestSettings;
+        private List<TestRecipeClass> _testList;
+        private TestRecipeClass _selectedRecipe;
+        private TestRunner _testRunner;
 
         public MainOperatorUI()
         {
             InitializeComponent();
+            
             _programDataSettings = SettingsData.LoadSettingsFromXML(Program.ProgramIniFile);
             _testList = Program.TestList;
-            _selectedTestSettings = _testList.FirstOrDefault(tst => tst.Name == _programDataSettings.SelectedTest);
+            _selectedRecipe = _testList.FirstOrDefault(tst => tst.Name == _programDataSettings.SelectedTest);
             TxbxSelectedTest.Text = _programDataSettings.SelectedTest;
+            _testRunner = new TestRunner(_selectedRecipe, _programDataSettings);
+            initUI();
 
         }
 
@@ -34,8 +39,24 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
 
         }
 
+        public void initUI()
+        {
+            TestOK.Value = false;
+            TestNOK.Value = false;
+            TestResultTable.Rows.Clear();
+        }
 
+        private void BtnStart_Click(object sender, EventArgs e)
+        {
 
-      
+            if (_testRunner.RunTest(TestResultTable))
+            {
+                TestOK.Value = true;
+            }
+            else
+            {
+                TestNOK.Value = true;
+            }
+        }
     }
 }

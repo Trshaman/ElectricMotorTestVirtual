@@ -10,7 +10,7 @@ using System.Xml.Serialization;
 namespace ElectricMotorTestVirtual.OOP_Approach.Recipe
 {
     [Serializable]
-    public class TestSettings
+    public class TestRecipeClass
     {
 
         public string Name { get; set; }
@@ -21,17 +21,17 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Recipe
 
         public TestRecipe RecipeSettings { get; set; }
 
-        public TestSettings()
+        public TestRecipeClass()
         {
             this.RecipeSettings = new TestRecipe();
         }
-        public static Exception SaveTestsAsXML(string fileName, List<TestSettings> testList)
+        public static Exception SaveTestsAsXML(string fileName, List<TestRecipeClass> testList)
         {
             FileStream fs = null;
             try
             {
                 fs = new FileStream(fileName, FileMode.Create);
-                XmlSerializer x = new XmlSerializer(typeof(List<TestSettings>));
+                XmlSerializer x = new XmlSerializer(typeof(List<TestRecipeClass>));
                 x.Serialize(fs, testList); ;
             }
             catch (Exception ex)
@@ -49,7 +49,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Recipe
             return null;
         }
 
-        public static List<TestSettings> LoadTestsFromXML(string fileName)
+        public static List<TestRecipeClass> LoadTestsFromXML(string fileName)
         {
             if (File.Exists(fileName))
             {
@@ -57,8 +57,8 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Recipe
                 {
                     using (StreamReader fs = new StreamReader(fileName))
                     {
-                        XmlSerializer x = new XmlSerializer(typeof (List<TestSettings>));
-                        return (List<TestSettings>)x.Deserialize(fs); 
+                        XmlSerializer x = new XmlSerializer(typeof (List<TestRecipeClass>));
+                        return (List<TestRecipeClass>)x.Deserialize(fs); 
                     }
                 }
                 catch (Exception ex)
@@ -69,9 +69,9 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Recipe
             return null;
         }
 
-        public TestSettings Copy(string name)
+        public TestRecipeClass Copy(string name)
         {
-            TestSettings newTest = new TestSettings();
+            TestRecipeClass newTest = new TestRecipeClass();
             newTest.Name = name;
             newTest.No = No;
             newTest.RecipeSettings = this.RecipeSettings;

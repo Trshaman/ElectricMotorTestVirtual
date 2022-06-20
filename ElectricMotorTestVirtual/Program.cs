@@ -30,7 +30,7 @@ namespace ElectricMotorTestVirtual
         internal static List<Log> StartUpLogs;
         internal static string UserSettingsFile;
         internal static string ProgramIniFile;
-        internal static List<TestSettings> TestList;
+        internal static List<TestRecipeClass> TestList;
         internal static SettingsData ProgamSettings;
 
         internal static bool AddNewTest = false;
@@ -96,9 +96,9 @@ namespace ElectricMotorTestVirtual
                 StartUpLogs.Add(new Log(DateTime.Now, LogTypes.System, 5, -1, -1, "\\Settings klasörü bulunamadı. Yeniden oluşturulacak, tüm test,istasyon,kullanıcı bilgileri tanımlanmalıdır. ", System.Drawing.SystemIcons.Error));
                 Directory.CreateDirectory(SettingDir);
             }
-            TestList = TestSettings.LoadTestsFromXML(TestSettingFile);
+            TestList = TestRecipeClass.LoadTestsFromXML(TestSettingFile);
             if (TestList == null)
-                TestList = new List<TestSettings>();
+                TestList = new List<TestRecipeClass>();
             ProgamSettings = SettingsData.LoadSettingsFromXML(ProgramIniFile);
             if(ProgamSettings == null)
                 ProgamSettings = new SettingsData();
