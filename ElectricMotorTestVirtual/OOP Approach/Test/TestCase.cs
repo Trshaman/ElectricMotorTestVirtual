@@ -33,7 +33,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Test
 
         public abstract void DataAcquisition();
 
-        public abstract TestStates ExecuteTest(DataGridView dataGridView);
+        public abstract bool ExecuteTest(DataGridView dataGridView);
 
         public abstract void LogSQL();
 

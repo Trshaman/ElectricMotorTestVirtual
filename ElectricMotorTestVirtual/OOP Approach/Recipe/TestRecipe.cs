@@ -5,6 +5,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,7 +31,24 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Recipe
             this.PerformanceTestRecipe = new PerformanceTest();
             this.MotorModelRecipe = new MotorModel();
         }
+       
+        public List<object> GetAllTest()
+        {
+            List<object> tests = new List<object>();
+            PropertyInfo[] Properties = this.GetType().GetProperties();
+            foreach (PropertyInfo property in Properties)
+            {
+                var obj = this.GetType().GetProperty(property.Name).GetValue(this, null);
+      
+                if (obj.GetType().BaseType == typeof(TestCase))
+                {
+                    tests.Add(obj);
+                }
+                
+            }
+          
+            return tests;
 
- 
+        }
     }
 }

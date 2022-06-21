@@ -46,7 +46,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
             }
         }
 
-        public override TestStates ExecuteTest(DataGridView dataGridView)
+        public override bool ExecuteTest(DataGridView dataGridView)
         {
             if (base.IsTestActive == true)
             {
@@ -62,11 +62,11 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
                 string testResult = base.TestResult == true ? "Test OK" : "Test NOK";
                 Program.LogForm.WriteLog(LogTypes.System, 0, -1, -1, this.GetType().Name + testResult, SystemIcons.Information);
                 base.TestStarted = false;
-                return TestResult == true ? TestStates.TestResultOK : TestStates.TestResultNOK;
+                return TestResult == true ? true : false;
             }
             else
             {
-                return TestStates.TestEmpty;
+                return true;
             }
 
         }

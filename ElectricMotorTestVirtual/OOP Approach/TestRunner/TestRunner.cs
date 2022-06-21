@@ -34,13 +34,18 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestRunner
         {
             checkDeviceConnection();
             initRelayMatrix();
-            _selectedTestRecipe.RecipeSettings.EmkTestRecipe.ExecuteTest(dataGridView); _selectedTestRecipe.RecipeSettings.HVTestRecipe.ExecuteTest(dataGridView);
-            _selectedTestRecipe.RecipeSettings.LCRTestRecipe.ExecuteTest(dataGridView);
-            _selectedTestRecipe.RecipeSettings.PerformanceTestRecipe.ExecuteTest(dataGridView);
+            foreach (ITestOperation test in _selectedTestRecipe.RecipeSettings.GetAllTest())
+            {
+                if (test.ExecuteTest(dataGridView))
+                {
+
+                }
+                else
+                {
+                    return false;
+                }     
+            }
             return true;
-
-
-
         }
            
         

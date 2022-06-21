@@ -13,7 +13,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Test
 
         void PrepareRelayMatrix();
 
-        TestStates ExecuteTest(DataGridView dataGridView);
+        bool ExecuteTest(DataGridView dataGridView);
 
         double ApplyCoefficent(double value);
 

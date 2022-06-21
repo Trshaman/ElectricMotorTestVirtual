@@ -48,7 +48,8 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
 
         private void BtnStart_Click(object sender, EventArgs e)
         {
-
+            TestOK.Value = false;
+            TestNOK.Value = false;
             if (_testRunner.RunTest(TestResultTable))
             {
                 TestOK.Value = true;
