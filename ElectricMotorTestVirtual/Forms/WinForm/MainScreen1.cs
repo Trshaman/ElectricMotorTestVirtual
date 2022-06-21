@@ -55,12 +55,12 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
             {
                 _recipeSelectionPage = new RecipeSelectionPage();
                 _recipeSelectionPage.HandleDestroyed += (object send, EventArgs e2) => { _recipeSelectionPage = null; };
-                _recipeSelectionPage.Show();
                 _recipeSelectionPage.MdiParent = this;
+                _recipeSelectionPage.Show();
             }
             else
             {
-                _mainOperatorUI.Focus();
+                _recipeSelectionPage.Focus();
             }
         }
 
@@ -70,8 +70,8 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
             {
                 _settingsPage = new ComSettingsPage();
                 _settingsPage.HandleDestroyed += (object send, EventArgs e2) => { _settingsPage = null; };
-                _settingsPage.Show();
                 _settingsPage.MdiParent = this;
+                _settingsPage.Show();
             }
             else
             {

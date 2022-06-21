@@ -32,20 +32,24 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestRunner
 
         public bool RunTest(DataGridView dataGridView)
         {
+            dataGridView.Rows.Clear();
+            bool testResult = true;
             checkDeviceConnection();
             initRelayMatrix();
-            foreach (ITestOperation test in _selectedTestRecipe.RecipeSettings.GetAllTest())
+            foreach (ITestOperation test in _selectedTestRecipe.RecipeSettings.GetTestList())
             {
+                
                 if (test.ExecuteTest(dataGridView))
                 {
 
                 }
                 else
                 {
-                    return false;
+                    testResult = false;
+                    break;
                 }     
             }
-            return true;
+            return testResult;
         }
            
         

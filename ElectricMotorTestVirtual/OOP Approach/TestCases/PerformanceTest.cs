@@ -14,19 +14,19 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 {
     public class PerformanceTest : TestCase
     {
-        public int UnloadPerformanceRpmMax { get; set; }
+        public double UnloadPerformanceRpmMax { get; set; }
         
-        public int UnloadPerformanceRpmMin { get; set; }
-        public int LoadPerformanceRpmMax { get; set; }
+        public double UnloadPerformanceRpmMin { get; set; }
+        public double LoadPerformanceRpmMax { get; set; }
         
-        public int LoadPerformanceRpmMin { get; set; }
+        public double LoadPerformanceRpmMin { get; set; }
         public double LoadTorque1Nm { get; set; }
         public double LoadTorque2Nm { get; set; }
 
         [XmlIgnore] [TestComparable]
-        public int UnloadPerformance { get; set; }
+        public double UnloadPerformanceRpm { get; set; }
         [XmlIgnore] [TestComparable]
-        public int LoadPerformance { get; set; }
+        public double LoadPerformanceRpm { get; set; }
 
         public override double ApplyCoefficent(double value)
         {
@@ -84,7 +84,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
         public override bool PrapereResult(DataGridView dataGridView)
         {
             PropertyInfo[] Properties = this.GetType().GetProperties();
-            bool testResult = false;
+            bool testResult = true;
             int lastRowIndex = 0;
 
             foreach (PropertyInfo property in Properties)
@@ -106,10 +106,10 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 
                     double testValue = (double)this.GetType().GetProperty(propName).GetValue(this, null);
 
-
+                    bool testResultTable = false;
                     if (testValue >= min && testValue <= max)
                     {
-                        testResult = true;
+                        testResultTable = true;
                     }
                     else
                     {
@@ -121,7 +121,9 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
                     dataGridView.Rows[lastRowIndex].Cells[Program.TestMaxLimit].Value = max;
                     dataGridView.Rows[lastRowIndex].Cells[Program.TestMeasuredValue].Value = testValue;
                     dataGridView.Rows[lastRowIndex].Cells[Program.TestMinLimit].Value = min;
-                    dataGridView.Rows[lastRowIndex].Cells[Program.TestResult].Value = testResult ? "OK" : "RED";
+                    dataGridView.Rows[lastRowIndex].Cells[Program.TestResult].Value = testResultTable ? "OK" : "RED";
+                    Color testResultColor = testResultTable == true ? Color.Yellow : Color.Red;
+                    dataGridView.Rows[lastRowIndex].DefaultCellStyle.BackColor = testResultColor;
                 }
             }
             return testResult;

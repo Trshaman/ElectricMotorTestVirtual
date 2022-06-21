@@ -32,7 +32,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Recipe
             this.MotorModelRecipe = new MotorModel();
         }
        
-        public List<object> GetAllTest()
+        public List<object> GetTestList()
         {
             List<object> tests = new List<object>();
             PropertyInfo[] Properties = this.GetType().GetProperties();

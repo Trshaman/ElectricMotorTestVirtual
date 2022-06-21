@@ -28,7 +28,7 @@ namespace ElectricMotorTestVirtual.Forms
             R1Ohm_Max.Value = test.R1Max;
             R1Ohm_Min.Value = test.R1Min;
             R2Ohm_Max.Value = test.R2Max;
-            R2Ohm_Max.Value = test.R2Min;
+            R2Ohm_Min.Value = test.R2Min;
             R3Ohm_Max.Value = test.R3Max;
             R3Ohm_Min.Value = test.R3Min;
             L1Inductance_Max.Value = test.L1Max;
@@ -45,7 +45,7 @@ namespace ElectricMotorTestVirtual.Forms
             test.R1Max = R1Ohm_Max.Value;
             test.R1Min = R1Ohm_Min.Value;
             test.R2Max = R2Ohm_Max.Value;
-            test.R2Min = R2Ohm_Max.Value;
+            test.R2Min = R2Ohm_Min.Value;
             test.R3Max = R3Ohm_Max.Value;
             test.R3Min = R3Ohm_Min.Value;
             test.L1Max = L1Inductance_Max.Value;
