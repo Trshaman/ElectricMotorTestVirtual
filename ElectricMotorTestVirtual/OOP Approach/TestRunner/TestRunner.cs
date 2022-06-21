@@ -34,29 +34,19 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestRunner
         {
             checkDeviceConnection();
             initRelayMatrix();
-            var DENEME = _selectedTestRecipe.RecipeSettings.GetType().GetMembers();
-            var DENEME2 = _selectedTestRecipe.RecipeSettings.GetType().GetProperties();
-
-            foreach (var testCases in _selectedTestRecipe.RecipeSettings.GetType().GetProperties())
-            {
-                var obj = testCases.PropertyType.BaseType;
-                if (testCases.PropertyType.BaseType == typeof(TestCase))
-                {
-                    var obj2 = testCases.GetType().GetProperties().GetValue()
-                }
-                //initRelayMatrix();
-                //if (testCases.ExecuteTest(dataGridView) == TestStates.TestResultNOK)
-                //{
-                //     return false;
-                //    break;
-                   
-                //}
-              
-            }
+            _selectedTestRecipe.RecipeSettings.EmkTestRecipe.ExecuteTest(dataGridView); _selectedTestRecipe.RecipeSettings.HVTestRecipe.ExecuteTest(dataGridView);
+            _selectedTestRecipe.RecipeSettings.LCRTestRecipe.ExecuteTest(dataGridView);
+            _selectedTestRecipe.RecipeSettings.PerformanceTestRecipe.ExecuteTest(dataGridView);
             return true;
-        }
 
+
+
+        }
+           
         
+
+       
+     
 
 
     }

@@ -22,9 +22,9 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
         public double IRResistanceMin { get; set; }
 
         [XmlIgnore][TestComparable]
-        private double LeakageCurrent { get; set; }
+        public double LeakageCurrent { get; set; }
         [XmlIgnore][TestComparable]
-        private double IRResistance { get; set; }
+        public double IRResistance { get; set; }
         public override double ApplyCoefficent(double value)
         {
             return 0;
@@ -38,7 +38,10 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
             {
                 if (Attribute.IsDefined(property, typeof(TestComparable)))
                 {
-                    property.SetValue(property, rnd.Next(1, 100));
+                    string propName = property.Name;
+                    double value = (double)rnd.Next(1, 100);
+                    // property.SetValue(property, rnd.Next(1, 100));
+                    this.GetType().GetProperty(propName).SetValue(this, value, null);
                 }
             }
         }
@@ -55,6 +58,9 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
                 base.TestResult = PrapereResult(dataGridView);
                 LogSQL();
                 base.TestDuration = startTestTime - DateTime.Now;
+                base.TestStarted = false;
+                string testResult = base.TestResult == true ? "Test OK" : "Test NOK";
+                Program.LogForm.WriteLog(LogTypes.System, 0, -1, -1, this.GetType().Name + testResult, SystemIcons.Information);
                 base.TestStarted = false;
                 return TestResult == true ? TestStates.TestResultOK : TestStates.TestResultNOK;
             }
@@ -76,16 +82,29 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
         {
             PropertyInfo[] Properties = this.GetType().GetProperties();
             bool testResult = false;
-            int lastRowIndex = dataGridView.Rows.Count - 1;
+            int lastRowIndex = 0;
+        
             foreach (PropertyInfo property in Properties)
             {
                 if (Attribute.IsDefined(property, typeof(TestComparable)))
                 {
-
+                    if (dataGridView.Rows.Count - 1 == -1)
+                    {
+                        lastRowIndex = 0;
+                    }
+                    else
+                    {
+                        lastRowIndex = dataGridView.Rows.Count;
+                    }
                     double max = (double)this.GetType().GetProperty(property.Name + "Max").GetValue(this, null);
                     double min = (double)this.GetType().GetProperty(property.Name + "Min").GetValue(this, null);
-                    double PropertyValue = (double)property.GetValue(property);
-                    if ((double)property.GetValue(property) >= min && (double)property.GetValue(property) <= max)
+                    string propName = property.Name;
+
+
+                    double testValue = (double)this.GetType().GetProperty(propName).GetValue(this, null);
+
+
+                    if (testValue >= min && testValue <= max)
                     {
                         testResult = true;
                     }
@@ -94,9 +113,10 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
                         testResult = false;
                     }
                     dataGridView.Rows.Add();
-                    dataGridView.Rows[lastRowIndex].Cells[Program.TestTableName].Value = property.Name;
+                    dataGridView.Rows[lastRowIndex].Cells[Program.TestParameter].Value = property.Name;
                     dataGridView.Rows[lastRowIndex].Cells[Program.TestUnit].Value = "";
                     dataGridView.Rows[lastRowIndex].Cells[Program.TestMaxLimit].Value = max;
+                    dataGridView.Rows[lastRowIndex].Cells[Program.TestMeasuredValue].Value = testValue;
                     dataGridView.Rows[lastRowIndex].Cells[Program.TestMinLimit].Value = min;
                     dataGridView.Rows[lastRowIndex].Cells[Program.TestResult].Value = testResult ? "OK" : "RED";
                 }
