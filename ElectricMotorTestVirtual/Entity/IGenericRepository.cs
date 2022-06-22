@@ -14,5 +14,7 @@ namespace ElectricMotorTestVirtual.Entity
         void Update(T obj);
         void Delete(object id);
         void Save();
+        T GetLastRow();
+
     }
 }

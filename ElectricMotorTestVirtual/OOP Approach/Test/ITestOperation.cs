@@ -13,13 +13,13 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Test
 
         void PrepareRelayMatrix();
 
-        bool ExecuteTest(DataGridView dataGridView);
+        bool ExecuteTest(DataGridView dataGridView, int indx);
 
         double ApplyCoefficent(double value);
 
         bool PrapereResult(DataGridView dataGridView);
 
-        void LogSQL();
+        void LogSQL(int index);
 
 
 

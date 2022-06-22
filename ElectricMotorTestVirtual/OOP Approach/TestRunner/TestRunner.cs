@@ -1,4 +1,5 @@
-﻿using ElectricMotorTestVirtual.OOP_Approach.Recipe;
+﻿using ElectricMotorTestVirtual.Entity;
+using ElectricMotorTestVirtual.OOP_Approach.Recipe;
 using ElectricMotorTestVirtual.OOP_Approach.Settings;
 using ElectricMotorTestVirtual.OOP_Approach.Test;
 using System;
@@ -15,6 +16,9 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestRunner
         public static string SelectedTestName;
         private TestRecipeClass _selectedTestRecipe;
         private SettingsData _testSettings;
+        private TestResult _testResult;
+        private IGenericRepository<TestResult> repository = new GenericRepository<TestResult>();
+        private int TestResultindx;
         private static void initRelayMatrix()
         {
 
@@ -23,10 +27,31 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestRunner
         {
             _selectedTestRecipe = selectedRecipe;
             _testSettings = testSettings;
+            
         }
-        private static void checkDeviceConnection()
+        private void checkDeviceConnection()
         {
+            
+        }
+        public void logTestSQL(String serialNumber)
+        {
+            _testResult = new TestResult()
+            {
+                Date = DateTime.Now,
+                SerialNumber = serialNumber,
+                Result = false,
+                HVTestActive = _selectedTestRecipe.RecipeSettings.HVTestRecipe.IsTestActive,
+                EMKTestActive = _selectedTestRecipe.RecipeSettings.EmkTestRecipe.IsTestActive,
+                LCRTestActive =
+                _selectedTestRecipe.RecipeSettings.LCRTestRecipe.IsTestActive,
+                PerformanceTestActive =
+                _selectedTestRecipe.RecipeSettings.PerformanceTestRecipe.IsTestActive,
 
+            };
+            repository.Insert(_testResult);
+            repository.Save();
+            var LastTestResultTable = repository.GetLastRow();
+            TestResultindx = LastTestResultTable.Id;
         }
 
 
@@ -39,7 +64,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestRunner
             foreach (ITestOperation test in _selectedTestRecipe.RecipeSettings.GetTestList())
             {
                 
-                if (test.ExecuteTest(dataGridView))
+                if (test.ExecuteTest(dataGridView, TestResultindx))
                 {
 
                 }

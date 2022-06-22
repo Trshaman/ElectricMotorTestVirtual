@@ -16,6 +16,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
     public class HVTest : TestCase
     {
         private IGenericRepository<HVTest> repository = new GenericRepository<HVTest>();
+
         public int Id { get; set; }
         public double HvTesVoltage { get; set; }
         public double LeakageCurrentMax { get; set; }
@@ -48,7 +49,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
             }
         }
 
-        public override bool ExecuteTest(DataGridView dataGridView)
+        public override bool ExecuteTest(DataGridView dataGridView, int indx)
         {
             if (base.IsTestActive == true)
             {
@@ -58,13 +59,14 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
                 PrepareRelayMatrix();
                 DataAcquisition();
                 base.TestResult = PrapereResult(dataGridView);
-                LogSQL();
+                
                 base.TestDuration = startTestTime - DateTime.Now;
                 base.TestStarted = false;
                 string testResult = base.TestResult == true ? "Test OK" : "Test NOK";
                 Program.LogForm.WriteLog(LogTypes.System, 0, -1, -1, this.GetType().Name + testResult, SystemIcons.Information);
                 base.TestStarted = false;
-                return TestResult == true ? true : false;
+                LogSQL(indx);
+                return TestResult;
             }
             else
             {
@@ -73,8 +75,9 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 
         }
 
-        public override void LogSQL()
+        public override void LogSQL(int index)
         {
+            this.Id = index;
             repository.Insert(this);
             repository.Save();
         }

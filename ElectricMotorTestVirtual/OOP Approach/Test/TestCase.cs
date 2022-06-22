@@ -18,7 +18,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Test
 
         public bool TestStarted;
 
-        public bool TestResult;
+        public bool TestResult { get; set; }
 
         public TimeSpan TestDuration;
 
@@ -33,9 +33,9 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Test
 
         public abstract void DataAcquisition();
 
-        public abstract bool ExecuteTest(DataGridView dataGridView);
+        public abstract bool ExecuteTest(DataGridView dataGridView, int indx);
 
-        public abstract void LogSQL();
+        public abstract void LogSQL(int index);
 
         public abstract bool PrapereResult(DataGridView dataGridView);
 

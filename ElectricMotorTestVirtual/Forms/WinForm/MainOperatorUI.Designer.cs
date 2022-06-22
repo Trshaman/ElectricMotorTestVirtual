@@ -38,7 +38,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnClose = new System.Windows.Forms.Button();
-            this.Barcıde = new System.Windows.Forms.TextBox();
+            this.TxtbxSerialNumber = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnStart = new System.Windows.Forms.Button();
             this.TxbxSelectedTest = new System.Windows.Forms.TextBox();
@@ -132,13 +132,13 @@
             this.BtnClose.Text = "Çıkış";
             this.BtnClose.UseVisualStyleBackColor = true;
             // 
-            // Barcıde
+            // TxtbxSerialNumber
             // 
-            this.Barcıde.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Barcıde.Location = new System.Drawing.Point(118, 21);
-            this.Barcıde.Name = "Barcıde";
-            this.Barcıde.Size = new System.Drawing.Size(150, 26);
-            this.Barcıde.TabIndex = 5;
+            this.TxtbxSerialNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TxtbxSerialNumber.Location = new System.Drawing.Point(118, 21);
+            this.TxtbxSerialNumber.Name = "TxtbxSerialNumber";
+            this.TxtbxSerialNumber.Size = new System.Drawing.Size(150, 26);
+            this.TxtbxSerialNumber.TabIndex = 5;
             // 
             // label2
             // 
@@ -246,7 +246,7 @@
             this.Controls.Add(this.TxbxSelectedTest);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.Barcıde);
+            this.Controls.Add(this.TxtbxSerialNumber);
             this.Controls.Add(this.TestNOK);
             this.Controls.Add(this.TestOK);
             this.Controls.Add(this.BtnStart);
@@ -276,7 +276,7 @@
         private System.Windows.Forms.Button BtnClose;
         private UserInterface.LedDisplay TestOK;
         private UserInterface.LedDisplay TestNOK;
-        private System.Windows.Forms.TextBox Barcıde;
+        private System.Windows.Forms.TextBox TxtbxSerialNumber;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnStart;
         private System.Windows.Forms.TextBox TxbxSelectedTest;

@@ -50,6 +50,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
         {
             TestOK.Value = false;
             TestNOK.Value = false;
+            _testRunner.logTestSQL(TxtbxSerialNumber.Text); 
             if (_testRunner.RunTest(TestResultTable))
             {
                 TestOK.Value = true;

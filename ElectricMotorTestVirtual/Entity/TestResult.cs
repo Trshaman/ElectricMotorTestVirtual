@@ -25,5 +25,7 @@ namespace ElectricMotorTestVirtual.Entity
         public bool IsACSBtnpressed { get; set; }
 
         public bool Result { get; set; }
+
+
     }
 }
