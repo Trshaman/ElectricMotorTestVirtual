@@ -14,6 +14,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 {
     public class PerformanceTest : TestCase
     {
+        public int Id { get; set; }
         public double UnloadPerformanceRpmMax { get; set; }
         
         public double UnloadPerformanceRpmMin { get; set; }

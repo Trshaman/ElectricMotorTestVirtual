@@ -14,7 +14,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 {
     public class HVTest : TestCase
     {
-
+        public int Id { get; set; }
         public double HvTesVoltage { get; set; }
         public double LeakageCurrentMax { get; set; }
         public double LeakageCurrentMin { get; set; }

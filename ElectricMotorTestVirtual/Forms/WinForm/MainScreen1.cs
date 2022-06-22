@@ -1,4 +1,5 @@
-﻿using GlobalFunctions;
+﻿using ElectricMotorTestVirtual.Entity;
+using GlobalFunctions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,8 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
             Program.LogForm.Show();
             //0:system 1:alarm
             Program.LogForm.WriteLog(LogTypes.System, 0, -1, -1, "Program Başlatıldı.", SystemIcons.Information);
+            Context c = new Context();
+            c.Database.Create();
         }
 
         private void MainMenu_Load(object sender, EventArgs e)

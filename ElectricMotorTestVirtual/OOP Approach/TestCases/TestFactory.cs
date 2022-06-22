@@ -10,6 +10,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 {
     public static class TestFactory
     {
+        //Kullanılmıyor deneme amacıyla yapıldı.
         public static TestCase CreateEMKTest()
         {
             return new EMKTest();

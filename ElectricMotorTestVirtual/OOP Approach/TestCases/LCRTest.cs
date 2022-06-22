@@ -14,6 +14,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 {
     public class LCRTest : TestCase
     {
+        public int Id { get; set; }
         public double R1Max { get; set; }
         public double R1Min { get; set; }
         public double R2Max { get; set; }
