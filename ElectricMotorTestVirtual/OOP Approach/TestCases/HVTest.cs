@@ -1,4 +1,5 @@
-﻿using ElectricMotorTestVirtual.OOP_Approach.Test;
+﻿using ElectricMotorTestVirtual.Entity;
+using ElectricMotorTestVirtual.OOP_Approach.Test;
 using GlobalFunctions;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 {
     public class HVTest : TestCase
     {
+        private IGenericRepository<HVTest> repository = new GenericRepository<HVTest>();
         public int Id { get; set; }
         public double HvTesVoltage { get; set; }
         public double LeakageCurrentMax { get; set; }
@@ -73,7 +75,8 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 
         public override void LogSQL()
         {
-
+            repository.Insert(this);
+            repository.Save();
         }
 
 

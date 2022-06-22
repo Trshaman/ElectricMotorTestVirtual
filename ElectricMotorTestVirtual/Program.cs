@@ -102,7 +102,8 @@ namespace ElectricMotorTestVirtual
             ProgamSettings = SettingsData.LoadSettingsFromXML(ProgramIniFile);
             if(ProgamSettings == null)
                 ProgamSettings = new SettingsData();
-            //ToDo:init ayarları yapılabilir.
+            //ToDo:init ayarları yapılabilir. SQL database kontrol edilip yok ise oluşturulabilir : EntityFrameWork
+
 
             //if (!CheckCreateSystemDatabaseAndTables())
             //   return false;

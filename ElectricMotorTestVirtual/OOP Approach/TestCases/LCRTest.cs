@@ -1,4 +1,5 @@
-﻿using ElectricMotorTestVirtual.OOP_Approach.Test;
+﻿using ElectricMotorTestVirtual.Entity;
+using ElectricMotorTestVirtual.OOP_Approach.Test;
 using GlobalFunctions;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 {
     public class LCRTest : TestCase
     {
+        private IGenericRepository<LCRTest> repository = new GenericRepository<LCRTest>();
         public int Id { get; set; }
         public double R1Max { get; set; }
         public double R1Min { get; set; }
@@ -90,7 +92,8 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 
         public override void LogSQL()
         {
-
+            repository.Insert(this);
+            repository.Save();
         }
 
 

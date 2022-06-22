@@ -7,15 +7,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
+using ElectricMotorTestVirtual.Entity;
 using ElectricMotorTestVirtual.OOP_Approach.Motor;
 using ElectricMotorTestVirtual.OOP_Approach.Test;
 using GlobalFunctions;
+
 
 namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 {
     public class EMKTest : TestCase
     {
-        public int Id { get; set; } 
+        private IGenericRepository<EMKTest> repository = new GenericRepository<EMKTest>();
+        public int Id { get; set; }     
         public double PeakToPeaxMax { get; set; }
         public double PeakToPeaxMin { get; set; }
         public double RmsMax { get; set; }
@@ -73,7 +76,8 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 
         public override void LogSQL()
         {
-
+            repository.Insert(this);
+            repository.Save();
         }
 
 
