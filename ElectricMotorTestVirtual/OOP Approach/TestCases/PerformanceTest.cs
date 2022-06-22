@@ -3,6 +3,7 @@ using ElectricMotorTestVirtual.OOP_Approach.Test;
 using GlobalFunctions;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
@@ -15,7 +16,12 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 {
     public class PerformanceTest : TestCase
     {
+        
+        
         private IGenericRepository<PerformanceTest> repository = new GenericRepository<PerformanceTest>();
+
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Index(IsUnique = true)]
         public int Id { get; set; }
         public double UnloadPerformanceRpmMax { get; set; }
         

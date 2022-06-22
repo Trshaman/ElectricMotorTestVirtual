@@ -15,8 +15,8 @@ namespace ElectricMotorTestVirtual.Entity
 
         public GenericRepository()
         {
-            this._context = new Context();
-            table = _context.Set<T>();
+            //this._context = new Context();
+           // table = _context.Set<T>();
         }
 
         public GenericRepository(Context context)

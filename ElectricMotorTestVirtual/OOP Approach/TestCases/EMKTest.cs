@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
@@ -18,6 +19,8 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
     public class EMKTest : TestCase
     {
         private IGenericRepository<EMKTest> repository = new GenericRepository<EMKTest>();
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Index(IsUnique = true)]
         public int Id { get; set; }     
         public double PeakToPeaxMax { get; set; }
         public double PeakToPeaxMin { get; set; }

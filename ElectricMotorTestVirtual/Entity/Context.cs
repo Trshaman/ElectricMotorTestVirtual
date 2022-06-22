@@ -10,6 +10,11 @@ namespace ElectricMotorTestVirtual.Entity
 {
     public class Context : DbContext
     {
+        public Context(string ConnctionString)
+            : base(ConnctionString)
+        {
+
+        }
         public DbSet<TestResult> TestResults { get; set; }
 
         public DbSet <EMKTest> EMKTestResults { get; set; }

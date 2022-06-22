@@ -3,6 +3,7 @@ using ElectricMotorTestVirtual.OOP_Approach.Test;
 using GlobalFunctions;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
@@ -15,7 +16,10 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 {
     public class LCRTest : TestCase
     {
+        
         private IGenericRepository<LCRTest> repository = new GenericRepository<LCRTest>();
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Index(IsUnique = true)]
         public int Id { get; set; }
         public double R1Max { get; set; }
         public double R1Min { get; set; }

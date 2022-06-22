@@ -3,6 +3,7 @@ using ElectricMotorTestVirtual.OOP_Approach.Test;
 using GlobalFunctions;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
@@ -16,7 +17,8 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
     public class HVTest : TestCase
     {
         private IGenericRepository<HVTest> repository = new GenericRepository<HVTest>();
-
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Index(IsUnique = true)]
         public int Id { get; set; }
         public double HvTesVoltage { get; set; }
         public double LeakageCurrentMax { get; set; }
