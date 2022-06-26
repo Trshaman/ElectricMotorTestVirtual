@@ -11,7 +11,7 @@ namespace ElectricMotorTestVirtual.Entity
     public class Context : DbContext
     {
         public Context(string ConnctionString)
-            : base(ConnctionString)
+            : base(Program.ConnectionString)
         {
 
         }

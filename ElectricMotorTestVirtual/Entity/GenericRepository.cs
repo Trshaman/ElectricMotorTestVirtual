@@ -6,6 +6,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace ElectricMotorTestVirtual.Entity
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
@@ -15,8 +16,8 @@ namespace ElectricMotorTestVirtual.Entity
 
         public GenericRepository()
         {
-            //this._context = new Context();
-           // table = _context.Set<T>();
+            this._context = new Context(Program.ConnectionString);
+            table = _context.Set<T>();
         }
 
         public GenericRepository(Context context)

@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -30,13 +29,8 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
             Program.LogForm.Show();
             //0:system 1:alarm
             Program.LogForm.WriteLog(LogTypes.System, 0, -1, -1, "Program Başlatıldı.", SystemIcons.Information);
-            SqlConnection conn = new SqlConnection();
-            conn.ConnectionString =
-              "Data Source=DESKTOP-JU85NQ5\\SQLSERVER;" +
-              "Initial Catalog=ElectricTestVirtual;" +
-              "Integrated Security=SSPI;";
-            Context c = new Context(conn.ConnectionString);
-            c.Database.Create();
+           
+           
    
         }
 

@@ -11,6 +11,8 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using ElectricMotorTestVirtual.Entity;
 
 namespace ElectricMotorTestVirtual
 {
@@ -32,6 +34,8 @@ namespace ElectricMotorTestVirtual
         internal static string ProgramIniFile;
         internal static List<TestRecipeClass> TestList;
         internal static SettingsData ProgamSettings;
+        public static SqlConnection Conn = new SqlConnection();
+        public static string ConnectionString = "";
 
         internal static bool AddNewTest = false;
         internal static bool AdjustTest = false;
@@ -52,7 +56,10 @@ namespace ElectricMotorTestVirtual
         [STAThread]
          static void Main(string[] parameter)
         {
-           
+            ConnectionString =
+             "Data Source=DESKTOP-JU85NQ5\\SQLSERVER;" +
+             "Initial Catalog=ElectricTestVirtual;" +
+             "Integrated Security=SSPI;";
             CultureInfo cultureInfo = (CultureInfo)Thread.CurrentThread.CurrentCulture.Clone();
             cultureInfo.NumberFormat.NumberDecimalSeparator = ".";
             Thread.CurrentThread.CurrentCulture = cultureInfo;
@@ -103,6 +110,9 @@ namespace ElectricMotorTestVirtual
             if(ProgamSettings == null)
                 ProgamSettings = new SettingsData();
             //ToDo:init ayarları yapılabilir. SQL database kontrol edilip yok ise oluşturulabilir : EntityFrameWork
+           
+            //Context c = new Context(ConnectionString);
+            //c.Database.Create();
 
 
             //if (!CheckCreateSystemDatabaseAndTables())
