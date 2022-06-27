@@ -57,14 +57,17 @@ namespace ElectricMotorTestVirtual
          static void Main(string[] parameter)
         {
             ConnectionString =
-             "Data Source=DESKTOP-4D8975P\\SQLEXPRESS;" +
+             "Data Source=.\\SQLEXPRESS;" +
              "Initial Catalog=ElectricTestVirtual;" +
              "Integrated Security=SSPI;";
             Context c = new Context(ConnectionString);
             if (!c.Database.Exists())
             {
                 MessageBox.Show("SQL Server database bulunamadı. Yeniden oluşturulacak", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Cursor.Current = Cursors.WaitCursor;
                 c.Database.Create();
+                Cursor.Current = Cursors.Default;
+
             }
             CultureInfo cultureInfo = (CultureInfo)Thread.CurrentThread.CurrentCulture.Clone();
             cultureInfo.NumberFormat.NumberDecimalSeparator = ".";
