@@ -18,9 +18,12 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
     public class HVTest : TestCase
     {
         private IGenericRepository<HVTest> repository = new GenericRepository<HVTest>();
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [Index(IsUnique = true)]
+        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
+        //[Index(IsUnique = true)]
         public int Id { get; set; }
+        public int? TestResultId { get; set; }
+        [ForeignKey("TestResultId")]
+        public TestResult TestResult { get; set; }
         public double HvTesVoltage { get; set; }
         public double LeakageCurrentMax { get; set; }
         public double LeakageCurrentMin { get; set; }
@@ -69,7 +72,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
                 Program.LogForm.WriteLog(LogTypes.System, 0, -1, -1, this.GetType().Name + testResult, SystemIcons.Information);
                 base.TestStarted = false;
                 LogSQL(indx);
-                return TestResult;
+                return base.TestResult;
             }
             else
             {
@@ -80,7 +83,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 
         public override void LogSQL(int index)
         {
-            this.Id = index;
+            this.TestResultId = index;
             repository.Insert(this);
             repository.Save();
         }

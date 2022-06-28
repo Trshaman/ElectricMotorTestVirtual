@@ -20,9 +20,12 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
         
         private IGenericRepository<PerformanceTest> repository = new GenericRepository<PerformanceTest>();
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [Index(IsUnique = true)]
+        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
+        //[Index(IsUnique = true)]
         public int Id { get; set; }
+        public int? TestResultId { get; set; }
+        [ForeignKey("TestResultId")]
+        public TestResult TestResult { get; set; }
         public double UnloadPerformanceRpmMax { get; set; }
         
         public double UnloadPerformanceRpmMin { get; set; }
@@ -74,7 +77,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
                 Program.LogForm.WriteLog(LogTypes.System, 0, -1, -1, this.GetType().Name + testResult, SystemIcons.Information);
                 base.TestStarted = false;
                 LogSQL(indx);
-                return TestResult;
+                return base.TestResult;
             }
             else
             {
@@ -85,7 +88,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 
         public override void LogSQL(int index)
         {
-            this.Id = index;
+            this.TestResultId = index;
             repository.Insert(this);
             repository.Save();
         }

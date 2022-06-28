@@ -1,4 +1,5 @@
-﻿using ElectricMotorTestVirtual.OOP_Approach.Motor;
+﻿using ElectricMotorTestVirtual.Entity;
+using ElectricMotorTestVirtual.OOP_Approach.Motor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
