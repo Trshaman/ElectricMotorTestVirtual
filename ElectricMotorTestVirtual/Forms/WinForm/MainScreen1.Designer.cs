@@ -33,6 +33,7 @@
             this.receteAyarlariToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.haberlesmeAyarlariToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.programiKapatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.raporToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +43,8 @@
             this.testSayfasiToolStripMenuItem,
             this.receteAyarlariToolStripMenuItem,
             this.haberlesmeAyarlariToolStripMenuItem,
-            this.programiKapatToolStripMenuItem});
+            this.programiKapatToolStripMenuItem,
+            this.raporToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1101, 24);
@@ -77,6 +79,13 @@
             this.programiKapatToolStripMenuItem.Text = "Programı Kapat";
             this.programiKapatToolStripMenuItem.Click += new System.EventHandler(this.programiKapatToolStripMenuItem_Click_1);
             // 
+            // raporToolStripMenuItem
+            // 
+            this.raporToolStripMenuItem.Name = "raporToolStripMenuItem";
+            this.raporToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.raporToolStripMenuItem.Text = "Rapor";
+            this.raporToolStripMenuItem.Click += new System.EventHandler(this.raporToolStripMenuItem_Click);
+            // 
             // MainScreen1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -101,5 +110,6 @@
         private System.Windows.Forms.ToolStripMenuItem receteAyarlariToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem haberlesmeAyarlariToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem programiKapatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem raporToolStripMenuItem;
     }
 }

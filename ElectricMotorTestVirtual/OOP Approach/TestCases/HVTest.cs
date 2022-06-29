@@ -64,15 +64,15 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
                 base.TestStarted = true;
                 PrepareRelayMatrix();
                 DataAcquisition();
-                base.TestResult = PrapereResult(dataGridView);
+                base.TestResultValue = PrapereResult(dataGridView);
                 
                 base.TestDuration = startTestTime - DateTime.Now;
                 base.TestStarted = false;
-                string testResult = base.TestResult == true ? "Test OK" : "Test NOK";
+                string testResult = base.TestResultValue == true ? "Test OK" : "Test NOK";
                 Program.LogForm.WriteLog(LogTypes.System, 0, -1, -1, this.GetType().Name + testResult, SystemIcons.Information);
                 base.TestStarted = false;
                 LogSQL(indx);
-                return base.TestResult;
+                return base.TestResultValue;
             }
             else
             {
@@ -142,5 +142,6 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
         {
 
         }
+
     }
 }

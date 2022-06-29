@@ -60,12 +60,6 @@
     <Compile Include="Entity\IGenericRepository.cs" />
     <Compile Include="Entity\GenericRepository.cs" />
     <Compile Include="Entity\TestResult.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\EMKTestUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -95,6 +89,12 @@
     </Compile>
     <Compile Include="Forms\WinForm\ComSettingsPage.Designer.cs">
       <DependentUpon>ComSettingsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WinForm\DetailedTestReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WinForm\DetailedTestReport.Designer.cs">
+      <DependentUpon>DetailedTestReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\WinForm\frmLog.cs">
       <SubType>Form</SubType>
@@ -126,6 +126,12 @@
     <Compile Include="Forms\WinForm\TestRecipeSettings.Designer.cs">
       <DependentUpon>TestRecipeSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\WinForm\TestResultDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WinForm\TestResultDatabase.Designer.cs">
+      <DependentUpon>TestResultDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="OOP Approach\Motor\Coefficent.cs" />
     <Compile Include="OOP Approach\Motor\IMotorModel.cs" />
     <Compile Include="OOP Approach\Motor\MotorModel.cs" />
@@ -141,6 +147,7 @@
     <Compile Include="OOP Approach\TestCases\TestComparableAttribute.cs" />
     <Compile Include="OOP Approach\TestRunner\TestRunner.cs" />
     <Compile Include="OOP Approach\Test\ITestOperation.cs" />
+    <Compile Include="OOP Approach\Test\PrepareTableResult.cs" />
     <Compile Include="OOP Approach\Test\TestCase.cs" />
     <Compile Include="OOP Approach\Test\TestStates.cs" />
     <Compile Include="Program.cs" />
@@ -160,6 +167,9 @@
     <EmbeddedResource Include="Forms\WinForm\ComSettingsPage.resx">
       <DependentUpon>ComSettingsPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WinForm\DetailedTestReport.resx">
+      <DependentUpon>DetailedTestReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\WinForm\frmLog.resx">
       <DependentUpon>frmLog.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\WinForm\TestRecipeSettings.resx">
       <DependentUpon>TestRecipeSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WinForm\TestResultDatabase.resx">
+      <DependentUpon>TestResultDatabase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

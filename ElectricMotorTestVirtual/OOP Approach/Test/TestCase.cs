@@ -19,7 +19,7 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Test
 
         public bool TestStarted;
 
-        public bool TestResult { get; set; }
+        public bool TestResultValue { get; set; }
 
         public TimeSpan TestDuration;
 

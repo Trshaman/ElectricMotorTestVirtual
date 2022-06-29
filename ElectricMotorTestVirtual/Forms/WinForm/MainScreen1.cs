@@ -18,6 +18,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
         private MainOperatorUI _mainOperatorUI;
         private frmLog _frmLog;
         private RecipeSelectionPage _recipeSelectionPage;
+        private TestResultDatabase _testResultDatabase;
         private string connectionString;
 
 
@@ -95,6 +96,21 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
             else
             {
                 _mainOperatorUI.Focus();
+            }
+        }
+
+        private void raporToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_testResultDatabase == null)
+            {
+                _testResultDatabase = new TestResultDatabase();
+                _testResultDatabase.HandleDestroyed += (object send, EventArgs e2) => { _testResultDatabase = null; };
+                _testResultDatabase.MdiParent = this;
+                _testResultDatabase.Show();
+            }
+            else
+            {
+                _testResultDatabase.Focus();
             }
         }
     }
