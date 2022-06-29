@@ -59,5 +59,6 @@ namespace ElectricMotorTestVirtual.Entity
         {
             return table.ToArray().Last();
         }
+
     }
 }

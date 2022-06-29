@@ -50,7 +50,6 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
                 {
                     string propName = property.Name;
                     double value = (double)rnd.Next(1, 100);
-                    // property.SetValue(property, rnd.Next(1, 100));
                     this.GetType().GetProperty(propName).SetValue(this, value, null);
                 }
             }
@@ -92,50 +91,8 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
 
         public override bool PrapereResult(DataGridView dataGridView)
         {
-            PropertyInfo[] Properties = this.GetType().GetProperties();
-            bool testResult = true;
-            int lastRowIndex = 0;
-
-            foreach (PropertyInfo property in Properties)
-            {
-                if (Attribute.IsDefined(property, typeof(TestComparable)))
-                {
-                    if (dataGridView.Rows.Count - 1 == -1)
-                    {
-                        lastRowIndex = 0;
-                    }
-                    else
-                    {
-                        lastRowIndex = dataGridView.Rows.Count;
-                    }
-                    double max = (double)this.GetType().GetProperty(property.Name + "Max").GetValue(this, null);
-                    double min = (double)this.GetType().GetProperty(property.Name + "Min").GetValue(this, null);
-                    string propName = property.Name;
-
-
-                    double testValue = (double)this.GetType().GetProperty(propName).GetValue(this, null);
-
-                    bool testResultTable = false;
-                    if (testValue >= min && testValue <= max)
-                    {
-                        testResultTable = true;
-                    }
-                    else
-                    {
-                        testResult = false;
-                    }
-                    dataGridView.Rows.Add();
-                    dataGridView.Rows[lastRowIndex].Cells[Program.TestParameter].Value = property.Name;
-                    dataGridView.Rows[lastRowIndex].Cells[Program.TestUnit].Value = "";
-                    dataGridView.Rows[lastRowIndex].Cells[Program.TestMaxLimit].Value = max;
-                    dataGridView.Rows[lastRowIndex].Cells[Program.TestMeasuredValue].Value = testValue;
-                    dataGridView.Rows[lastRowIndex].Cells[Program.TestMinLimit].Value = min;
-                    dataGridView.Rows[lastRowIndex].Cells[Program.TestResult].Value = testResultTable ? "OK" : "RED";
-                    Color testResultColor = testResultTable == true ? Color.Yellow : Color.Red;
-                    dataGridView.Rows[lastRowIndex].DefaultCellStyle.BackColor = testResultColor;
-                }
-            }
-            return testResult;
+            PrepareTable Table = new PrepareTable();
+            return Table.PreapareTableForTestResult(this, dataGridView);
         }
 
         public override void PrepareRelayMatrix()

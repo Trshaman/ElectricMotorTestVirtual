@@ -16,5 +16,6 @@ namespace ElectricMotorTestVirtual.Entity
         void Save();
         T GetLastRow();
 
+
     }
 }

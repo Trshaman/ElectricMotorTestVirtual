@@ -147,7 +147,7 @@
     <Compile Include="OOP Approach\TestCases\TestComparableAttribute.cs" />
     <Compile Include="OOP Approach\TestRunner\TestRunner.cs" />
     <Compile Include="OOP Approach\Test\ITestOperation.cs" />
-    <Compile Include="OOP Approach\Test\PrepareTableResult.cs" />
+    <Compile Include="OOP Approach\Test\PrepareTable.cs" />
     <Compile Include="OOP Approach\Test\TestCase.cs" />
     <Compile Include="OOP Approach\Test\TestStates.cs" />
     <Compile Include="Program.cs" />

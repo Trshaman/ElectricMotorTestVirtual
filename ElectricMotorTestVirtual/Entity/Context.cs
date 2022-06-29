@@ -17,11 +17,11 @@ namespace ElectricMotorTestVirtual.Entity
         }
         public DbSet<TestResult> TestResults { get; set; }
 
-        public DbSet <EMKTest> EMKTestResults { get; set; }
-
         public DbSet <HVTest> HVTestResults { get; set; }
 
         public DbSet <LCRTest> LCRTestResults { get; set; }
+
+        public DbSet<EMKTest> EMKTestResults { get; set; }
 
         public DbSet <PerformanceTest> PerformanceTestResults { get; set; }
     }

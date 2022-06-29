@@ -108,13 +108,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView TestResultTable;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClmnTestParameter;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClmnUnit;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClmnUpperLimit;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClmnResultValue;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClmnLowLimit;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClmnResult;
+        public System.Windows.Forms.DataGridView TestResultTable;
     }
 }

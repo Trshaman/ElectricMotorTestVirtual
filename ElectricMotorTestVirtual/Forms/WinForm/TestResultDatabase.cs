@@ -1,4 +1,5 @@
 ﻿using ElectricMotorTestVirtual.Entity;
+using ElectricMotorTestVirtual.OOP_Approach.Test;
 using ElectricMotorTestVirtual.OOP_Approach.TestCases;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
         private IGenericRepository<LCRTest> repositoryLCR = new GenericRepository<LCRTest>();
         private IGenericRepository<PerformanceTest> repositoryPerform = new GenericRepository<PerformanceTest>();
         private DetailedTestReport _detailedTestReport;
+        private PrepareTable _prepareTable = new PrepareTable();
         public TestResultDatabase()
         {
             InitializeComponent();
@@ -35,9 +37,23 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
         private void DtGrdTestControlTable_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             
-             
+            List<TestCase> testResultCases = new List<TestCase>();
             DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-            textBox1.Text = row.Cells[0].Value.ToString();
+            testResultCases.Add(repositoryHV.GetAll().FirstOrDefault(result => result.TestResultId == (int)row.Cells[0].Value));
+            testResultCases.Add(repositoryLCR.GetAll().FirstOrDefault(result => result.TestResultId == (int)row.Cells[0].Value));
+            testResultCases.Add(repositoryEMK.GetAll().FirstOrDefault(result => result.TestResultId == (int)row.Cells[0].Value));
+            testResultCases.Add(repositoryPerform.GetAll().FirstOrDefault(result => result.TestResultId == (int)row.Cells[0].Value));
+            DetailedTestReport detailedTestReport = new DetailedTestReport();
+            _detailedTestReport = new DetailedTestReport();
+            _detailedTestReport.HandleDestroyed += (object send, EventArgs e2) => { _detailedTestReport = null; };
+            foreach (TestCase test in testResultCases)
+            {
+                if (test != null)
+                {
+                    _prepareTable.PreapareTableForDetailedReport(test, _detailedTestReport.TestResultTable);
+                }
+            }
+            _detailedTestReport.Show();
 
 
         }
