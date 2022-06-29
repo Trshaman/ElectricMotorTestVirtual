@@ -74,6 +74,12 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestRunner
                     break;
                 }     
             }
+            if (testResult == true)
+            {
+                _testResult.Result=true;
+                repository.Update(_testResult);
+                repository.Save();
+            }
             return testResult;
         }
            

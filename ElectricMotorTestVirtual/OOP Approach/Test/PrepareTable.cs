@@ -2,16 +2,19 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace ElectricMotorTestVirtual.OOP_Approach.Test
 {
     public class PrepareTable
     {
+        Microsoft.Office.Interop.Excel.Application XcelApp = new Microsoft.Office.Interop.Excel.Application();
         public bool PreapareTableForTestResult(TestCase TestCase,DataGridView TestResultTable)
         {
             PropertyInfo[] Properties = TestCase.GetType().GetProperties();
@@ -99,6 +102,24 @@ namespace ElectricMotorTestVirtual.OOP_Approach.Test
                 }
             
 
+        }
+        public void ExportPdf(DataGridView dataGridView1,string TestDate,string SerialNumber)
+        {
+            XcelApp.Application.Workbooks.Add(Type.Missing);
+
+            for (int i = 1; i < dataGridView1.Columns.Count + 1; i++)
+            {
+                XcelApp.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
+            }
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                {
+                    XcelApp.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+            XcelApp.Columns.AutoFit();
+            XcelApp.Visible = true;
         }
 
     }

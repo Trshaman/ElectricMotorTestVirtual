@@ -21,7 +21,9 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
             InitializeComponent();
         }
 
-        
-
+        private void ExportPdf_Click(object sender, EventArgs e)
+        {
+            _prepareTable.ExportPdf(TestResultTable, TestSerialNumber.Text, TxbxTestDate.Text);
+        }
     }
 }

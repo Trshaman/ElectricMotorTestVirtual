@@ -36,26 +36,41 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
 
         private void DtGrdTestControlTable_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-            List<TestCase> testResultCases = new List<TestCase>();
-            DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-            testResultCases.Add(repositoryHV.GetAll().FirstOrDefault(result => result.TestResultId == (int)row.Cells[0].Value));
-            testResultCases.Add(repositoryLCR.GetAll().FirstOrDefault(result => result.TestResultId == (int)row.Cells[0].Value));
-            testResultCases.Add(repositoryEMK.GetAll().FirstOrDefault(result => result.TestResultId == (int)row.Cells[0].Value));
-            testResultCases.Add(repositoryPerform.GetAll().FirstOrDefault(result => result.TestResultId == (int)row.Cells[0].Value));
-            DetailedTestReport detailedTestReport = new DetailedTestReport();
-            _detailedTestReport = new DetailedTestReport();
-            _detailedTestReport.HandleDestroyed += (object send, EventArgs e2) => { _detailedTestReport = null; };
-            foreach (TestCase test in testResultCases)
+            if (_detailedTestReport == null)
             {
-                if (test != null)
+                List<TestCase> testResultCases = new List<TestCase>();
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                testResultCases.Add(repositoryHV.GetAll().FirstOrDefault(result => result.TestResultId == (int)row.Cells[0].Value));
+                testResultCases.Add(repositoryLCR.GetAll().FirstOrDefault(result => result.TestResultId == (int)row.Cells[0].Value));
+                testResultCases.Add(repositoryEMK.GetAll().FirstOrDefault(result => result.TestResultId == (int)row.Cells[0].Value));
+                testResultCases.Add(repositoryPerform.GetAll().FirstOrDefault(result => result.TestResultId == (int)row.Cells[0].Value));
+                DetailedTestReport detailedTestReport = new DetailedTestReport();
+                _detailedTestReport = new DetailedTestReport();
+                _detailedTestReport.TestSerialNumber.Text = row.Cells[1].Value.ToString();
+                _detailedTestReport.TxbxTestDate.Text = row.Cells[2].Value.ToString();
+                if ((bool)row.Cells[8].Value)
                 {
-                    _prepareTable.PreapareTableForDetailedReport(test, _detailedTestReport.TestResultTable);
+                    _detailedTestReport.TestOK.Value = true;
                 }
+                else
+                {
+                    _detailedTestReport.TestNOK.Value = true;
+                }
+                _detailedTestReport.HandleDestroyed += (object send, EventArgs e2) => { _detailedTestReport = null; };
+                foreach (TestCase test in testResultCases)
+                {
+                    if (test != null)
+                    {
+                        _prepareTable.PreapareTableForDetailedReport(test, _detailedTestReport.TestResultTable);
+                    }
+                }
+                _detailedTestReport.Show();
             }
-            _detailedTestReport.Show();
-
-
+            else
+            {
+                _detailedTestReport.MaximizeBox = true;
+                _detailedTestReport.Focus();
+            }
         }
     }
 }
