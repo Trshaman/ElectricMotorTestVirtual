@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        dotnet-version: ['3.0', '3.1.x', '4.7.x' ]
+        dotnet-version: ['3.0', '3.1.x', '4.0' ]
 
     steps:
       - uses: actions/checkout@v3
@@ -22,3 +22,4 @@ jobs:
         run: dotnet build --configuration Release --no-restore
       - name: Test
         run: dotnet test --no-restore --verbosity normal
+        
