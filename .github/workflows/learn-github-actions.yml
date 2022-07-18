@@ -1,5 +1,9 @@
-name: learn-github-actions
- build:
+name: dotnet package
+
+on: [push]
+
+jobs:
+  build:
 
     runs-on: ubuntu-latest
     strategy:
