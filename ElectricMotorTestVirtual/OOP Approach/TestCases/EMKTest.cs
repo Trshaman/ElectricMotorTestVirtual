@@ -26,8 +26,8 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
         public int? TestResultId { get; set; }
         [ForeignKey("TestResultId")]
         public TestResult TestResult { get; set; }     
-        public double PeakToPeaxMax { get; set; }
-        public double PeakToPeaxMin { get; set; }
+        public double PeakToPeakMax { get; set; }
+        public double PeakToPeakMin { get; set; }
         public double RmsMax { get; set; }
         public double RmsMin { get; set; }
 

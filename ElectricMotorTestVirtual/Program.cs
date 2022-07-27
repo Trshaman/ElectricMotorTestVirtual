@@ -61,6 +61,7 @@ namespace ElectricMotorTestVirtual
              "Initial Catalog=ElectricTestVirtual;" +
              "Integrated Security=SSPI;";
             Context c = new Context(ConnectionString);
+            
             if (!c.Database.Exists())
             {
                 MessageBox.Show("SQL Server database bulunamadı. Yeniden oluşturulacak", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -69,6 +70,7 @@ namespace ElectricMotorTestVirtual
                 Cursor.Current = Cursors.Default;
 
             }
+            c.Database.CompatibleWithModel(true);
             CultureInfo cultureInfo = (CultureInfo)Thread.CurrentThread.CurrentCulture.Clone();
             cultureInfo.NumberFormat.NumberDecimalSeparator = ".";
             Thread.CurrentThread.CurrentCulture = cultureInfo;
