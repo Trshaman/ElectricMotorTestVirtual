@@ -2,7 +2,7 @@
 using ElectricMotorTestVirtual.OOP_Approach.Recipe;
 using ElectricMotorTestVirtual.OOP_Approach.Settings;
 using ElectricMotorTestVirtual.OOP_Approach.TestRunner;
-using GlobalFunctions;
+// GlobalFunctions;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -26,10 +26,10 @@ namespace ElectricMotorTestVirtual
         internal static string TestRecipeSettingFile;
         internal static string TestTableName;
         internal static bool IsServer;
-        public static frmLog LogForm;
+        //public static frmLog LogForm;
         internal static string TestFileBackupDir;
         internal static string TestsFile;
-        internal static List<Log> StartUpLogs;
+       // internal static List<Log> StartUpLogs;
         internal static string UserSettingsFile;
         internal static string ProgramIniFile;
         internal static List<TestRecipeClass> TestList;
@@ -92,7 +92,7 @@ namespace ElectricMotorTestVirtual
 
         private static void DoStartUp()
         {
-            StartUpLogs = new List<Log>();
+          //  StartUpLogs = new List<Log>();
             SettingDir = Directory.GetCurrentDirectory() + "\\Settings\\";
             TestFileBackupDir = Directory.GetCurrentDirectory() + "\\ActualTestsState\\Backups\\";
             if (!Directory.Exists(Directory.GetCurrentDirectory() + "\\ActualTestsState\\"))
@@ -111,7 +111,7 @@ namespace ElectricMotorTestVirtual
             if (!Directory.Exists(SettingDir))
             {
                 MessageBox.Show("\\Settings klasörü bulunamadı. Yeniden oluşturulacak, tüm test,istasyon,kullanıcı bilgileri tanımlanmalıdır. ", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                StartUpLogs.Add(new Log(DateTime.Now, LogTypes.System, 5, -1, -1, "\\Settings klasörü bulunamadı. Yeniden oluşturulacak, tüm test,istasyon,kullanıcı bilgileri tanımlanmalıdır. ", System.Drawing.SystemIcons.Error));
+         //       StartUpLogs.Add(new Log(DateTime.Now, LogTypes.System, 5, -1, -1, "\\Settings klasörü bulunamadı. Yeniden oluşturulacak, tüm test,istasyon,kullanıcı bilgileri tanımlanmalıdır. ", System.Drawing.SystemIcons.Error));
                 Directory.CreateDirectory(SettingDir);
             }
             TestList = TestRecipeClass.LoadTestsFromXML(TestSettingFile);

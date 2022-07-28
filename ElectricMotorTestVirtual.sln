@@ -5,10 +5,6 @@ VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElectricMotorTestVirtual", "ElectricMotorTestVirtual\ElectricMotorTestVirtual.csproj", "{83A8CF58-1048-4B42-BBF0-AD7303DE4E22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalFunctions", "GlobalFunctions\GlobalFunctions.csproj", "{2A924922-F1D8-443C-9E1B-CBCEFC3981F8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserInterface", "UserInterface\UserInterface.csproj", "{79837FCB-9B53-46FC-8D32-ACC27CA4409C}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,14 +15,6 @@ Global
 		{83A8CF58-1048-4B42-BBF0-AD7303DE4E22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83A8CF58-1048-4B42-BBF0-AD7303DE4E22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83A8CF58-1048-4B42-BBF0-AD7303DE4E22}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2A924922-F1D8-443C-9E1B-CBCEFC3981F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2A924922-F1D8-443C-9E1B-CBCEFC3981F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2A924922-F1D8-443C-9E1B-CBCEFC3981F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2A924922-F1D8-443C-9E1B-CBCEFC3981F8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{79837FCB-9B53-46FC-8D32-ACC27CA4409C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{79837FCB-9B53-46FC-8D32-ACC27CA4409C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{79837FCB-9B53-46FC-8D32-ACC27CA4409C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{79837FCB-9B53-46FC-8D32-ACC27CA4409C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

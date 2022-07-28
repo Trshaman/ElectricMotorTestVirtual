@@ -102,12 +102,6 @@
     <Compile Include="Forms\WinForm\DetailedTestReport.Designer.cs">
       <DependentUpon>DetailedTestReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\WinForm\frmLog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\WinForm\frmLog.designer.cs">
-      <DependentUpon>frmLog.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\WinForm\MainOperatorUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,9 +170,6 @@
     <EmbeddedResource Include="Forms\WinForm\DetailedTestReport.resx">
       <DependentUpon>DetailedTestReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\WinForm\frmLog.resx">
-      <DependentUpon>frmLog.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\WinForm\MainOperatorUI.resx">
       <DependentUpon>MainOperatorUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,16 +209,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <ProjectReference Include="..\GlobalFunctions\GlobalFunctions.csproj">
-      <Project>{2a924922-f1d8-443c-9e1b-cbcefc3981f8}</Project>
-      <Name>GlobalFunctions</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UserInterface\UserInterface.csproj">
-      <Project>{79837fcb-9b53-46fc-8d32-acc27ca4409c}</Project>
-      <Name>UserInterface</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

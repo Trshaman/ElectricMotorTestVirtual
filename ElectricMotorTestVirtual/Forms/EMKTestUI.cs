@@ -35,19 +35,19 @@ namespace ElectricMotorTestVirtual.Forms
 
         public void LoadTestToUIEmk(EMKTest test)
         {
-            PeaktoPeakV_Max.Value = test.PeakToPeakMax;
-            PeaktoPeakV_Min.Value = test.PeakToPeakMin;
-            RmsV_Max.Value = test.RmsMax;
-            RmsV_Min.Value = test.RmsMin;
+            PeaktoPeakV_Max.Text = test.PeakToPeakMax.ToString();
+            PeaktoPeakV_Min.Text = test.PeakToPeakMin.ToString();
+            RmsV_Max.Text = test.RmsMax.ToString();
+            RmsV_Min.Text = test.RmsMin.ToString();
             EmkTestActive.Checked = test.IsTestActive;
         }
 
         public void LoadUItoTestEmk(EMKTest test)
         {
-            test.PeakToPeakMax = PeaktoPeakV_Max.Value;
-            test.PeakToPeakMin = PeaktoPeakV_Min.Value;
-            test.RmsMax = RmsV_Max.Value;
-            test.RmsMin = RmsV_Min.Value;
+            test.PeakToPeakMax = Convert.ToDouble(PeaktoPeakV_Max.Text);
+            test.PeakToPeakMin = Convert.ToDouble(PeaktoPeakV_Min.Text);
+            test.RmsMax = Convert.ToDouble(RmsV_Max.Text);
+            test.RmsMin = Convert.ToDouble(RmsV_Min.Text);
             test.IsTestActive = EmkTestActive.Checked;
         }
     }

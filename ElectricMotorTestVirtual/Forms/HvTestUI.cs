@@ -40,22 +40,23 @@ namespace ElectricMotorTestVirtual.Forms
 
         public void LoadTestToUIHV(HVTest test)
         {
-            HvTestVoltageKv.Value = test.HvTesVoltage;
-            LeakagemA_Max.Value = test.LeakageCurrentMax;
-            LeakagemA_Min.Value = test.LeakageCurrentMin;
-            IRResistanceOhm_Max.Value = test.IRResistanceMax;
-            IRResistanceOhm_Min.Value = test.IRResistanceMin;
+            HvTestVoltageKv.Text = test.HvTesVoltage.ToString();
+            LeakagemA_Max.Text = test.LeakageCurrentMax.ToString();
+            LeakagemA_Min.Text = test.LeakageCurrentMin.ToString();
+            IRResistanceOhm_Max.Text = test.IRResistanceMax.ToString();
+            IRResistanceOhm_Min.Text = test.IRResistanceMin.ToString();
             HVTestActive.Checked = test.IsTestActive;
           
         }
 
         public void LoadUItoTestHV(HVTest test)
         {
-            test.HvTesVoltage = HvTestVoltageKv.Value;
-            test.LeakageCurrentMax = LeakagemA_Max.Value;
-            test.LeakageCurrentMin = LeakagemA_Min.Value;
-            test.IRResistanceMax = IRResistanceOhm_Max.Value;
-            test.IRResistanceMin = IRResistanceOhm_Min.Value;
+            test.HvTesVoltage = Convert.ToDouble(HvTestVoltageKv.Text);
+
+            test.LeakageCurrentMax = Convert.ToDouble(LeakagemA_Max.Text);
+            test.LeakageCurrentMin = Convert.ToDouble(LeakagemA_Min.Text);
+            test.IRResistanceMax = Convert.ToDouble(IRResistanceOhm_Max.Text);
+            test.IRResistanceMin = Convert.ToDouble(IRResistanceOhm_Min.Text);
             test.IsTestActive = HVTestActive.Checked;
         }
     }

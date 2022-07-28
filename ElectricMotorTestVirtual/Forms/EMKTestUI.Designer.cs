@@ -34,10 +34,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.PeaktoPeakV_Max = new UserInterface.NumericTextbox();
-            this.PeaktoPeakV_Min = new UserInterface.NumericTextbox();
-            this.RmsV_Max = new UserInterface.NumericTextbox();
-            this.RmsV_Min = new UserInterface.NumericTextbox();
+            this.PeaktoPeakV_Max = new  System.Windows.Forms.TextBox();
+            this.PeaktoPeakV_Min = new System.Windows.Forms.TextBox();
+            this.RmsV_Max = new System.Windows.Forms.TextBox();
+            this.RmsV_Min = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -118,62 +118,42 @@
             // PeaktoPeakV_Max
             // 
             this.PeaktoPeakV_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PeaktoPeakV_Max.InputType = UserInterface.NumericTextbox.InputTypes.Double;
             this.PeaktoPeakV_Max.Location = new System.Drawing.Point(66, 81);
-            this.PeaktoPeakV_Max.MaxValue = 0D;
-            this.PeaktoPeakV_Max.MinValue = 0D;
             this.PeaktoPeakV_Max.Name = "PeaktoPeakV_Max";
-            this.PeaktoPeakV_Max.NumberDecimalSeparator = '.';
             this.PeaktoPeakV_Max.Size = new System.Drawing.Size(94, 24);
             this.PeaktoPeakV_Max.TabIndex = 126;
             this.PeaktoPeakV_Max.Text = "0.00";
             this.PeaktoPeakV_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.PeaktoPeakV_Max.Value = 0D;
             // 
             // PeaktoPeakV_Min
             // 
             this.PeaktoPeakV_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PeaktoPeakV_Min.InputType = UserInterface.NumericTextbox.InputTypes.Double;
             this.PeaktoPeakV_Min.Location = new System.Drawing.Point(248, 81);
-            this.PeaktoPeakV_Min.MaxValue = 0D;
-            this.PeaktoPeakV_Min.MinValue = 0D;
             this.PeaktoPeakV_Min.Name = "PeaktoPeakV_Min";
-            this.PeaktoPeakV_Min.NumberDecimalSeparator = '.';
             this.PeaktoPeakV_Min.Size = new System.Drawing.Size(94, 24);
             this.PeaktoPeakV_Min.TabIndex = 126;
             this.PeaktoPeakV_Min.Text = "0.00";
             this.PeaktoPeakV_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.PeaktoPeakV_Min.Value = 0D;
             // 
             // RmsV_Max
             // 
             this.RmsV_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RmsV_Max.InputType = UserInterface.NumericTextbox.InputTypes.Double;
             this.RmsV_Max.Location = new System.Drawing.Point(66, 183);
-            this.RmsV_Max.MaxValue = 0D;
-            this.RmsV_Max.MinValue = 0D;
             this.RmsV_Max.Name = "RmsV_Max";
-            this.RmsV_Max.NumberDecimalSeparator = '.';
             this.RmsV_Max.Size = new System.Drawing.Size(94, 24);
             this.RmsV_Max.TabIndex = 126;
             this.RmsV_Max.Text = "0.00";
             this.RmsV_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.RmsV_Max.Value = 0D;
             // 
             // RmsV_Min
             // 
             this.RmsV_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RmsV_Min.InputType = UserInterface.NumericTextbox.InputTypes.Double;
             this.RmsV_Min.Location = new System.Drawing.Point(248, 183);
-            this.RmsV_Min.MaxValue = 0D;
-            this.RmsV_Min.MinValue = 0D;
             this.RmsV_Min.Name = "RmsV_Min";
-            this.RmsV_Min.NumberDecimalSeparator = '.';
             this.RmsV_Min.Size = new System.Drawing.Size(94, 24);
             this.RmsV_Min.TabIndex = 127;
             this.RmsV_Min.Text = "0.00";
             this.RmsV_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.RmsV_Min.Value = 0D;
             // 
             // EMK_Test
             // 
@@ -197,9 +177,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private UserInterface.NumericTextbox RmsV_Min;
-        private UserInterface.NumericTextbox PeaktoPeakV_Min;
-        private UserInterface.NumericTextbox RmsV_Max;
-        private UserInterface.NumericTextbox PeaktoPeakV_Max;
+        private System.Windows.Forms.TextBox RmsV_Min;
+        private System.Windows.Forms.TextBox PeaktoPeakV_Min;
+        private System.Windows.Forms.TextBox RmsV_Max;
+        private System.Windows.Forms.TextBox PeaktoPeakV_Max;
     }
 }

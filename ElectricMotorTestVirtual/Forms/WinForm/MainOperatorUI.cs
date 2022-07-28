@@ -41,23 +41,23 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
 
         public void initUI()
         {
-            TestOK.Value = false;
-            TestNOK.Value = false;
+            //TestOK.Value = false;
+            //TestNOK.Value = false;
             TestResultTable.Rows.Clear();
         }
 
         private void BtnStart_Click(object sender, EventArgs e)
         {
-            TestOK.Value = false;
-            TestNOK.Value = false;
+            //TestOK.Value = false;
+            //TestNOK.Value = false;
             _testRunner.logTestSQL(TxtbxSerialNumber.Text); 
             if (_testRunner.RunTest(TestResultTable))
             {
-                TestOK.Value = true;
+                //TestOK.Value = true;
             }
             else
             {
-                TestNOK.Value = true;
+                //TestNOK.Value = true;
             }
         }
     }

@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.LoadTorqueNm_Point2 = new UserInterface.NumericTextbox();
-            this.LoadTorqueNm_Point1 = new UserInterface.NumericTextbox();
-            this.LoadPerformRpm_Min = new UserInterface.NumericTextbox();
-            this.LoadPerformRpm_Max = new UserInterface.NumericTextbox();
-            this.UnloadPerformRpm_Max = new UserInterface.NumericTextbox();
+            this.LoadTorqueNm_Point2 = new System.Windows.Forms.TextBox();
+            this.LoadTorqueNm_Point1 = new System.Windows.Forms.TextBox();
+            this.LoadPerformRpm_Min = new System.Windows.Forms.TextBox();
+            this.LoadPerformRpm_Max = new System.Windows.Forms.TextBox();
+            this.UnloadPerformRpm_Max = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,7 +41,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.PerformTestActive = new System.Windows.Forms.CheckBox();
-            this.UnloadPerformRpm_Min = new UserInterface.NumericTextbox();
+            this.UnloadPerformRpm_Min = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,77 +72,52 @@
             // LoadTorqueNm_Point2
             // 
             this.LoadTorqueNm_Point2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.LoadTorqueNm_Point2.InputType = UserInterface.NumericTextbox.InputTypes.Double;
             this.LoadTorqueNm_Point2.Location = new System.Drawing.Point(313, 278);
-            this.LoadTorqueNm_Point2.MaxValue = 0D;
-            this.LoadTorqueNm_Point2.MinValue = 0D;
             this.LoadTorqueNm_Point2.Name = "LoadTorqueNm_Point2";
-            this.LoadTorqueNm_Point2.NumberDecimalSeparator = '\0';
             this.LoadTorqueNm_Point2.Size = new System.Drawing.Size(122, 24);
             this.LoadTorqueNm_Point2.TabIndex = 127;
             this.LoadTorqueNm_Point2.Text = "0";
             this.LoadTorqueNm_Point2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.LoadTorqueNm_Point2.Value = 0D;
             // 
             // LoadTorqueNm_Point1
             // 
             this.LoadTorqueNm_Point1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.LoadTorqueNm_Point1.InputType = UserInterface.NumericTextbox.InputTypes.Double;
             this.LoadTorqueNm_Point1.Location = new System.Drawing.Point(94, 278);
-            this.LoadTorqueNm_Point1.MaxValue = 100D;
-            this.LoadTorqueNm_Point1.MinValue = 0D;
             this.LoadTorqueNm_Point1.Name = "LoadTorqueNm_Point1";
-            this.LoadTorqueNm_Point1.NumberDecimalSeparator = '\0';
             this.LoadTorqueNm_Point1.Size = new System.Drawing.Size(122, 24);
             this.LoadTorqueNm_Point1.TabIndex = 127;
             this.LoadTorqueNm_Point1.Text = "0";
             this.LoadTorqueNm_Point1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.LoadTorqueNm_Point1.Value = 0D;
             // 
             // LoadPerformRpm_Min
             // 
             this.LoadPerformRpm_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.LoadPerformRpm_Min.InputType = UserInterface.NumericTextbox.InputTypes.Integer;
             this.LoadPerformRpm_Min.Location = new System.Drawing.Point(313, 190);
-            this.LoadPerformRpm_Min.MaxValue = 0D;
-            this.LoadPerformRpm_Min.MinValue = 0D;
             this.LoadPerformRpm_Min.Name = "LoadPerformRpm_Min";
-            this.LoadPerformRpm_Min.NumberDecimalSeparator = '\0';
             this.LoadPerformRpm_Min.Size = new System.Drawing.Size(122, 24);
             this.LoadPerformRpm_Min.TabIndex = 127;
             this.LoadPerformRpm_Min.Text = "0";
             this.LoadPerformRpm_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.LoadPerformRpm_Min.Value = 0D;
             // 
             // LoadPerformRpm_Max
             // 
             this.LoadPerformRpm_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.LoadPerformRpm_Max.InputType = UserInterface.NumericTextbox.InputTypes.Integer;
             this.LoadPerformRpm_Max.Location = new System.Drawing.Point(94, 190);
-            this.LoadPerformRpm_Max.MaxValue = 100D;
-            this.LoadPerformRpm_Max.MinValue = 0D;
             this.LoadPerformRpm_Max.Name = "LoadPerformRpm_Max";
-            this.LoadPerformRpm_Max.NumberDecimalSeparator = '\0';
             this.LoadPerformRpm_Max.Size = new System.Drawing.Size(122, 24);
             this.LoadPerformRpm_Max.TabIndex = 127;
             this.LoadPerformRpm_Max.Text = "0";
             this.LoadPerformRpm_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.LoadPerformRpm_Max.Value = 0D;
             // 
             // UnloadPerformRpm_Max
             // 
             this.UnloadPerformRpm_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.UnloadPerformRpm_Max.InputType = UserInterface.NumericTextbox.InputTypes.Integer;
             this.UnloadPerformRpm_Max.Location = new System.Drawing.Point(94, 102);
-            this.UnloadPerformRpm_Max.MaxValue = 100D;
-            this.UnloadPerformRpm_Max.MinValue = 0D;
             this.UnloadPerformRpm_Max.Name = "UnloadPerformRpm_Max";
-            this.UnloadPerformRpm_Max.NumberDecimalSeparator = '\0';
             this.UnloadPerformRpm_Max.Size = new System.Drawing.Size(122, 24);
             this.UnloadPerformRpm_Max.TabIndex = 127;
             this.UnloadPerformRpm_Max.Text = "0";
             this.UnloadPerformRpm_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.UnloadPerformRpm_Max.Value = 0D;
             // 
             // label6
             // 
@@ -231,17 +206,12 @@
             // UnloadPerformRpm_Min
             // 
             this.UnloadPerformRpm_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.UnloadPerformRpm_Min.InputType = UserInterface.NumericTextbox.InputTypes.Integer;
             this.UnloadPerformRpm_Min.Location = new System.Drawing.Point(313, 102);
-            this.UnloadPerformRpm_Min.MaxValue = 100D;
-            this.UnloadPerformRpm_Min.MinValue = 0D;
             this.UnloadPerformRpm_Min.Name = "UnloadPerformRpm_Min";
-            this.UnloadPerformRpm_Min.NumberDecimalSeparator = '\0';
             this.UnloadPerformRpm_Min.Size = new System.Drawing.Size(122, 24);
             this.UnloadPerformRpm_Min.TabIndex = 127;
             this.UnloadPerformRpm_Min.Text = "0";
             this.UnloadPerformRpm_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.UnloadPerformRpm_Min.Value = 0D;
             // 
             // PerformansTest
             // 
@@ -269,12 +239,12 @@
         private System.Windows.Forms.CheckBox PerformTestActive;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
-        private UserInterface.NumericTextbox LoadPerformRpm_Max;
-        private UserInterface.NumericTextbox UnloadPerformRpm_Max;
-        private UserInterface.NumericTextbox LoadTorqueNm_Point2;
-        private UserInterface.NumericTextbox LoadTorqueNm_Point1;
-        private UserInterface.NumericTextbox LoadPerformRpm_Min;
-        private UserInterface.NumericTextbox UnloadPerformRpm_MinUnloadPerformRpm_Min;
-        private UserInterface.NumericTextbox UnloadPerformRpm_Min;
+        private System.Windows.Forms.TextBox LoadPerformRpm_Max;
+        private System.Windows.Forms.TextBox UnloadPerformRpm_Max;
+        private System.Windows.Forms.TextBox LoadTorqueNm_Point2;
+        private System.Windows.Forms.TextBox LoadTorqueNm_Point1;
+        private System.Windows.Forms.TextBox LoadPerformRpm_Min;
+        private System.Windows.Forms.TextBox UnloadPerformRpm_MinUnloadPerformRpm_Min;
+        private System.Windows.Forms.TextBox UnloadPerformRpm_Min;
     }
 }

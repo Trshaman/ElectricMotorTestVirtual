@@ -1,5 +1,5 @@
 ﻿using ElectricMotorTestVirtual.Entity;
-using GlobalFunctions;
+//using GlobalFunctions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +16,7 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
     {
         private ComSettingsPage _settingsPage;
         private MainOperatorUI _mainOperatorUI;
-        private frmLog _frmLog;
+       // private frmLog _frmLog;
         private RecipeSelectionPage _recipeSelectionPage;
         private TestResultDatabase _testResultDatabase;
         private string connectionString;
@@ -25,11 +25,11 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
         public MainScreen1()
         {
             InitializeComponent();
-            Program.LogForm = new frmLog();
-            Program.LogForm.MdiParent = this;
-            Program.LogForm.Show();
+            //Program.LogForm = new frmLog();
+           // Program.LogForm.MdiParent = this;
+          //  Program.LogForm.Show();
             //0:system 1:alarm
-            Program.LogForm.WriteLog(LogTypes.System, 0, -1, -1, "Program Başlatıldı.", SystemIcons.Information);
+           // Program.LogForm.WriteLog(LogTypes.System, 0, -1, -1, "Program Başlatıldı.", SystemIcons.Information);
            
            
    

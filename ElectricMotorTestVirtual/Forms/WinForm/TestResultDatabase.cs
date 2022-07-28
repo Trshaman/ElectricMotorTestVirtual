@@ -50,11 +50,11 @@ namespace ElectricMotorTestVirtual.Forms.WinForm
                 _detailedTestReport.TxbxTestDate.Text = row.Cells[2].Value.ToString();
                 if ((bool)row.Cells[8].Value)
                 {
-                    _detailedTestReport.TestOK.Value = true;
+                   // _detailedTestReport.TestOK.Value = true;
                 }
                 else
                 {
-                    _detailedTestReport.TestNOK.Value = true;
+                    //_detailedTestReport.TestNOK.Value = true;
                 }
                 _detailedTestReport.HandleDestroyed += (object send, EventArgs e2) => { _detailedTestReport = null; };
                 foreach (TestCase test in testResultCases)

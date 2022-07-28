@@ -42,18 +42,18 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.LCRTestActive = new System.Windows.Forms.CheckBox();
-            this.R1Ohm_Max = new UserInterface.NumericTextbox();
-            this.R2Ohm_Max = new UserInterface.NumericTextbox();
-            this.R3Ohm_Max = new UserInterface.NumericTextbox();
-            this.L1Inductance_Max = new UserInterface.NumericTextbox();
-            this.L2Inductance_Max = new UserInterface.NumericTextbox();
-            this.L3Inductance_Max = new UserInterface.NumericTextbox();
-            this.R1Ohm_Min = new UserInterface.NumericTextbox();
-            this.R2Ohm_Min = new UserInterface.NumericTextbox();
-            this.R3Ohm_Min = new UserInterface.NumericTextbox();
-            this.L1Inductance_Min = new UserInterface.NumericTextbox();
-            this.L2Inductance_Min = new UserInterface.NumericTextbox();
-            this.L3Inductance_Min = new UserInterface.NumericTextbox();
+            this.R1Ohm_Max = new System.Windows.Forms.TextBox();
+            this.R2Ohm_Max = new System.Windows.Forms.TextBox();
+            this.R3Ohm_Max = new System.Windows.Forms.TextBox();
+            this.L1Inductance_Max = new System.Windows.Forms.TextBox();
+            this.L2Inductance_Max = new System.Windows.Forms.TextBox();
+            this.L3Inductance_Max = new System.Windows.Forms.TextBox();
+            this.R1Ohm_Min = new System.Windows.Forms.TextBox();
+            this.R2Ohm_Min = new System.Windows.Forms.TextBox();
+            this.R3Ohm_Min = new System.Windows.Forms.TextBox();
+            this.L1Inductance_Min = new System.Windows.Forms.TextBox();
+            this.L2Inductance_Min = new System.Windows.Forms.TextBox();
+            this.L3Inductance_Min = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -237,182 +237,122 @@
             // R1Ohm_Max
             // 
             this.R1Ohm_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.R1Ohm_Max.InputType = UserInterface.NumericTextbox.InputTypes.Double;
             this.R1Ohm_Max.Location = new System.Drawing.Point(57, 44);
-            this.R1Ohm_Max.MaxValue = 100D;
-            this.R1Ohm_Max.MinValue = 0D;
             this.R1Ohm_Max.Name = "R1Ohm_Max";
-            this.R1Ohm_Max.NumberDecimalSeparator = '\0';
             this.R1Ohm_Max.Size = new System.Drawing.Size(101, 24);
             this.R1Ohm_Max.TabIndex = 126;
             this.R1Ohm_Max.Text = "0.00";
             this.R1Ohm_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.R1Ohm_Max.Value = 0D;
             // 
             // R2Ohm_Max
             // 
             this.R2Ohm_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.R2Ohm_Max.InputType = UserInterface.NumericTextbox.InputTypes.Double;
             this.R2Ohm_Max.Location = new System.Drawing.Point(57, 95);
-            this.R2Ohm_Max.MaxValue = 100D;
-            this.R2Ohm_Max.MinValue = 0D;
             this.R2Ohm_Max.Name = "R2Ohm_Max";
-            this.R2Ohm_Max.NumberDecimalSeparator = '\0';
             this.R2Ohm_Max.Size = new System.Drawing.Size(101, 24);
             this.R2Ohm_Max.TabIndex = 126;
             this.R2Ohm_Max.Text = "0.00";
             this.R2Ohm_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.R2Ohm_Max.Value = 0D;
             // 
             // R3Ohm_Max
             // 
             this.R3Ohm_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.R3Ohm_Max.InputType = UserInterface.NumericTextbox.InputTypes.Double;
             this.R3Ohm_Max.Location = new System.Drawing.Point(57, 142);
-            this.R3Ohm_Max.MaxValue = 100D;
-            this.R3Ohm_Max.MinValue = 0D;
             this.R3Ohm_Max.Name = "R3Ohm_Max";
-            this.R3Ohm_Max.NumberDecimalSeparator = '\0';
             this.R3Ohm_Max.Size = new System.Drawing.Size(101, 24);
             this.R3Ohm_Max.TabIndex = 126;
             this.R3Ohm_Max.Text = "0.00";
             this.R3Ohm_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.R3Ohm_Max.Value = 0D;
             // 
             // L1Inductance_Max
             // 
             this.L1Inductance_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.L1Inductance_Max.InputType = UserInterface.NumericTextbox.InputTypes.Double;
             this.L1Inductance_Max.Location = new System.Drawing.Point(57, 192);
-            this.L1Inductance_Max.MaxValue = 100D;
-            this.L1Inductance_Max.MinValue = 0D;
             this.L1Inductance_Max.Name = "L1Inductance_Max";
-            this.L1Inductance_Max.NumberDecimalSeparator = '\0';
             this.L1Inductance_Max.Size = new System.Drawing.Size(101, 24);
             this.L1Inductance_Max.TabIndex = 126;
             this.L1Inductance_Max.Text = "0.00";
             this.L1Inductance_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.L1Inductance_Max.Value = 0D;
             // 
             // L2Inductance_Max
             // 
             this.L2Inductance_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.L2Inductance_Max.InputType = UserInterface.NumericTextbox.InputTypes.Double;
             this.L2Inductance_Max.Location = new System.Drawing.Point(57, 244);
-            this.L2Inductance_Max.MaxValue = 100D;
-            this.L2Inductance_Max.MinValue = 0D;
             this.L2Inductance_Max.Name = "L2Inductance_Max";
-            this.L2Inductance_Max.NumberDecimalSeparator = '\0';
             this.L2Inductance_Max.Size = new System.Drawing.Size(101, 24);
             this.L2Inductance_Max.TabIndex = 126;
             this.L2Inductance_Max.Text = "0.00";
             this.L2Inductance_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.L2Inductance_Max.Value = 0D;
             // 
             // L3Inductance_Max
             // 
             this.L3Inductance_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.L3Inductance_Max.InputType = UserInterface.NumericTextbox.InputTypes.Double;
             this.L3Inductance_Max.Location = new System.Drawing.Point(57, 292);
-            this.L3Inductance_Max.MaxValue = 100D;
-            this.L3Inductance_Max.MinValue = 0D;
             this.L3Inductance_Max.Name = "L3Inductance_Max";
-            this.L3Inductance_Max.NumberDecimalSeparator = '\0';
             this.L3Inductance_Max.Size = new System.Drawing.Size(101, 24);
             this.L3Inductance_Max.TabIndex = 126;
             this.L3Inductance_Max.Text = "0.00";
             this.L3Inductance_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.L3Inductance_Max.Value = 0D;
             // 
             // R1Ohm_Min
             // 
             this.R1Ohm_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.R1Ohm_Min.InputType = UserInterface.NumericTextbox.InputTypes.Double;
             this.R1Ohm_Min.Location = new System.Drawing.Point(287, 44);
-            this.R1Ohm_Min.MaxValue = 100D;
-            this.R1Ohm_Min.MinValue = 0D;
             this.R1Ohm_Min.Name = "R1Ohm_Min";
-            this.R1Ohm_Min.NumberDecimalSeparator = '\0';
             this.R1Ohm_Min.Size = new System.Drawing.Size(101, 24);
             this.R1Ohm_Min.TabIndex = 126;
             this.R1Ohm_Min.Text = "0.00";
             this.R1Ohm_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.R1Ohm_Min.Value = 0D;
             // 
             // R2Ohm_Min
             // 
             this.R2Ohm_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.R2Ohm_Min.InputType = UserInterface.NumericTextbox.InputTypes.Double;
             this.R2Ohm_Min.Location = new System.Drawing.Point(287, 95);
-            this.R2Ohm_Min.MaxValue = 100D;
-            this.R2Ohm_Min.MinValue = 0D;
             this.R2Ohm_Min.Name = "R2Ohm_Min";
-            this.R2Ohm_Min.NumberDecimalSeparator = '\0';
             this.R2Ohm_Min.Size = new System.Drawing.Size(101, 24);
             this.R2Ohm_Min.TabIndex = 126;
             this.R2Ohm_Min.Text = "0.00";
             this.R2Ohm_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.R2Ohm_Min.Value = 0D;
             // 
             // R3Ohm_Min
             // 
             this.R3Ohm_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.R3Ohm_Min.InputType = UserInterface.NumericTextbox.InputTypes.Double;
             this.R3Ohm_Min.Location = new System.Drawing.Point(288, 142);
-            this.R3Ohm_Min.MaxValue = 100D;
-            this.R3Ohm_Min.MinValue = 0D;
             this.R3Ohm_Min.Name = "R3Ohm_Min";
-            this.R3Ohm_Min.NumberDecimalSeparator = '\0';
             this.R3Ohm_Min.Size = new System.Drawing.Size(101, 24);
             this.R3Ohm_Min.TabIndex = 126;
             this.R3Ohm_Min.Text = "0.00";
             this.R3Ohm_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.R3Ohm_Min.Value = 0D;
             // 
             // L1Inductance_Min
             // 
             this.L1Inductance_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.L1Inductance_Min.InputType = UserInterface.NumericTextbox.InputTypes.Double;
             this.L1Inductance_Min.Location = new System.Drawing.Point(287, 192);
-            this.L1Inductance_Min.MaxValue = 100D;
-            this.L1Inductance_Min.MinValue = 0D;
             this.L1Inductance_Min.Name = "L1Inductance_Min";
-            this.L1Inductance_Min.NumberDecimalSeparator = '\0';
             this.L1Inductance_Min.Size = new System.Drawing.Size(101, 24);
             this.L1Inductance_Min.TabIndex = 126;
             this.L1Inductance_Min.Text = "0.00";
             this.L1Inductance_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.L1Inductance_Min.Value = 0D;
             // 
             // L2Inductance_Min
             // 
             this.L2Inductance_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.L2Inductance_Min.InputType = UserInterface.NumericTextbox.InputTypes.Double;
             this.L2Inductance_Min.Location = new System.Drawing.Point(287, 244);
-            this.L2Inductance_Min.MaxValue = 100D;
-            this.L2Inductance_Min.MinValue = 0D;
             this.L2Inductance_Min.Name = "L2Inductance_Min";
-            this.L2Inductance_Min.NumberDecimalSeparator = '\0';
             this.L2Inductance_Min.Size = new System.Drawing.Size(101, 24);
             this.L2Inductance_Min.TabIndex = 126;
             this.L2Inductance_Min.Text = "0.00";
             this.L2Inductance_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.L2Inductance_Min.Value = 0D;
             // 
             // L3Inductance_Min
             // 
             this.L3Inductance_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.L3Inductance_Min.InputType = UserInterface.NumericTextbox.InputTypes.Double;
             this.L3Inductance_Min.Location = new System.Drawing.Point(287, 292);
-            this.L3Inductance_Min.MaxValue = 100D;
-            this.L3Inductance_Min.MinValue = 0D;
             this.L3Inductance_Min.Name = "L3Inductance_Min";
-            this.L3Inductance_Min.NumberDecimalSeparator = '\0';
             this.L3Inductance_Min.Size = new System.Drawing.Size(101, 24);
             this.L3Inductance_Min.TabIndex = 126;
             this.L3Inductance_Min.Text = "0.00";
             this.L3Inductance_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.L3Inductance_Min.Value = 0D;
             // 
             // LCRTest
             // 
@@ -444,17 +384,17 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox LCRTestActive;
-        private UserInterface.NumericTextbox L3Inductance_Min;
-        private UserInterface.NumericTextbox L3Inductance_Max;
-        private UserInterface.NumericTextbox L2Inductance_Min;
-        private UserInterface.NumericTextbox L2Inductance_Max;
-        private UserInterface.NumericTextbox L1Inductance_Min;
-        private UserInterface.NumericTextbox L1Inductance_Max;
-        private UserInterface.NumericTextbox R3Ohm_Min;
-        private UserInterface.NumericTextbox R3Ohm_Max;
-        private UserInterface.NumericTextbox R2Ohm_Min;
-        private UserInterface.NumericTextbox R2Ohm_Max;
-        private UserInterface.NumericTextbox R1Ohm_Min;
-        private UserInterface.NumericTextbox R1Ohm_Max;
+        private System.Windows.Forms.TextBox L3Inductance_Min;
+        private System.Windows.Forms.TextBox L3Inductance_Max;
+        private System.Windows.Forms.TextBox L2Inductance_Min;
+        private System.Windows.Forms.TextBox L2Inductance_Max;
+        private System.Windows.Forms.TextBox L1Inductance_Min;
+        private System.Windows.Forms.TextBox L1Inductance_Max;
+        private System.Windows.Forms.TextBox R3Ohm_Min;
+        private System.Windows.Forms.TextBox R3Ohm_Max;
+        private System.Windows.Forms.TextBox R2Ohm_Min;
+        private System.Windows.Forms.TextBox R2Ohm_Max;
+        private System.Windows.Forms.TextBox R1Ohm_Min;
+        private System.Windows.Forms.TextBox R1Ohm_Max;
     }
 }
