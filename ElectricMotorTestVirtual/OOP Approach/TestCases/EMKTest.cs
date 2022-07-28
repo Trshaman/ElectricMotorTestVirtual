@@ -12,7 +12,6 @@ using System.Xml.Serialization;
 using ElectricMotorTestVirtual.Entity;
 using ElectricMotorTestVirtual.OOP_Approach.Motor;
 using ElectricMotorTestVirtual.OOP_Approach.Test;
-//using GlobalFunctions;
 
 
 namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
@@ -20,8 +19,6 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
     public class EMKTest : TestCase
     {
         private IGenericRepository<EMKTest> repository = new GenericRepository<EMKTest>();
-        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
-        //[Index(IsUnique = true)]
         public int Id { get; set; } 
         public int? TestResultId { get; set; }
         [ForeignKey("TestResultId")]
@@ -60,7 +57,6 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
             if (base.IsTestActive == true)
             {
                 DateTime startTestTime = DateTime.Now;
-             //   Program.LogForm.WriteLog(LogTypes.System, 0, -1, -1, this.GetType().Name + "başlatıldı", SystemIcons.Information);
                 base.TestStarted = true;
                 PrepareRelayMatrix();
                 DataAcquisition();
@@ -68,7 +64,6 @@ namespace ElectricMotorTestVirtual.OOP_Approach.TestCases
                 base.TestDuration = startTestTime - DateTime.Now;
                 base.TestStarted = false;
                 string testResult = base.TestResultValue == true ? "Test OK" : "Test NOK";
-            //    Program.LogForm.WriteLog(LogTypes.System, 0, -1, -1, this.GetType().Name + testResult, SystemIcons.Information);
                 base.TestStarted = false;
                 LogSQL(indx);
                 return base.TestResultValue;

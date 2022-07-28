@@ -26,10 +26,8 @@ namespace ElectricMotorTestVirtual
         internal static string TestRecipeSettingFile;
         internal static string TestTableName;
         internal static bool IsServer;
-        //public static frmLog LogForm;
         internal static string TestFileBackupDir;
         internal static string TestsFile;
-       // internal static List<Log> StartUpLogs;
         internal static string UserSettingsFile;
         internal static string ProgramIniFile;
         internal static List<TestRecipeClass> TestList;
@@ -83,8 +81,6 @@ namespace ElectricMotorTestVirtual
 
 
 
-            //ToDo: settins ve kayıtlar kontrol edilecek.
-            //log formuna eklenicek.
             DoStartUp();
             Application.Run(new MainScreen1());
 
@@ -92,7 +88,6 @@ namespace ElectricMotorTestVirtual
 
         private static void DoStartUp()
         {
-          //  StartUpLogs = new List<Log>();
             SettingDir = Directory.GetCurrentDirectory() + "\\Settings\\";
             TestFileBackupDir = Directory.GetCurrentDirectory() + "\\ActualTestsState\\Backups\\";
             if (!Directory.Exists(Directory.GetCurrentDirectory() + "\\ActualTestsState\\"))
@@ -111,7 +106,6 @@ namespace ElectricMotorTestVirtual
             if (!Directory.Exists(SettingDir))
             {
                 MessageBox.Show("\\Settings klasörü bulunamadı. Yeniden oluşturulacak, tüm test,istasyon,kullanıcı bilgileri tanımlanmalıdır. ", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-         //       StartUpLogs.Add(new Log(DateTime.Now, LogTypes.System, 5, -1, -1, "\\Settings klasörü bulunamadı. Yeniden oluşturulacak, tüm test,istasyon,kullanıcı bilgileri tanımlanmalıdır. ", System.Drawing.SystemIcons.Error));
                 Directory.CreateDirectory(SettingDir);
             }
             TestList = TestRecipeClass.LoadTestsFromXML(TestSettingFile);
@@ -120,26 +114,6 @@ namespace ElectricMotorTestVirtual
             ProgamSettings = SettingsData.LoadSettingsFromXML(ProgramIniFile);
             if(ProgamSettings == null)
                 ProgamSettings = new SettingsData();
-            //ToDo:init ayarları yapılabilir. SQL database kontrol edilip yok ise oluşturulabilir : EntityFrameWork
-           
-            //Context c = new Context(ConnectionString);
-            //c.Database.Create();
-
-
-            //if (!CheckCreateSystemDatabaseAndTables())
-            //   return false;
-
-            //Logger.ConnectionString = Program.ConStringDatabase;
-            //User.LoadUserListFromFile(UserSettingsFile);
-            //if (!System.Diagnostics.Debugger.IsAttached)
-            //{
-            //    frmLogIn frmue = new frmLogIn();
-            //    frmue.ShowDialog();
-            //    if (CancelStartUp)
-            //        return CancelStartUp;
-            //}
-            //else
-            //    User.ActiveUser = new User("Admin", UserLevels.Admin, "emtest4001");
 
         }
     }
