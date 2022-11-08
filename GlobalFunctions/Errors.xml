@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--Değişken olan yerlere 3 adet soru işareti eklendi. Çalışma zamanında buraya gerekli stringler eklenecek-->
-<!--enum ErrorActions{DoNothing,Stop,EmergencyStop,User}-->
-<Errors>
-  <Error><ID>1000</ID><Lang>tr-TR</Lang><Name>Kalibrasyon süresi geçti</Name><Decription> Son kalibrasyon tarihi : ???. Lütfen ???'ın kalibrasyonunu yapınız!</Decription><ErrorAction>0</ErrorAction></Error>
-  <Error><ID>1000</ID><Lang>en-En</Lang><Name>Calibration date expired</Name><Decription> Last calibration date : ???. Please, recalibrate ??? channel!</Decription><ErrorAction>0</ErrorAction></Error>
-  
-</Errors>
