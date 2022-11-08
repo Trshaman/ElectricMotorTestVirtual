@@ -10,7 +10,7 @@ I just tried to practice OOP and EntityFramework based on my previous labview te
 -Future test cases can be implemented SQL and Test Cycle easily
 - [x] Learning purpose
 - [x] Make it interesting
-- [ ] Publish it
+- [x] Publish it
 
 
 
