@@ -1,7 +1,7 @@
 # ElectricMotorTestVirtual
 VirtualProject
 
-I just tried to practice OOP and EntityFramework based on my previous labview test project 
+I just tried to practice OOP and EntityFramework based on my previous LabVIEW test project 
 
 -Test cases are extendable, future test cases won't be interrupt already working test cases
 
