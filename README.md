@@ -1,4 +1,4 @@
-# ElectricMotorTestVirtual
+# Electric Motor Virtual Test 
 VirtualProject
 
 I just tried to practice OOP and EntityFramework based on my previous LabVIEW test project 
