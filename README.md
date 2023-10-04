@@ -7,7 +7,7 @@ I just tried to practice OOP and EntityFramework based on my previous LabVIEW te
 
 -SQL database tables are creating programmatically in init state 
 
--Future test cases can be implemented SQL and Test Cycle easily
+-Future test cases can be implemented  SQL and Test Cycle dynamically
 - [x] Learning purpose
 - [x] Make it interesting
 - [x] Publish it
