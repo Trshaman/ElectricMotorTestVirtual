@@ -16,3 +16,5 @@ I just tried to practice OOP and EntityFramework based on my previous LabVIEW te
 
 
 ![](/Images/ElectricMotorImage.jpg)![](/Images/RightArrow.png)![](/Images/Test.png)![](/Images/RightArrow.png)![](/Images/SQ.png)
+![](/Readmegif.gif)
+
